@@ -1,4 +1,4 @@
-# Name:  OpenLDAP
+# Project Name:  OpenLDAP
 ### https://github.com/openldap/openldap
 
 ## Operational Enviroment Description:
@@ -16,8 +16,8 @@
 
 ## Open-source Project Description
 #### LDAP is a protocol that stands for Lightweight Directory Application Protocol.  A LDAP server can be any databse on the backend, but is commonly a database type that is optomized for high performance read access vs. write.  OpenLDAP devired with early x.500 work down by MIT, the University of Michigan, and Berckley.  Today popular commercial implementations of OpenLDAP are available as: Microsfot Active Directory, Oracle, RadiantLogic, etc.
-### The project has 85 contributors on the GitHUb Mirror of OpenLDAP.org and more than 20k commits with weekly commits.  The [OPenLDAP Foundation](https://www.openldap.org/project/) has a list of the core team an contributors.  
-###OpenLDAP is included with RedHat Enterprise Linux.
+#### The project has 85 contributors on the GitHUb Mirror of OpenLDAP.org and more than 20k commits with weekly commits.  The [OPenLDAP Foundation](https://www.openldap.org/project/) has a list of the core team an contributors.  
+####OpenLDAP is included with RedHat Enterprise Linux.
 
 ## History of Security Issues
 #####  There are [50+ CVE's](https://www.cvedetails.com/vulnerability-list/vendor_id-439/Openldap.html) for OpenLDAP as recent as May 2023 which the vast majority resulting in a denial of service.  They encompass many common vulnerabilites; SQL injection, buffer overflows, input validation, etc.
