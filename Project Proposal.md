@@ -22,10 +22,10 @@
 #### OpenLDAP is included with RedHat Enterprise Linux.
 
 ## License
-Open LDAP uses a BSD style [license.](https://www.openldap.org/software/release/license.html)
+Open LDAP uses a BSD style [license.](https://www.openldap.org/software/release/license.html) which is a permissive free software license with limited restrictions on the use and distribution.
 
 ## History of Security Issues
-#####  There are [50+ CVE's](https://www.cvedetails.com/vulnerability-list/vendor_id-439/Openldap.html) for OpenLDAP as recent as May 2023 which the vast majority resulting in a denial of service.  They encompass many common vulnerabilities;SQL injection, buffer overflows, input validation, etc.
+#####  There are [50+ CVE's](https://www.cvedetails.com/vulnerability-list/vendor_id-439/Openldap.html) for OpenLDAP as recent as May 2023 which the vast majority resulting in a denial of service.  They encompass many common vulnerabilities; SQL injection, buffer overflows, input validation, etc.
 
 ## Reflection on Teamwork:
 #### The team is using Discord as a collaboration tool, which supports txt, voice, sharing, and video on both desktop and mobile platforms and will augment it with Zoom as needed.  The team needs to schedule meetings early in the week because of complex and conflicting schedules of full time day job student, and full time students with evening classes.  Because of the commitments with the instructor and limited availability of real time communications ,the agreed upon meeting times cannot be rescheduled to accommodate individuals.  All project work will be concluded by Sunday at 10pm, to allow all team members to start the following weeks activities with a blank plate.
