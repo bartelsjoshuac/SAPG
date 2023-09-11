@@ -7,20 +7,20 @@
 ![Diagram](https://github.com/bartelsjoshuac/SOA/blob/main/Systems%20Engineering%20VIew.drawio.svg)
 
 ## Security Features:
-### - Access control list (ACLs)s and the Directory Information Tree (DIT)
-### - Audit logg
-### - API (and JNDI)
+#### - Access control list (ACLs)s and the Directory Information Tree (DIT)
+#### - Audit logg
+#### - API (and JNDI)
 
 ## Motovation
-### OpenLDAP has a deep history from the early days at MIT, the Unversity of Michigan, and is the root of every modern commercial LDAP implementation that serves as the core of an Identity and Access Management suite.
+#### OpenLDAP has a deep history from the early days at MIT, the Unversity of Michigan, and is the root of every modern commercial LDAP implementation that serves as the core of an Identity and Access Management suite.
 
 ## Open-source Project Description
-### LDAP is a protocol that stands for Lightweight Directory Application Protocol.  A LDAP server can be any databse on the backend, but is commonly a database type that is optomized for high performance read access vs. write.  OpenLDAP devired with early x.500 work down by MIT, the University of Michigan, and Berckley.  Today popular commercial implementations of OpenLDAP are available as: Microsfot Active Directory, Oracle, RadiantLogic, etc.
+#### LDAP is a protocol that stands for Lightweight Directory Application Protocol.  A LDAP server can be any databse on the backend, but is commonly a database type that is optomized for high performance read access vs. write.  OpenLDAP devired with early x.500 work down by MIT, the University of Michigan, and Berckley.  Today popular commercial implementations of OpenLDAP are available as: Microsfot Active Directory, Oracle, RadiantLogic, etc.
 ### The project has 85 contributors on the GitHUb Mirror of OpenLDAP.org and more than 20k commits with weekly commits.  The [OPenLDAP Foundation](https://www.openldap.org/project/) has a list of the core team an contributors.  
 ###OpenLDAP is included with RedHat Enterprise Linux.
 
 ## History of Security Issues
-####  There are [50+ CVE's](https://www.cvedetails.com/vulnerability-list/vendor_id-439/Openldap.html) for OpenLDAP as recent as May 2023 which the vast majority resulting in a denial of service.  They encompass many common vulnerabilites; SQL injection, buffer overflows, input validation, etc.
+#####  There are [50+ CVE's](https://www.cvedetails.com/vulnerability-list/vendor_id-439/Openldap.html) for OpenLDAP as recent as May 2023 which the vast majority resulting in a denial of service.  They encompass many common vulnerabilites; SQL injection, buffer overflows, input validation, etc.
 
 
 ## Reflection on teamwork:
