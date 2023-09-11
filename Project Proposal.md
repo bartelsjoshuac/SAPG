@@ -17,7 +17,7 @@
 ## Open-source Project Description
 #### LDAP is a protocol that stands for Lightweight Directory Application Protocol.  A LDAP server can be any database on the backend, but is commonly a database type that is optimized for high performance read access vs. write.  OpenLDAP derived with early x.500 work down by MIT, the University of Michigan, and Berkeley.  Today popular commercial implementations of OpenLDAP are available as: Microsoft Active Directory, Oracle, RadiantLogic, etc.
 
-OpenLDAP is written in C and runs on any platform which has a C compiler.  It is provided as source code only.  However, there are [binary packages available](https://www.openldap.org/faq/data/cache/108.html)
+#### OpenLDAP is written in C and runs on any platform which has a C compiler.  It is provided as source code only.  However, there are [binary packages available](https://www.openldap.org/faq/data/cache/108.html)
 #### The project has 85 contributors on the GitHub Mirror of OpenLDAP.org and more than 20k commits with weekly commits.  The [OpenLDAP Foundation](https://www.openldap.org/project/) has a list of the core team and contributors.  
 #### OpenLDAP is included with RedHat Enterprise Linux.
 
