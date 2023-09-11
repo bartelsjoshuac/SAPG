@@ -1,5 +1,5 @@
-Project Proposal
-Name: OpenLDAP (https://github.com/openldap/openldap)
-Operational Enviroment:  Nearly every IT organization runs some sort of user directory service (even if it is only Active Directory) as the back end for their Identity Management, authenticaton, and authorization services.  LDAP is often used as a back en database for applications as well.
-Systems Engineering Diagram:
+# **Project Proposal**
+##Name: OpenLDAP (https://github.com/openldap/openldap)
+##Operational Enviroment:  Nearly every IT organization runs some sort of user directory service (even if it is only Active Directory) as the back end for their Identity Management, authenticaton, and authorization services.  LDAP is often used as a back en database for applications as well.
+##Systems Engineering Diagram:
 ![Systems Engineering Diagram:](https://github.com/bartelsjoshuac/SOA/blob/main/Systems%20Engineering%20VIew.drawio.png)
