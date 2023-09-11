@@ -24,7 +24,7 @@
 
 
 ## Reflection on teamwork:
-#### The team is using Discord as a collaboration tool, which support, txt, voice, and video on both desktop and mobile platforms.  The team needs to schedule meetings early in the week because of complex and conflicting schedules of full time day job workers, and full time stuents with evening classes.  Because of the commitments with the instructor and other team members, the meeting times can not be rescheuled to accomadate the needs of one team member.  All project would should be concluded by Sunday at 10pm, to allow all team members to start the following weeks activites with a blank plate.
+#### The team is using Discord as a collaboration tool, which support, txt, voice, and video on both desktop and mobile platforms.  The team needs to schedule meetings early in the week because of complex and conflicting schedules of full time day job workers, and full time stuents with evening classes.  Because of the commitments with the instructor and other team members, the agreed upon meeting times can not be rescheuled to accomadate individuals.  All project work will be concluded by Sunday at 10pm, to allow all team members to start the following weeks activites with a blank plate.
 
 
 
