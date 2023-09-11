@@ -1,4 +1,4 @@
-# Name:  ## OpenLDAP
+# Name:  OpenLDAP
 ### https://github.com/openldap/openldap
 
 ## Operational Enviroment Description:
