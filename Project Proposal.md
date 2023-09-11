@@ -20,7 +20,7 @@
 #### The project has 85 contributors on the GitHUb Mirror of OpenLDAP.org and more than 20k commits with weekly commits
 
 ## History Security Issues
-####  need list
+####  There are [50+ CVE's](https://www.cvedetails.com/vulnerability-list/vendor_id-439/Openldap.html) for OpenLDAP as recent as May 2023 which the vast majority resulting in a denial of service.  They encompass many common vulnerabilites; SQL injection, buffer overflows, input validation, etc.
 
 
 ## Reflection on teamwork:
