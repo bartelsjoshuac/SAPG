@@ -5,7 +5,7 @@
 ### ![Link to our Project Board](https://github.com/users/bartelsjoshuac/projects/2)
 
 ## Operational Environment Description:
-#### Every enterprise has some sort of LDAP directory service, even if it is only Active Directory.  LDAP directories are used in Identity Management systems for authentication, authorization, and access control as well as auditing.   Sometimes they are the central IDM or HR source, but more often are used as the “glue” between many different sources of identity information. Numerous applications use LDAP directories in place of a database as well.  
+#### Every enterprise has some sort of LDAP directory service, even if it is only Active Directory. LDAP directories are used in Identity Management systems for authentication, authorization, and access control as well as auditing. Sometimes they are the central IDM or HR source, but more often are used as the “glue” between many different sources of identity information. In fact, the University of Nebraska System likely uses LDAP or a similar servise to manage the Single Sign On service. Because of this, we can say that our project is used in many setting such as home, office, enterprise, bank, and government. Numerous applications use LDAP directories in place of a database as well.  
 
 ![Diagram](https://github.com/bartelsjoshuac/SOA/blob/main/Systems%20Engineering%20VIew.drawio.svg)
 ## Security Features:
