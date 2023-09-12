@@ -1,8 +1,8 @@
 # Project Name:  OpenLDAP
 
-### ![Link to LDAP repo: ](https://github.com/openldap/openldap)
-### ![Link to our GitHub: ](https://github.com/bartelsjoshuac/SAPG (ours))
-### ![Link to our Project Board: ](https://github.com/users/bartelsjoshuac/projects/2)
+### ![Link to LDAP repo](https://github.com/openldap/openldap)
+### ![Link to our GitHub](https://github.com/bartelsjoshuac/SAPG (ours))
+### ![Link to our Project Board](https://github.com/users/bartelsjoshuac/projects/2)
 
 ## Operational Environment Description:
 #### Every enterprise has some sort of LDAP directory service, even if it is only Active Directory.  LDAP directories are used in Identity Management systems for authentication, authorization, and access control as well as auditing.   Sometimes they are the central IDM or HR source, but more often are used as the “glue” between many different sources of identity information. Numerous applications use LDAP directories in place of a database as well.  
