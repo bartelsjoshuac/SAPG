@@ -8,6 +8,14 @@
 #### Every enterprise has some sort of LDAP directory service, even if it is only Active Directory. LDAP directories are used in Identity Management systems for authentication, authorization, and access control as well as auditing. Sometimes they are the central IDM or HR source, but more often are used as the “glue” between many different sources of identity information. In fact, the University of Nebraska System likely uses LDAP or a similar servise to manage the Single Sign On service. Because of this, we can say that our project is used in many setting such as home, office, enterprise, bank, and government. Numerous applications use LDAP directories in place of a database as well.  
 
 ![Diagram](https://github.com/bartelsjoshuac/SOA/blob/main/Systems%20Engineering%20VIew.drawio.svg)
+
+## Perceived Threats:
+#### - Denial of Service
+#### - Unauthorized changes to user information (permissions)
+#### - Replication and referrals: utilizing internal LDAP protocol to falsify relationship between servers
+#### - Modification of system attributes
+
+
 ## Security Features:
 #### - Access control list (ACLs)s and the Directory Information Tree (DIT)
 #### - Audit log (used in lieu of application logs)
@@ -16,7 +24,7 @@
 #### - Configuration items such as lookthroughlimits, referrals (and their ACL’s).
 
 ## Team Motivation
-#### OpenLDAP has a deep history from the early days at MIT, the University of Michigan, and is the root of every modern commercial LDAP implementation that serves as the core of an Identity and Access Management suite.  Nearly every commercial implementation available today shows signs of its OpenLDAP roots, beginning with Netscape Directory Sever (iPlanet, Sun One, Oracle)   The OpenLDAP Foundation was founded in 1998 during the iPlanet ays.  LDAP has been and will continue to be the foundation in SSP and IdM environments for the foreseeable future.  One team member has experience with every commercial OpenLDAP implementation available, but never OpenLDAP, but the rest of the team was not familiar with LDAP.
+#### OpenLDAP has a deep history from the early days at MIT, the University of Michigan, and is the root of every modern commercial LDAP implementation that serves as the core of an Identity and Access Management suite.  Nearly every commercial implementation available today shows signs of its OpenLDAP roots, beginning with Netscape Directory Sever (iPlanet, Sun One, Oracle)   The OpenLDAP Foundation was founded in 1998 during the iPlanet ays.  LDAP has been and will continue to be the foundation in SSP and IdM environments for the foreseeable future. While LDAP protocol is used by most people on a day to day basis, many are unfamiliar with its functionality at an architectural and security level. One team member has experience with nearly every commercial OpenLDAP implementation available, but never OpenLDAP, but the rest of the team was not familiar with LDAP.
 
 ## Open-source Project Description
 #### LDAP is a protocol that stands for Lightweight Directory Application Protocol.  A LDAP server can be any database on the backend, but is commonly a database type that is optimized for high performance read access vs. write.  Referring to LDAP as a server is a bit of a misnomer, but it common use  OpenLDAP derived with early x.500 work down by MIT, the University of Michigan, and Berkeley.   Several LDAP implementations use BerkelyDB or bTree SleepyCat style backend databases that are a black box to the server component. Today popular commercial implementations of OpenLDAP are available as: Microsoft Active Directory, Oracle, RadiantLogic,  CA Directory, IBM Tivoli Diectory, etc.
