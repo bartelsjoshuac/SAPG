@@ -31,11 +31,11 @@
 uid=user1, ou=HR,dc=company,dc=com
 uid=user1, ou=HR,dc=company,dc=com
 
-They can not delete dc=company or dc=com.
+#### They ACL would not allow them to  delete dc=company or dc=com.
 
 ---
 ### Use Case 4: MDFY
-
+An MDFY will follow the BIND use case to identify the actor.  It will also apply ACL’s
 ---
 ### Use Case 5: SRCH
 
