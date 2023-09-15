@@ -10,7 +10,9 @@
 ![Use Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/Use%20Case%201%20-%20Bind.drawio.svg)
 
 
-#### Misuse
+#### UseMisuse
+
+![UseMisuse Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/Use-Misuse%20Case%201%20-Bind.drawio.svg)
 
 ### Use Case 2: ADD
 
