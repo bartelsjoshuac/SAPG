@@ -7,7 +7,7 @@
 
 #### Use:
 
-<img alt="image" src="hhttps://github.com/bartelsjoshuac/SAPG/blob/main/Use%20Case%201%20-%20Bind.drawio.png/">
+![Use Case](hhttps://github.com/bartelsjoshuac/SAPG/blob/main/Use%20Case%201%20-%20Bind.drawio.png/)
 
 #### The actor bind with a valid Distinguished Name (DN) and simple password to establish their identity to the LDAP server.  The LDAP server will them wait for additional operations, and apply ACL’s based on that identity.
 
