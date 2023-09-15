@@ -30,6 +30,7 @@
 ##### Example:
 uid=user1, ou=HR,dc=company,dc=com
 uid=user1, ou=HR,dc=company,dc=com
+
 They can not delete dc=company or dc=com.
 
 ---
