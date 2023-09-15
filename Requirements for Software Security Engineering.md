@@ -14,12 +14,16 @@
 
 ![UseMisuse Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/Use-Misuse%20Case%201%20-Bind.drawio.svg)
 
+***
 ### Use Case 2: ADD
 
+***
 ### Use Case 2: DEL
 
+***
 ### Use Case 4: MDFY
 
+***
 ### Use Case 5: SRCH
 
 
