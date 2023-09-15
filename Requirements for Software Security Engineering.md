@@ -22,9 +22,15 @@
 
 ---
 ### Use Case 2: ADD
-
+####  An ADD will follow the BIND use case to identify the actor to evaluate the ACL’s to determine if the user has the authority to add this type of record.  If they do, it will then check that the ADD request complients with the schema, e.g. required attributes, optional attributes, no system attributes.So  a bad actor could try and add something that already exists (modify), something they are not allow to add, something that violates the schema definition, 
 ---
 ### Use Case 2: DEL
+####  An DEL will follow the BIND use case to identify the actor.  Like the ADD it must verify the ACLs, but it does not need to check schema.  It should check recursively that the DEL is allowed, they might to delete an organizationalUnit (ou) that has multiple leaves.  While they probably would be allowed to delete the leaf, they probably would not be allowed to delete the ou.
+
+##### Example:
+uid=user1, ou=HR,dc=company,dc=com
+uid=user1, ou=HR,dc=company,dc=com
+They can not delete dc=company or dc=com.
 
 ---
 ### Use Case 4: MDFY
