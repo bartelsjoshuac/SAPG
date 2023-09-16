@@ -3,7 +3,7 @@
 ## Part 1
 
 ### Use Case 1: BIND
-#### The BIND operation identifies the actor to the server.  LDAP will typical allow anonymous BIND operations which may or may not be disabled, depending on business requirements.  ACL’s are applied to the actor that bound to the system.  So binding anonymously would typically be configured with read only access, where binding as cn=Directory Manager often applies no ACL’s at all.
+The BIND operation identifies the actor to the server.  LDAP will typical allow anonymous BIND operations which may or may not be disabled, depending on business requirements.  ACL’s are applied to the actor that bound to the system.  So binding anonymously would typically be configured with read only access, where binding as cn=Directory Manager often applies no ACL’s at all.
 
 #### Use:
 
