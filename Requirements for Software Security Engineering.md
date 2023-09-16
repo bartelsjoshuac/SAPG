@@ -42,19 +42,19 @@ An DEL will follow the BIND use case to identify the actor.  Like the ADD it mus
 
 #### Use:
 
-![Use-Case - DEL](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use Case - DEL.svg)
+![Use-Case - DEL](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use%20Case%20-%20DEL.svg)
 
 The actor DELs with a valid Distinguished Name (DN) and appropriate password to the LDAP server. This DN and password belong to the user who is going to be deleted. The LDAP server will them wait for additional operations, and apply access control lists (ACL) based on that identity.
 
 #### Misuse:
 
-![Misuse-Case - DEL](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Misuse Case - DEL.svg)
+![Misuse-Case - DEL](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Misuse%20Case%20-%20DEL.svg)
 
 A malicious actor is attempting to impersonate the administrator. This will allow him to perform several unauthorized actions, such as gathering user information and performing unauthorized deletes. This unauthorized access can compromise the integrity of the system and lead to lack of user trust at best and identity theft and impersonation at worse.
 
 #### Misuse Remedy:
 
-![Misuse-Case-Remedy - DEL](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Misuse Case Remedy - DEL.svg)
+![Misuse-Case-Remedy - DEL](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Misuse%20Case%20Remedy%20-%20DEL.svg)
 
 Such an attack by a malicious actor may be prevented through various security features integral to LDAP protocol. LDAP requires authentication to ensure that users are only acting within the scope of their defined permissions. This is ensured via Kerberos for secure authentication using tickets. Certificates may also be used to add an extra layer of security. Additionally, LDAP uses authorization mechanisms to control what authenticated users can do within the directory. This is handled via the access control lists (ACL) or directory server access control instructions (ACI). These mechanisms allow administrators to define who can access what information and impose restrictions on administrator roles. Third, auditing and logging may be used to track user activities, further reducing the risk of administrator impersonation. Fourth and finally, LDAP supports IP whitelisting, allowing administrators to configure the LDAP server to only accept connections from trusted IP addresses. This limits the server accessibility to only those with connections trusted by the organization.
 
