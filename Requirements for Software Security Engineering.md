@@ -21,6 +21,7 @@ The bad actor is attempting to determine the password of a good actor’s they o
 
 ---
 ### Use Case 2: ADD
+
 An ADD will follow the BIND use case to identify the actor to evaluate the ACL’s to determine if the user has the authority to add this type of record.  If they do, it will then check that the ADD request complients with the schema, e.g. required attributes, optional attributes, no system attributes.So  a bad actor could try and add something that already exists (modify), something they are not allow to add, something that violates the schema definition, 
 
 ---
