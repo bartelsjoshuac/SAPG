@@ -39,7 +39,8 @@ LDAP is a protocol that stands for Lightweight Directory Application Protocol. A
 #### OpenLDAP is included with RedHat Enterprise Linux (RHEL) an often used or required for advanced features of RHEL
 
 ## License
-Open LDAP uses a BSD style [license.](https://www.openldap.org/software/release/license.html) which is a permissive free software license with limited restrictions on the use and distribution.  Contributions 
+Open LDAP uses a BSD style [license.](https://www.openldap.org/software/release/license.html) which is a permissive free software license with limited restrictions on the use and distribution.  [Contributions](https://www.openldap.org/devel/contributing.html#:~:text=patch%20instructions%20above.-,Submitting%20Contributions,the%20body%20of%20the%20message.) 
+should be submitted as a patch suitable for integration into the Git repository git-am(1) and must contain a notice of orgin and a rights notification if longer than 10 lines of code.  They should also include the appropriate notices from the [Issue Tracking System](https://bugs.openldap.org/).
 
 ## History of Security Issues
 There are [50+ CVE's](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=OpenLDAP) for OpenLDAP as recent as May 2023 which the vast majority resulting in a denial of service.  They encompass many common vulnerabilities, SQL injection, buffer overflows, input validation, etc.  The associated JNDI access method for LDAP was the root behind the 2020/21 Log4J vulnerabilities as Log4J offers a feature to store log property configurations in LDAP. OpenLDAP, over the course of its life, has been subject to denial of service attacks, memory leaks, double free erros, and null-pointer dereferences, data integrity issues, and input validation issues, which have lead to developments with the software to address these issues. 
