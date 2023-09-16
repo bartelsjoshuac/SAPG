@@ -7,7 +7,7 @@
 ## Operational Environment Description:
 #### Every organization of any size, in theory, could employ LDAP (lightweight directory access protocol) servers, even if it is only to facilitate Windows Active Directory usage. LDAP directories are used in Identity Management (IDM) systems for authentication, authorization, and access control as well as auditing. Some typical usage of LDAP severs are: user authentication and authorization, centralizaed directory services like address books, email systems, and phone directories, single sign on (SSO), network management (for storing netowrk device information and manageing network resources), user group management, and integration with external directory services. Sometimes they are the central IDM or human resources (HR) sources, but more often are used as the “glue” between many different sources of identity information. In fact, the University of Nebraska System likely uses LDAP or a similar servise to manage the Single Sign On service. Because of this, we can say that our project is certainly used in many settings such as personal/home, office, enterprise, bank, and government envrionments. Numerous applications use LDAP directories in place of more traditional relational databases as well.
 
-![Diagram]([https://github.com/bartelsjoshuac/SAPG/blob/main/images/Systems%20Engineering%20VIew.drawio.svg)
+![Diagram](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Systems%20Engineering%20VIew.drawio.svg)
 
 ## Perceived Threats:
 #### - Denial of Service
