@@ -7,7 +7,7 @@ The BIND operation identifies the actor to the server.  LDAP will typical allow 
 
 #### Use:
 
-![Use-Case-1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/Use%20Case%201%20-%20Bind.drawio.svg)
+![Use-Case-1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use%20Case%201%20-%20Bind.drawio.svg)
 
 The actor bind with a valid Distinguished Name (DN) and simple password to establish their identity to the LDAP server.  The LDAP server will them wait for additional operations, and apply ACL’s based on that identity.
 
