@@ -39,6 +39,7 @@ LDAP is a protocol that stands for Lightweight Directory Application Protocol. A
 #### OpenLDAP is included with RedHat Enterprise Linux (RHEL) an often used or required for advanced features of RHEL
 
 ## License
+
 Open LDAP uses a BSD style [license.](https://www.openldap.org/software/release/license.html) which is a permissive free software license with limited restrictions on the use and distribution.  [Contributions](https://www.openldap.org/devel/contributing.html#:~:text=patch%20instructions%20above.-,Submitting%20Contributions,the%20body%20of%20the%20message.) 
 should be submitted as a patch suitable for integration into the Git repository git-am(1) and must contain a notice of orgin and a rights notification if longer than 10 lines of code.  They should also include the appropriate notices from the [Issue Tracking System](https://bugs.openldap.org/).
 
