@@ -3,13 +3,24 @@
 ## Part 1
 
 ### Use Case 1: BIND
-The BIND operation identifies the actor to the server.  LDAP will typical allow anonymous BIND operations which may or may not be disabled, depending on business requirements.  ACL’s are applied to the actor that bound to the system.  So binding anonymously would typically be configured with read only access, where binding as cn=Directory Manager often applies no ACL’s at all.
+The BIND operation identifies the actor to the server.  LDAP will typical allow anonymous BIND operations which may or may not be disabled, depending on business requirements.  ACL’s are applied to the actor that bound to the system when the BIND is successful.  Binding anonymously would typically be configured with read only access, as there would be no accountability of events.  Where binding as cn=Directory Manager often applies no ACL’s at all.  Is this case we will assume a normal BIND from a standard system user, which would be authenticating to a website via Single Sign On (SSO) software via a website, logging into a Linux server, etc.
 
 #### Use:
 
 ![Use-Case-1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use%20Case%201%20-%20Bind.drawio.svg)
 
-The actor bind with a valid Distinguished Name (DN) and simple password to establish their identity to the LDAP server.  The LDAP server will them wait for additional operations, and apply ACL’s based on that identity.
+The actor BINDS with a valid Distinguished Name (DN) and simple password to establish their identity to the LDAP server.  The LDAP server will them wait for additional operations, and apply ACL’s based on that identity.
+
+#### UseMisuse:
+
+![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case%201%20-Bind.drawio.svg)
+
+The bad actor is attempting to determine the password of a good actor’s DN they obtained from a previous anonymous BIND and SRCH request by performing a password spraying attack.  By obtaining the password they can then BIND as this user and perform actions on behalf of this user, who likely has additional privileges than they would as an anonymous user.
+
+![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
+
+.  The LDAP server will prevent this attack from being successful by applying and tracking loginAttempts and allowing a max of X attempts, before disabling the account.  It will not assist the attacker by differentiating to the bad actor if it was the username (DN) or password that was incorrect by informing them of the lock out.  The lockout shall remain in place for Y number of minutes, or until cleared by a Directory Manager preventing the attacker from succeeding.  Audit logs will also indicate a high number of failed attempts for this user, and a lockout, an abnormal activity for a standard user.
+
 
 #### UseMisuse:
 
