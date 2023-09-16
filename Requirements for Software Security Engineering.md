@@ -13,11 +13,11 @@ The actor bind with a valid Distinguished Name (DN) and simple password to estab
 
 #### UseMisuse:
 
-![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
+![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case%201%20-Bind.drawio.svg)
 
 The bad actor is attempting to determine the password of a good actor’s they obtained from a previous anonymous BIND and SRCH request by performing a password spraying attack.  The LDAP server will prevent this attack from being successful by applying tracking loginAttempts and allowing a max of X, before disabling the account.  It will not assist the attacker by differentiating to the bad actor if it was the username or password that was incorrect by informing them of the lock out.  The lockout shall remain in place for Y number of minutes, or until cleared by a Directory Manager.
 
-![Use-Misuse-Case Final](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
+![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
 
 ---
 ### Use Case 2: ADD
