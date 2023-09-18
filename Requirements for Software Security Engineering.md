@@ -35,6 +35,10 @@ The bad actor is attempting to determine the password of a good actor’s they o
 
 An ADD will follow the BIND use case to identify the actor to evaluate the ACL’s to determine if the user has the authority to add this type of record.  If they do, it will then check that the ADD request complies with the schema, e.g. required attributes, optional attributes, no system attributes.So  a bad actor could try and add something that already exists (modify), something they are not allow to add, something that violates the schema definition, 
 
+### Use:
+
+The actor ADD a new user with a valid Distiguished Name (DN) and a valid password to the LDAP server.
+
 ---
 ### Use Case 3: DEL - An administrator wants to delete an employee entry that is no longer with the company.
 
