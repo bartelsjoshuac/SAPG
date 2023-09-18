@@ -15,7 +15,7 @@ The actor BINDS with a valid Distinguished Name (DN) and simple password to esta
 
 ![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case%201%20-Bind.drawio.svg)
 
-The bad actor is attempting to determine the password of a good actor’s DN they obtained from a previous anonymous BIND and SRCH request by performing a password spraying attack.  By obtaining the password they can then BIND as this user and perform actions on behalf of this user, who likely has additional privileges than they would as an anonymous user.
+The bad actor is attempting to determine via a brute force attack, the password of a good actor’s DN they obtained from a previous anonymous BIND and SRCH request by performing a password spraying attack.  By obtaining the password they can then BIND as this user and perform actions on behalf of this user, who likely has additional privileges than they would as an anonymous user.
 
 ![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
 
