@@ -42,19 +42,19 @@ The actor ADD a new user with a valid Distiguished Name (DN) and a valid passwor
 ---
 ### Use Case 3: An administrator wants to delete an employee entry that is no longer with the company. (DEL)
 
-An DEL will follow the BIND use case to identify the actor.  Like the ADD it must verify the ACLs, but it does not need to check schema.  It should check recursively that the DEL is allowed, they might to delete an organizational unit (OU) that has multiple leaves.  While they would be allowed to delete the leaf, they would not be allowed to delete the OU.
+DEL is used to remove records from the LDAP server. A DEL will follow the BIND use case to identify the actor.  Like the ADD it must verify the ACLs, but it does not need to check schema.  It should check recursively that the DEL is allowed, they might to delete an organizational unit (OU) that has multiple leaves.  While they would be allowed to delete the leaf, they would not be allowed to delete the OU.
 
 #### Use:
 
 ![Use-Case - DEL](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use%20Case%20-%20DEL.svg)
 
-The actor DELs with a valid Distinguished Name (DN) and appropriate password to the LDAP server. This DN and password belong to the user who is going to be deleted. The LDAP server will them wait for additional operations, and apply access control lists (ACL) based on that identity.
+The administrator DELs a user with a valid Distinguished Name (DN) and appropriate password from the LDAP server. This DN and password belong to an employee who is no longer with the company. The LDAP server will them wait for additional operations, and apply access control lists (ACL) based on that identity.
 
 #### Misuse:
 
 ![Misuse-Case - DEL](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Misuse%20Case%20-%20DEL.svg)
 
-A malicious actor is attempting to impersonate the administrator. This will allow him to perform several unauthorized actions, such as gathering user information and performing unauthorized deletes. This unauthorized access can compromise the integrity of the system and lead to lack of user trust at best and identity theft and impersonation at worse.
+A malicious actor is attempting to impersonate the administrator. This will allow him to perform several unauthorized actions, such as gathering user information, performing unauthorized deletes, and even deleting entire organizational units (OU). This unauthorized access can compromise the integrity of the system and lead to lack of user trust at best and identity theft and impersonation at worse.
 
 #### Misuse Remedy:
 
