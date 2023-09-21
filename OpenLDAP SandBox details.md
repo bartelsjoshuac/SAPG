@@ -3,4 +3,4 @@ Download [Apache Directory Studio](https://directory.apache.org/studio/downloads
 Create a new connection to 34.42.251.0 port 389.  This is a Google Cloud mini server, so it doesn't have much for power.  For the Bind ND use "cn=admin,dc=example,dc=com". And you can figure out the password.
 I created some sample users, organizationl units a group, put a member in group, etc.  Create, delete or modify whatever you wish.  Directory studio will "coach" you through the schema as far as required attributes, etc.
 
-!(Example](https://github.com/bartelsjoshuac/SAPG/blob/main/images/OpenLDAPSandbox.jpg)
+![Example](https://github.com/bartelsjoshuac/SAPG/blob/main/images/OpenLDAPSandbox.jpg)
