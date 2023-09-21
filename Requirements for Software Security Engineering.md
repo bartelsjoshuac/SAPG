@@ -2,14 +2,18 @@
 
 ## Part 1
 
-### Use Case 1: Authenticat and Authorization (BIND)
+# Requirements for Software Security Engineering
+
+## Part 1
+
+### Use Case 1: Authenticate and Authorization (BIND)
 The BIND operation identifies the actor to the server.  LDAP will typically allow anonymous BIND operations which may or may not be disabled, depending on business requirements.  ACL’s are applied to the actor that bound to the system when the BIND is successful.  Binding anonymously would typically be configured with read only access, as there would be no accountability of events.  Where binding as cn=Directory Manager often applies no ACL’s at all.  Is this case we will assume a normal BIND from a standard system user, which would be authenticating to a website via Single Sign On (SSO) software via a website, logging into a Linux server, etc.
 
 #### Use:
 
 ![Use-Case-1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use%20Case%201%20-%20Bind.drawio.svg)
 
-The actor wishes to identify themselve to the server and will do so by providing a valid Distinguished Name (DN) and simple password to establish their identity to the LDAP server and perform a BIND.  The LDAP server will them wait for additional operations, and apply ACL’s based on that identity.
+The actor wishes to identify themselves to the server and will do so by providing a valid Distinguished Name (DN) and simple password to establish their identity to the LDAP server and perform a BIND.  The LDAP server will them wait for additional operations, and apply ACL’s based on that identity.
 
 #### UseMisuse:
 
@@ -26,9 +30,12 @@ The bad actor is attempting to determine via a brute force attack, the password 
 
 ![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case%201%20-Bind.drawio.svg)
 
-A bad actor with no valid credenmtials is attempting to determine the password of a good actor they obtained from a previous anonymous BIND and SRCH request by performing a brute force password attack.  The LDAP server will prevent this attack from being successful by tracking loginAttempts and allowing a max of X, before disabling the account.  It will not assist the bad actor by differentiating to the bad actor if it was the username or password that was incorrect by informing them of the lock out.  The lockout shall remain in place for Y number of minutes, or until cleared by a Directory Manager.
+A bad actor with no valid credentials is attempting to determine the password of a good actor they obtained from a previous anonymous BIND and SRCH request by performing a brute force password attack.  The LDAP server will prevent this attack from being successful by tracking loginAttempts and allowing a max of X, before disabling the account.  It will not assist the bad actor by differentiating to the bad actor if it was the username or password that was incorrect by informing them of the lock out.  The lockout shall remain in place for Y number of minutes, or until cleared by a Directory Manager.
+
+#### Misuse Remedy:
 
 ![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
+
 
 ---
 ### Use Case 2: An administrative wants to entry a new employee record with basic white page information and set a temporary password that the user must change at login. (ADD)
