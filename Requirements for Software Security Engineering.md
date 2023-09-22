@@ -25,13 +25,13 @@ The bad actor could perform a brute force or password spraying attack to determi
 
 #### Misuse Remedy:
 
-OpenLDAP supports SSL/TLS based on the OpenSSL package that is installed on the host machine.  A strong TLS encryption method should be selected to deter snigging passwords during BIND requests.
+OpenLDAP supports SSL/TLS based on the OpenSSL package that is installed on the host machine.  A strong TLS encryption method should be selected to deter snigging passwords during BIND requests.  
 
-OpenLDAP can store passwords in clear-txt, encrypted strings or hashes.  It is suggested that DIGEST-MD5 is used, however SHA, CRYPT, MD5, SMD5, and SASL are offered.  A strong encryption algorithm should be chosen.  Pass-thru authentication is also an option so that passwords are not stored in LDAP at all is is how a MFA solution would be implemented for the later attack vector (brute force or password spraying)
+OpenLDAP can store passwords in clear-txt, encrypted strings or hashes.  It is suggested that DIGEST-MD5 is used, however SHA, CRYPT, MD5, SMD5, and SASL are offered.  A strong encryption algorithm should be chosen.  Pass-thru authentication is also an option so that passwords are not stored in LDAP at all is is how a MFA solution would be implemented for the later attack vector (brute force or password spraying)  
 
-OpenLDAP has a [dynamically loaded password policy available.]( https://tobru.ch/openldap-password-policy-overlay/).  A password policy enforcing a minimum length, character set, and complexity should be configured to limit successful brute force or password spraying attacks.  Note that this module also includes the   login attempts and lockout.
+OpenLDAP has a [dynamically loaded password policy available.]( https://tobru.ch/openldap-password-policy-overlay/).  A password policy enforcing a minimum length, character set, and complexity should be configured to limit successful brute force or password spraying attacks.  Note that this module also includes the   login attempts and lockout.  
 
-The documentation on the configuration of any of these options is not very comprehensive, nor is it part of the setup script which may cause administrators to overlook them, possibly assuming they are implemented by default as they would be in commercial implementations.
+The documentation on the configuration of any of these options is not very comprehensive, nor is it part of the setup script which may cause administrators to overlook them, possibly assuming they are implemented by default as they would be in commercial implementations.  
 
 ![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
 
