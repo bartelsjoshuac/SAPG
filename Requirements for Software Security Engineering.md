@@ -3,13 +3,13 @@
 ## Part 1
 
 ### Use Case 1: Authenticate and Authorization (BIND)
-The BIND operation identifies the actor to the server.  LDAP will typically allow anonymous BIND operations which may or may not be disabled, depending on business requirements.  ACL’s are applied to the actor that bound to the system when the BIND is successful.  Binding anonymously would typically be configured with read only access, as there would be no accountability of events.  Where binding as cn=Directory Manager often applies no ACL’s at all.  Is this case we will assume a normal BIND from a standard system user with a password, which would be authenticating to a website via Single Sign On (SSO) software via a website, logging into a Linux server, etc.
+The BIND operation identifies the actor to the server.  LDAP will typically allow anonymous BIND operations which may or may not be disabled, depending on business requirements.  ACL’s are applied to the actor that bound to the system when the BIND is successful.  Binding anonymously would typically be configured with read only access, as there would be no accountability of changers.  Where binding as cn=admin often applies no ACL’s at all.  Is this case we will assume a normal BIND from a standard system user with a password, which would be authenticating to a website via Single Sign On (SSO) software via a website, logging into a Linux server, etc.
 
 #### Use:
 
 ![Use-Case-1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use%20Case%201%20-%20Bind.drawio.svg)
 
-The actor wishes to identify themselves to the server and will do so by providing a valid Distinguished Name (DN) and simple password to establish their identity to the LDAP server and perform a BIND.  The LDAP server will them wait for additional operations, and apply ACL’s based on that identity.
+The actor wishes to identify themselves to the server and will do so by providing a valid Distinguished Name (DN) and simple password to establish their identity to the LDAP server and perform a BIND.  The LDAP server will them wait for additional operations which will be explored in later uses cases that build on this.
 
 #### UseMisuse:
 
@@ -19,7 +19,7 @@ The bad actor could sniff the password on the wire on the know port (389).
 
 Once authenticated, with anonymous access they could also read another users password attribute.    
 
-Or given that weak password on in use, a brute force of password spraying attack could discover a password.  
+Given that weak passwords on in use, a brute force of password spraying attack could discover a password.  
 
 #### Misuse Remedy:
 
@@ -29,7 +29,7 @@ OpenLDAP can store passwords in clear-txt, encrypted strings or hashes.  It is s
 
 OpenLDAP has a [dynamically loaded password policy available.]( https://tobru.ch/openldap-password-policy-overlay/).  A password policy enforcing a minimum length, character set, and complexity should be configured to limit successful brute force or password spraying attacks.  Note that this module also includes the   login attempts and lockout.  
 
-The documentation on the configuration of any of these options is not very comprehensive, nor is it part of the setup script which may cause administrators to overlook them, possibly assuming they are implemented by default as they would be in commercial implementations.    
+The documentation on the configuration of any of these options is not very comprehensive, nor is it part of the setup script which may cause administrators to overlook them, possibly assuming they are implemented by default as they would be in commercial implementations.  
 
 ![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
 
