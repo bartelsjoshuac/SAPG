@@ -15,13 +15,9 @@ The actor wishes to identify themselves to the server and will do so by providin
 
 ![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case%201%20-Bind.drawio.svg)
 
-The bad actor could sniff the password on the wire.  Once authenticated, with anonymous access they could also read another users password.  Or given that weak password on in use, a brute force of password spraying attack could discover a password.
-OpenLDAP stores passwords in clear text by default (base64).  It is a plain text protocol, which is easily on a known port.  It also does not require apply any common password strength rules.
-The bad actor could perform a brute force or password spraying attack to determine user(s) passwords
-
-
----------------------------------------------------------------
-
+The bad actor could sniff the password on the wire on the know port (389)    
+Once authenticated, with anonymous access they could also read another users password attribute.    
+Or given that weak password on in use, a brute force of password spraying attack could discover a password.
 
 #### Misuse Remedy:
 
