@@ -1,1 +1,46 @@
-<mxfile host="Electron" modified="2021-09-15T13:59:21.630Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/15.2.7 Chrome/93.0.4577.63 Electron/14.0.1 Safari/537.36" etag="0DxmAOTgJXJ8esGbQqGx" version="15.2.7" type="device"><diagram id="7q6WzZqFf9v9yzIv_zda" name="Use case">zVfbctowEP0aHtPBFxLySIAknaFtpsy0Sd8UpNhqhdaV12Dn6yvb8kW2SWgbpuUF7ZG00p7dPYKRN9+mN4pE4QegTIzcMU1H3mLkuo4zPtdfOZKVyOXlRQkEilOzqAHW/JkZcGzQhFMWWwsRQCCPbHADUrINWhhRCvb2sicQ9qkRCVgPWG+I6KNfOcWwRKeTcYPfMh6EWAdsZrakWmyAOCQU9i3IW468uQLAcrRN50zk5FW8lPuuD8zWF1NM4jEb1mv4JpZLmn7xn1d+upg+JtmZW3rZEZGYgGcbBGVujFlFg758lA+TrSgXeFc7ppBrolbkkYk7iDlykHrJIyDCtrVgJniQTyBEGg1xK7Th6CEkKLhk8zp1Yw0+cSHmIPIj9MHedfHReD9cw0B+DEtbkAn/hsGWocr0EjM7NZkwpehU9r5JrGegsJXTc4MRU0pB7bhhWw8M4b9Bvtcjv8c7k3SWV7G2JEhm83eQEkatou4T0op4MhBxhSkmCPKd3QpDNJgT7oDrm9R8O45NuOu4tosYErVhZle7dDuO3PErjpCogGHPUZGVOuyjEgU/GLgz4n/6qT5697PgMxDvbCAvmuG1MUFhCAFIIpYNeqUgkZTRqtTrNSvI26AAvzPEzEgeSRDs7OqkquzedEVhPOTGu0llLtL25CIzFiVxWJ8bo9IRVcpVuqXXPA/fbK3rCyKmu/Rqk6hdvZ2lHO+bU7X1UG3U4+YCuVGdP1iCg2Vapv+FBvGN4BfZfSE/B6r86PL9qy72e128goDLfskIoR+tvDT2IUe2jkgR+16/m3biT6iA3UZyLvoS6LgDijA9lQZOeuy9l1GS935MpH5SnknxrPyPZPodefOcf01mdYEjXxTT8ZZgvIEAva6NtsZYgjQgWIMa5ByhQW8kOS/V7f/y0nZ+2nh+p8SOfWlrQagcuR1HJ35pqyZsCviOxPEeFNXorS5ULoM/F4MDHT5QKYebvqOg/ul6XpvNv4OS4OY/lrf8BQ==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-09-22T04:33:23.311Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="PI0GgIg7q-iX1cOmuZOh" version="21.8.0" type="github">
+  <diagram id="7q6WzZqFf9v9yzIv_zda" name="Use case">
+    <mxGraphModel dx="1010" dy="643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SSoZlEEdxV4zL4xD8buy-2" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="80" y="180" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SSoZlEEdxV4zL4xD8buy-3" value="" style="endArrow=none;html=1;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="212" as="sourcePoint" />
+            <mxPoint x="200" y="212" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="okeo2Aa4OqrN3XAgRoa3-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeWidth=1;endFill=0;endArrow=open;curved=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="SSoZlEEdxV4zL4xD8buy-4" target="okeo2Aa4OqrN3XAgRoa3-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SSoZlEEdxV4zL4xD8buy-4" value="Login" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="200" y="170" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SSoZlEEdxV4zL4xD8buy-5" value="User login successful&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;" parent="1" vertex="1">
+          <mxGeometry x="410" y="310" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3aJk8DSeZ2ZfpNy6GsZW-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="okeo2Aa4OqrN3XAgRoa3-1" target="3aJk8DSeZ2ZfpNy6GsZW-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="okeo2Aa4OqrN3XAgRoa3-1" value="User Group" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="400" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3aJk8DSeZ2ZfpNy6GsZW-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="3aJk8DSeZ2ZfpNy6GsZW-1" target="3aJk8DSeZ2ZfpNy6GsZW-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3aJk8DSeZ2ZfpNy6GsZW-1" value="ADD User" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="130" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3aJk8DSeZ2ZfpNy6GsZW-3" value="LDAP User Login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="280" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3aJk8DSeZ2ZfpNy6GsZW-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0.125;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="3aJk8DSeZ2ZfpNy6GsZW-3" target="SSoZlEEdxV4zL4xD8buy-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
