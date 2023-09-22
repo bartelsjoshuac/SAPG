@@ -15,9 +15,11 @@ The actor wishes to identify themselves to the server and will do so by providin
 
 ![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case%201%20-Bind.drawio.svg)
 
-The bad actor could sniff the password on the wire on the know port (389)    
+The bad actor could sniff the password on the wire on the know port (389).  
+
 Once authenticated, with anonymous access they could also read another users password attribute.    
-Or given that weak password on in use, a brute force of password spraying attack could discover a password.
+
+Or given that weak password on in use, a brute force of password spraying attack could discover a password.  
 
 #### Misuse Remedy:
 
