@@ -43,11 +43,59 @@ The documentation on the configuration of any of these options is not very compr
 
 An ADD will follow the BIND use case to identify the actor to evaluate the ACL’s to determine if the user has the authority to add this type of record.  If they do, it will then check that the ADD request complies with the schema, e.g. required attributes, optional attributes, no system attributes.So  a bad actor could try and add something that already exists (modify), something they are not allow to add, something that violates the schema definition, 
 
-### Use:
+#### Use:
 
-The actor ADD a new user with a valid Distiguished Name (DN) and a valid password to the LDAP server.
+The actor ADD a new user with a valid Distiguished Name (DN) and a valid password to the LDAP server with following steps:
+The actore logs in to the LDAP server with appropriate privileges.
+They navigate to the appropriate organizational unit (OU) where user accounts are managed.
+They create a new entry for new employee, including attributes such as cn (common name), uid (user ID), givenName, sn (surname), mail (email address), userPassword, etc.
+They set the password for new employee's account and configure any necessary group memberships or access permissions.
+The new employee is now able to log in to company systems using his LDAP credentials.
 
----
+#### UseMisuse1: Unauthorized Access and Data Manipulation
+
+Scenario:
+
+The Malicious Insider has gained unauthorized access to the LDAP administration interface.
+Main Flow:
+The Malicious Insider logs in using stolen credentials or exploits a vulnerability.
+The Malicious Insider selects the "Add Person" option.
+The Malicious Insider fills out the required fields with false or malicious information.
+The Malicious Insider submits the form.
+
+#### UseMisuse2: Injection Attack
+
+Scenario:
+
+The External Attacker has identified a vulnerability in the LDAP server's input validation.
+Main Flow:
+The External Attacker exploits a vulnerability to bypass input validation.
+The External Attacker injects malicious code or special characters into the input fields, potentially compromising the LDAP server.
+The External Attacker submits the form with the injected data.
+
+#### UseMisuse3: Denial-of-Service (DoS) Attack
+
+Scenario:
+
+The Malicious Attacker aims to disrupt normal LDAP server operations.
+Main Flow:
+
+The Malicious Attacker floods the LDAP server with a high volume of requests to add persons.
+The server's resources become overloaded due to the excessive processing demands.
+The LDAP server becomes unresponsive, impacting legitimate users' ability to access or modify directory information.
+
+#### Misuse Remedy:
+
+Unauthorized Access and Data Manipulation:
+Above attacks can be prevented by following remedies:
+Review and update access control lists (ACLs) regularly to ensure that only authorized users have the necessary permissions to perform LDAP operations. Configure proper permissions based on roles and responsibilities. Implement role-based access control (RBAC) to grant specific privileges to different user groups. Use LDAP groups and memberships to manage access. Enforce strong authentication mechanisms. Implement multi-factor authentication (MFA) to add an extra layer of security.
+
+Injection Attack:
+Implement robust input validation and sanitation techniques. Use parameterized queries to prevent SQL injection attacks. Sanitize input data to remove potentially harmful characters. Keep the LDAP server software and related libraries up-to-date. Regularly check for security updates and patches provided by the LDAP server's vendor. Apply patches promptly to address known vulnerabilities.
+
+Denial-of-Service (DoS) Attack:
+Implement traffic filtering and rate limiting to protect against DoS attacks. Use firewalls and network appliances to filter traffic and block suspicious requests. Configure rate-limiting rules to restrict the number of requests from a single source. Implement DoS detection and mitigation strategies. Use intrusion detection systems (IDS) or intrusion prevention systems (IPS) to detect and block suspicious traffic patterns.
+
 ### Use Case 3: An administrator wants to delete an employee entry that is no longer with the company. (DEL)
 
 DEL is used to remove records from the LDAP server. A DEL will follow the BIND use case to identify the actor.  Like the ADD it must verify the ACLs, but it does not need to check schema.  It should check recursively that the DEL is allowed, they might to delete an organizational unit (OU) that has multiple leaves.  While they would be allowed to delete the leaf, they would not be allowed to delete the OU.
