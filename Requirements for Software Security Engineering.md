@@ -142,9 +142,6 @@ is less obvious but it means how long should I spend trying to find what  you as
 
 So what does that say.  First it says give me everyone with a common name attribute, AKA, user.  But wait is says AND give me all the objects of the type of group.  Well, groups don’t have a CN, so the LDAP server is going to retrieve all the users and all the groups AND see if any of them match, to which the result is NO.  But it is going to spend a lot of time doing that, AKA, DDoS.  So a reasonable lookThruLimit prevents the LDAP server from wasting it time.  It says you don’t know what you are doing and sent a stupid query to me.
 
-### Use Case 6: Extended Operations - Not sure on this one yet.
-
-If we feel we need 6, I can do something for extended operations.  They are a family of uncommon operations and differ based on vendor.  Many of them can be very poorly implanted and I can find one for openLDAP that probably sux.
 
 
 ## Part 2
