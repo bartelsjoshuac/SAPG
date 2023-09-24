@@ -2,7 +2,7 @@
 
 ## Part 1
 
-<! -- Josh Bartels -->
+<!--- Josh Bartels --->
 ### Use Case 1: Authenticate and Authorization (BIND)
 The BIND operation identifies the actor to the server.  LDAP will typically allow anonymous BIND operations which may or may not be disabled, depending on business requirements.  ACL’s are applied to the actor that is bound to the system when the BIND is successful.  Binding anonymously would typically be configured with read only access, as there would be no accountability of changes.  Where binding as cn=admin often applies no ACL’s at all.  In this case, we will assume a normal BIND from a standard system user with a password, which would be authenticating to a website via Single Sign On (SSO) software via a website, logging into a Linux server, etc.
 
@@ -35,11 +35,7 @@ The documentation on the configuration of any of these options is not very compr
 
 ![Misuse-Remedy-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
 
-
-
-
-
-
+<!--- End --->
 ---
 ### Use Case 2: An administrator wants to create a new employee record with basic white page information and set a temporary password that the user must change at login. (ADD)
 
@@ -143,7 +139,7 @@ is less obvious but it means how long should I spend trying to find what  you as
 
 So what does that say.  First it says give me everyone with a common name attribute, AKA, user.  But wait is says AND give me all the objects of the type of group.  Well, groups don’t have a CN, so the LDAP server is going to retrieve all the users and all the groups AND see if any of them match, to which the result is NO.  But it is going to spend a lot of time doing that, AKA, DDoS.  So a reasonable lookThruLimit prevents the LDAP server from wasting it time.  It says you don’t know what you are doing and sent a stupid query to me.
 
-<! -- Josh Bartels -->
+<!--- Josh Bartels --->
 ### Use Case 6: Identity Management (Extended Operations)
 OpenLDAP supports extended operations which are operations not defined by the RFC.  This can be anything you implement for LDAP server to call such as a password policy as mentioned in Use Case #1.  More often than not extended operations are added by an associated Identity Management Suite and for this case we will examine role management such as what SairPoint provides
 
@@ -166,6 +162,7 @@ The analysis search must be redirected by referral to a read only copy.
 
 ![Misuse-Remedy-Case 6 - Bind]( https://github.com/bartelsjoshuac/SAPG/blob/main/Use-Misuse%20Case-Final6%20-EXTdrawio.svg)
 
+<!--- End --->
 
 
 
