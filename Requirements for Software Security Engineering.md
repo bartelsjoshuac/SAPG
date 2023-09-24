@@ -32,7 +32,7 @@ OpenLDAP has a [dynamically loaded password policy available.]( https://tobru.ch
 
 The documentation on the configuration of any of these options is not very comprehensive, nor is it part of the setup script which may cause administrators to overlook them, possibly assuming they are implemented by default as they would be in commercial implementations.  
 
-![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
+![Misuse-Remedy-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
 
 
 
