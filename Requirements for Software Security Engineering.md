@@ -127,9 +127,12 @@ uid=user1, ou=HR,dc=company,dc=com
 #### The ACL would not allow them to  delete dc=company or dc=com.
 
 ---
+<!--- Adam Stemmler --->
 ### Use Case 4: An employee has been promoted to a new possition, prompting a change in office location, phone number and group memberships. (MDFY)
 
 A MDFY action follows the BIND use case to identify the actor, and will then also apply ACLs. It is like an ADD in that it must verify the schema. Attributes have types- boolean, string, etc. They can also be multi-valued. A bad actor may try to discover the schema or influence. For example, cn is normally a single valued attribute. If it were multivalued and the bad actor could not change or MDFY the cn value, could they ADD a value so that my cn was equal to both user1 and username1? System attributes can almost never be modified, like loginAttempts. If the loginAttempts counter was exceeded, could a bad actor set it back to zero?
+
+
 
 ---
 ### Use Case 5: A building supervisor wants to search for the email address of all employees on 2nd floor in the Omaha HQ to notify them of a power outage. (SRCH)
@@ -174,6 +177,7 @@ The [Security section](https://www.openldap.org/doc/admin26/security.html) of th
 
 #### [Access Logging](https://www.openldap.org/doc/admin26/overlays.html#Access%20Logging) and [Audit](https://www.openldap.org/doc/admin26/overlays.html#Audit%20Logging) are two additional security features of LDAP that must be configured.
 
+<!--- Adam Stemmler --->
 ## Reflection on Assignment
 
 In our last reflection, we determined we needed to have more and better communication as a group. For this assignment, we were able to work together very well and our work was charecterized by much discussion and sharing of ideas. We had a lot of trouble understanding and identifying the expectations for this assignment, but through lots of discussion and work from the team, we were able to settle on what we determined was the best course of action for this assignment and the project as a whole.
