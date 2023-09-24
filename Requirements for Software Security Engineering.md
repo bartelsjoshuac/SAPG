@@ -3,32 +3,32 @@
 ## Part 1
 
 ### Use Case 1: Authenticate and Authorization (BIND)
-The BIND operation identifies the actor to the server.  LDAP will typically allow anonymous BIND operations which may or may not be disabled, depending on business requirements.  ACL’s are applied to the actor that bound to the system when the BIND is successful.  Binding anonymously would typically be configured with read only access, as there would be no accountability of changers.  Where binding as cn=admin often applies no ACL’s at all.  Is this case we will assume a normal BIND from a standard system user with a password, which would be authenticating to a website via Single Sign On (SSO) software via a website, logging into a Linux server, etc.
+The BIND operation identifies the actor to the server.  LDAP will typically allow anonymous BIND operations which may or may not be disabled, depending on business requirements.  ACL’s are applied to the actor that is bound to the system when the BIND is successful.  Binding anonymously would typically be configured with read only access, as there would be no accountability of changes.  Where binding as cn=admin often applies no ACL’s at all.  In this case, we will assume a normal BIND from a standard system user with a password, which would be authenticating to a website via Single Sign On (SSO) software via a website, logging into a Linux server, etc.
 
 #### Use:
 
 
 ![Use-Case-1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use%20Case%201%20-%20Bind.drawio.svg)
 
-The actor wishes to identify themselves to the server and will do so by providing a valid Distinguished Name (DN) and simple password to establish their identity to the LDAP server and perform a BIND.  The LDAP server will them wait for additional operations which will be explored in later uses cases that build on this.
+The actor wishes to identify themselves to the server and will do so by providing a valid Distinguished Name (DN) and simple password to establish their identity to the LDAP server and perform a BIND.  The LDAP server will then wait for additional operations which will be explored in later uses cases that build on this.
 
 #### UseMisuse:
 
 ![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case%201%20-Bind.drawio.svg)
 
-The bad actor could sniff the password on the wire on the know port (389).  
+The bad actor could sniff the password on the wire on the known port (389).  
 
-Once authenticated, with anonymous access they could also read another users password attribute.    
+Once authenticated, with anonymous access they could also read another user's password attribute.    
 
-Given that weak passwords on in use, a brute force of password spraying attack could discover a password.  
+Given that weak passwords are in use, a brute force or password spraying attack could discover a password.  
 
 #### Misuse Remedy:
 
-OpenLDAP supports SSL/TLS based on the OpenSSL package that is installed on the host machine.  A strong TLS encryption method should be selected to deter snigging passwords during BIND requests.    
+OpenLDAP supports SSL/TLS based on the OpenSSL package that is installed on the host machine.  A strong TLS encryption method should be selected to deter sniffing passwords during BIND requests.    
 
-OpenLDAP can store passwords in clear-txt, encrypted strings or hashes.  It is suggested that DIGEST-MD5 is used, however SHA, CRYPT, MD5, SMD5, and SASL are offered.  A strong encryption algorithm should be chosen.  Pass-thru authentication is also an option so that passwords are not stored in LDAP at all is is how a MFA solution would be implemented for the later attack vector (brute force or password spraying).    
+OpenLDAP can store passwords in clear-txt, encrypted strings, or hashes.  It is suggested that DIGEST-MD5 is used, however SHA, CRYPT, MD5, SMD5, and SASL are offered.  A strong encryption algorithm should be chosen.  Pass-thru authentication is also an option so that passwords are not stored in LDAP at all, this is how a MFA solution would be implemented for the later attack vector (brute force or password spraying).    
 
-OpenLDAP has a [dynamically loaded password policy available.]( https://tobru.ch/openldap-password-policy-overlay/).  A password policy enforcing a minimum length, character set, and complexity should be configured to limit successful brute force or password spraying attacks.  Note that this module also includes the   login attempts and lockout.  
+OpenLDAP has a [dynamically loaded password policy available.]( https://tobru.ch/openldap-password-policy-overlay/).  A password policy enforcing a minimum length, character set, and complexity should be configured to limit successful brute force or password spraying attacks.  Note that this module also includes the login attempts and lockout.  
 
 The documentation on the configuration of any of these options is not very comprehensive, nor is it part of the setup script which may cause administrators to overlook them, possibly assuming they are implemented by default as they would be in commercial implementations.  
 
@@ -40,9 +40,9 @@ The documentation on the configuration of any of these options is not very compr
 
 
 ---
-### Use Case 2: An administrative wants to entry a new employee record with basic white page information and set a temporary password that the user must change at login. (ADD)
+### Use Case 2: An administrator wants to create a new employee record with basic white page information and set a temporary password that the user must change at login. (ADD)
 
-An ADD will follow the BIND use case to identify the actor to evaluate the ACL’s to determine if the user has the authority to add this type of record.  If they do, it will then check that the ADD request complies with the schema, e.g. required attributes, optional attributes, no system attributes.So  a bad actor could try and add something that already exists (modify), something they are not allow to add, something that violates the schema definition, 
+An ADD will follow the BIND use case to identify the actor, evaluate relevant ACLs, and determine if the user has the authority to add this type of record.  If they do, it will then check that the ADD request complies with the schema, e.g. required attributes, optional attributes, no system attributes. So a bad actor could try and add something that already exists (modify), something they are not allow to add, something that violates the schema definition, 
 
 #### Use:
 
