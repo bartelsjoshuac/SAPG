@@ -143,6 +143,30 @@ is less obvious but it means how long should I spend trying to find what  you as
 
 So what does that say.  First it says give me everyone with a common name attribute, AKA, user.  But wait is says AND give me all the objects of the type of group.  Well, groups don’t have a CN, so the LDAP server is going to retrieve all the users and all the groups AND see if any of them match, to which the result is NO.  But it is going to spend a lot of time doing that, AKA, DDoS.  So a reasonable lookThruLimit prevents the LDAP server from wasting it time.  It says you don’t know what you are doing and sent a stupid query to me.
 
+<! -- Josh Bartels -->
+### Use Case 6: Identity Management (Extended Operations)
+OpenLDAP supports extended operations which are operations not defined by the RFC.  This can be anything you implement for LDAP server to call such as a password policy as mentioned in Use Case #1.  More often than not extended operations are added by an associated Identity Management Suite and for this case we will examine role management such as what SairPoint provides
+
+#### Use:
+![Use-Case-6 - EXT]( https://github.com/bartelsjoshuac/SAPG/blob/main/Use-Misuse%20Case%206%20-EXT.drawio.svg)
+
+The IDM suite is bound to the LDAP server as an administrative user and wishes to enforce policy via a reconciliation.  This will cause the LDAP server to initiate a large number of search and modify operations.
+
+#### UseMisuse:
+
+![Use-Misuse-Case 6 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case%201%20-Bind.drawio.svg)
+
+The extended operation has full reign over the LDAP server and can issue poor crafted queries which return inaccurate results, leading to unauthorized modifications
+
+#### Misuse Remedy:
+
+The adminID should be bound by ACLs and limits.  
+The extended operation must support a play mode for further evaluation before a commit.
+The analysis search must be redirected by referral to a read only copy.
+
+![Misuse-Remedy-Case 6 - Bind]( https://github.com/bartelsjoshuac/SAPG/blob/main/Use-Misuse%20Case-Final6%20-EXTdrawio.svg)
+
+
 
 
 ## Part 2
