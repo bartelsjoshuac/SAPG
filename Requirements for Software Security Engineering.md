@@ -167,7 +167,10 @@ The analysis search must be redirected by referral to a read only copy.
 
 <!--- End --->
 
+<!--- Monirul --->
+### Use Case 7: A security Analyst wants to generate a report containing a list of employees who have accessed sensitive date in last couple of months (SRCH).
 
+<!--- End --->
 
 ## Part 2
 
