@@ -54,6 +54,7 @@ The new employee is now able to log in to company systems using his LDAP credent
 
 #### UseMisuse1: Unauthorized Access and Data Manipulation
 
+![ADD - Misuse Case](https://github.com/bartelsjoshuac/SAPG/blob/main/images/ADD%20-%20Misuse%20Case.svg)
 Scenario:
 
 The Malicious Insider has gained unauthorized access to the LDAP administration interface.
