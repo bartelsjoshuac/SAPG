@@ -139,9 +139,9 @@ MDFY actions can only take place by a user once the BIND action has taken palce 
 An employee has recently been promoted to a new position, prompting a change in office location, phone number, and group memberships on the LDAP server. The employee can inteface with the company's LDAP server through an online web-based portal through which they can update their personal information. The employee sends modify requests to the LDAP server with their new information so the system is up to date with their newest contact information etc.
 
 #### Misuse:
-A disgruntled former employee, with exceptional hacking and network knowledge, who had been let go due to misconduct, wants to watch his former company suffer. To this end, this employee wants to disrupt company functions by influencing the data stored on the LDAP server. He is still in the LDAP server as an employee, as he has not been deleted yet, and he knows his login information, but he does not have access to the online portal to make changes. ####He can communicate directly with the server, however, and with his skills can elevate his account's privileges.
+A disgruntled former employee, with exceptional hacking and network knowledge, who had been let go due to misconduct, wants to watch his former company suffer. To this end, this employee wants to disrupt company functions by influencing the data stored on the LDAP server. He is still in the LDAP server as an employee, as he has not yet been deleted, and he knows his login information, but he does not have access to the online portal to make changes. However, he can communicate directly with the server.
 
-![MDFY_Full_Diagram](https://github.com/bartelsjoshuac/SAPG/blob/main/images/MDFY_Full_Diagram.svg)
+![MDFY_Full_Diagram](https://github.com/bartelsjoshuac/SAPG/main/images/MDFY_Full_Diagram.svg)
 
 employee may or may not be able to request things baove his level of access, he still has his access
 upload fake data to mess up server somehow
