@@ -134,7 +134,16 @@ uid=user1, ou=HR,dc=company,dc=com
 
 A MDFY action follows the BIND use case to identify the actor, and will then also apply ACLs. It is like an ADD in that it must verify the schema. Attributes have types- boolean, string, etc. They can also be multi-valued. A bad actor may try to discover the schema or influence. For example, cn is normally a single valued attribute. If it were multivalued and the bad actor could not change or MDFY the cn value, could they ADD a value so that my cn was equal to both user1 and username1? System attributes can almost never be modified, like loginAttempts. If the loginAttempts counter was exceeded, could a bad actor set it back to zero?
 
+LDAP clients can request modifications to make changes to data. These requests specify the distinguished name (DN) of the entry and a lsit of modifications. There are four modifications types: 1. add, 2. delete, 3. replace, 4. increment. Add can add a new attribute or add a new value to am existing attribute. Delete will delete values or whole attribute. Replace is much the same, but an alter sets of values within attributes. Increment can increase or decrease an integer value (like times loginAttempts) by a set amount. An important aspect of all modify requests is that the inforamtion they contain for modification must match the established schema on the LDAP server, as they will be rejected if they do not match. Once the server recieves the request and analyzes it for matching, it sets about changing the entry. 
 
+#### Use:
+An employee has recently been promoted to a new position, prompting a change in office location, phone number, and group memberships on the LDAP server. The employee can inteface with the company's LDAP server through an online web-based portal through which they can update their personal information. The employee sends modify requests to the LDAP server with their new information so the system is up to date with their newest contact information etc.
+
+#### Misuse:
+
+#### Misuse:
+
+#### Misuse:
 
 ---
 ### Use Case 5: A building supervisor wants to search for the email address of all employees on 2nd floor in the Omaha HQ to notify them of a power outage. (SRCH)
