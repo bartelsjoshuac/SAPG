@@ -52,38 +52,32 @@ They create a new entry for new employee, including attributes such as cn (commo
 They set the password for new employee's account and configure any necessary group memberships or access permissions.
 The new employee is now able to log in to company systems using his LDAP credentials.
 
-#### UseMisuse1: Unauthorized Access and Data Manipulation
+#### Misuse Cases
 
 ![ADD - Misuse Case](https://github.com/bartelsjoshuac/SAPG/blob/main/images/ADD%20-%20Misuse%20Case.svg)
-Scenario:
 
+**Scenario 1:**
 The Malicious Insider has gained unauthorized access to the LDAP administration interface.
-Main Flow:
-The Malicious Insider logs in using stolen credentials or exploits a vulnerability.
-The Malicious Insider selects the "Add Person" option.
-The Malicious Insider fills out the required fields with false or malicious information.
-The Malicious Insider submits the form.
 
-#### UseMisuse2: Injection Attack
+* The Malicious Insider logs in using stolen credentials or exploits a vulnerability.
+* The Malicious Insider selects the "Add Person" option.
+* The Malicious Insider fills out the required fields with false or malicious information.
+* The Malicious Insider submits the form.
 
-Scenario:
-
+**Scenario 2:** 
 The External Attacker has identified a vulnerability in the LDAP server's input validation.
-Main Flow:
-The External Attacker exploits a vulnerability to bypass input validation.
-The External Attacker injects malicious code or special characters into the input fields, potentially compromising the LDAP server.
-The External Attacker submits the form with the injected data.
 
-#### UseMisuse3: Denial-of-Service (DoS) Attack
+* The External Attacker exploits a vulnerability to bypass input validation.
+* The External Attacker injects malicious code or special characters into the input fields, potentially compromising the LDAP server.
+* The External Attacker submits the form with the injected data.
 
-Scenario:
-
+**Scenario 3:**
 The Malicious Attacker aims to disrupt normal LDAP server operations.
-Main Flow:
 
-The Malicious Attacker floods the LDAP server with a high volume of requests to add persons.
-The server's resources become overloaded due to the excessive processing demands.
-The LDAP server becomes unresponsive, impacting legitimate users' ability to access or modify directory information.
+* The Malicious Attacker floods the LDAP server with a high volume of requests to add persons.
+* The server's resources become overloaded due to the excessive processing demands.
+* The LDAP server becomes unresponsive, impacting legitimate users' ability to access or modify directory information.
+
 
 #### Misuse Remedy:
 
