@@ -148,6 +148,56 @@ An employee has recently been promoted to a new position, prompting a change in 
 ---
 ### Use Case 5: A building supervisor wants to search for the email address of all employees on 2nd floor in the Omaha HQ to notify them of a power outage. (SRCH)
 
+#### Use:
+In this use case, a building supervisor located at the Omaha HQ needs to efficiently notify all employees on the 2nd floor about an ongoing power outage. To accomplish this task, the supervisor leverages LDAP. The process begins with the supervisor logging into an LDAP client application, which grants access to the organization's LDAP directory. The supervisor then initiates a search query, specifying the criteria to find all employees located on the 2nd floor within the Omaha HQ. The LDAP server processes this query and returns a list of employee entries that match the criteria. Subsequently, the supervisor extracts the email addresses from the retrieved LDAP entries. If no employees are found on the 2nd floor, the system notifies the supervisor accordingly. With the obtained email addresses, the building supervisor can efficiently notify the affected employees about the power outage, ensuring timely communication and necessary actions are taken.
+
+![SRCH - use case](https://github.com/bartelsjoshuac/SAPG/blob/main/images/SRCH%20-%20use%20case.svg)
+
+#### Misuse 1:
+A malicious user attempts to misuse the system that the building supervisor uses to search for employee email addresses on the 2nd floor of the Omaha HQ. Instead of legitimate purposes like notifying employees of a power outage, the malicious user has harmful intentions, potentially involving spamming or phishing. Below are the steps for this misuse. 
+
+*	**Unauthorized Access:** The malicious user gains unauthorized access to the LDAP client application, possibly by exploiting a vulnerability in the system, using stolen credentials, or other illicit means.
+*	**Bypassing Authentication:** The malicious user circumvents the authentication and authorization mechanisms, gaining access to the LDAP server.
+*	**Performing Unauthorized Search:** Once inside the LDAP client application, the malicious user initiates a search query with malicious intent, trying to retrieve email addresses for employees on the 2nd floor.
+*	**Data Harvesting:** The LDAP server processes the unauthorized search query, returning a list of employee entries. The malicious user extracts the email addresses of employees on the 2nd floor without any legitimate reason.
+*	**Misuse of Email Addresses:** With the obtained email addresses, the malicious user could engage in harmful activities such as sending spam, phishing emails, or other unauthorized communications, potentially causing disruption and harm to the organization and its employees.
+
+The consequences of this misuse include but are not limited to unauthorized access to sensitive employee data, risk of data breaches and privacy violations, potential harm to employees through spam, phishing, or other malicious activities, and reputation damage to the organization.
+
+![SRCH-Misuse Case 1](https://github.com/bartelsjoshuac/SAPG/blob/main/images/SRCH-Misuse%20Case%201.svg)
+
+#### Remedy:
+
+*	Strengthen access controls and authentication mechanisms to prevent unauthorized access to the LDAP client application.
+*	Implement robust authorization policies to ensure that only authorized users can perform searches and access sensitive employee data.
+*	Regularly monitor and audit LDAP access to detect and respond to suspicious activities.
+*	Educate employees about security best practices to avoid falling victim to phishing or other malicious activities.
+
+![SRCH-Misuse Case 1 Remedy](https://github.com/bartelsjoshuac/SAPG/blob/main/images/SRCH-Misuse%20Case%201%20Remedy.svg)
+
+#### Misuse 2:
+A disgruntled employee with insider knowledge of the organization's systems and procedures attempts to misuse the process of retrieving email addresses for employees on the 2nd floor. Instead of using this information for legitimate purposes, the employee has malicious intentions, potentially involving data theft or disclosure. Below are the steps for this misuse.
+
+*	**Authorized Access:** The disgruntled employee already has authorized access to the LDAP client application as part of their job role.
+*	**Legitimate Search:** Initially, the employee initiates a legitimate search query for email addresses to notify employees of the power outage.
+*	**Unauthorized Data Copy:** After obtaining the email addresses, the employee decides to misuse their access by copying and saving the email addresses for unauthorized use later.
+*	**Unauthorized Disclosure:** The disgruntled employee may choose to disclose this information to unauthorized individuals, sell it on the black market, or use it for personal gain, such as in competing organizations or for phishing attempts.
+*	**Data Breach:** This misuse can lead to a data breach and compromise the privacy and security of employees on the 2nd floor. It may also have legal and financial repercussions for the organization.
+
+![SRCH-Misuse Case 2](https://github.com/bartelsjoshuac/SAPG/blob/main/images/SRCH-Misuse%20Case%202.svg)
+#### Remedy:
+
+To mitigate the risk of this misuse case, the organization should:
+
+*	Implement strict data access controls and monitor data extraction activities.
+*	Conduct regular security awareness training to educate employees about the importance of data security and the consequences of misuse.
+*	Monitor and log access to sensitive data, especially if multiple extraction attempts occur.
+*	Implement a clear data handling policy that restricts the use and storage of sensitive information for unauthorized purposes.
+
+This misuse case underscores the significance of not only external threats but also the importance of monitoring and managing insider threats within an organization.
+
+![SRCH-Misuse Case 2 Remedy](https://github.com/bartelsjoshuac/SAPG/blob/main/images/SRCH-Misuse%20Case%202%20Remedy.svg)
+
 Searches many times would happen with an anonymous BINDs.  Anonymous BINDs are like a everyone group.  But they still have ACLs applied.  Searches can be dangerous and cause a denial of service.  For example cn=user1* is probably not so bad, how many user1’s could there be.  A search of cn=user* might be bad.  A search of objectClass=* is the same as “give me everything”.  That is bad.  LDAP server employee maxResults, and lookThruLimits.  maxResults if the obvious one.  A lookThrulimit 
 is less obvious but it means how long should I spend trying to find what  you asked for.  For example take a query of (&(cn=*)(objectClass=groupofNames))
 
