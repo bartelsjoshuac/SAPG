@@ -43,6 +43,8 @@ An ADD will follow the BIND use case to identify the actor, evaluate relevant AC
 
 #### Use:
 
+![ADD - Use Case](https://github.com/bartelsjoshuac/SAPG/blob/main/images/ADD%20-%20Use%20Case.svg)
+
 The actor ADD a new user with a valid Distiguished Name (DN) and a valid password to the LDAP server with following steps:
 The actore logs in to the LDAP server with appropriate privileges.
 They navigate to the appropriate organizational unit (OU) where user accounts are managed.
