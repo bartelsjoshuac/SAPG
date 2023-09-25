@@ -87,15 +87,20 @@ The LDAP server becomes unresponsive, impacting legitimate users' ability to acc
 
 #### Misuse Remedy:
 
-Unauthorized Access and Data Manipulation:
+
+![Add Missuse remedy](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Add%20-%20Misuse%20Remedy.svg)
+
+**Unauthorized Access and Data Manipulation:**
 Above attacks can be prevented by following remedies:
 Review and update access control lists (ACLs) regularly to ensure that only authorized users have the necessary permissions to perform LDAP operations. Configure proper permissions based on roles and responsibilities. Implement role-based access control (RBAC) to grant specific privileges to different user groups. Use LDAP groups and memberships to manage access. Enforce strong authentication mechanisms. Implement multi-factor authentication (MFA) to add an extra layer of security.
 
-Injection Attack:
+**Injection Attack:**
 Implement robust input validation and sanitation techniques. Use parameterized queries to prevent SQL injection attacks. Sanitize input data to remove potentially harmful characters. Keep the LDAP server software and related libraries up-to-date. Regularly check for security updates and patches provided by the LDAP server's vendor. Apply patches promptly to address known vulnerabilities.
 
-Denial-of-Service (DoS) Attack:
+**Denial-of-Service (DoS) Attack:**
 Implement traffic filtering and rate limiting to protect against DoS attacks. Use firewalls and network appliances to filter traffic and block suspicious requests. Configure rate-limiting rules to restrict the number of requests from a single source. Implement DoS detection and mitigation strategies. Use intrusion detection systems (IDS) or intrusion prevention systems (IPS) to detect and block suspicious traffic patterns.
+
+
 
 ### Use Case 3: Deletion (DEL)
 
