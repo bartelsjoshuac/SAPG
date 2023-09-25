@@ -131,8 +131,6 @@ uid=user1, ou=HR,dc=company,dc=com
 <!--- Adam Stemmler --->
 ### Use Case 4: An employee has been promoted to a new possition, prompting a change in office location, phone number and group memberships. (MDFY)
 
-A MDFY action follows the BIND use case to identify the actor, and will then also apply ACLs. It is like an ADD in that it must verify the schema. Attributes have types- boolean, string, etc. They can also be multi-valued. A bad actor may try to discover the schema or influence. For example, cn is normally a single valued attribute. If it were multivalued and the bad actor could not change or MDFY the cn value, could they ADD a value so that my cn was equal to both user1 and username1? System attributes can almost never be modified, like loginAttempts. If the loginAttempts counter was exceeded, could a bad actor set it back to zero?
-
 MDFY actions can only take place by a user once the BIND action has taken palce and the use has been identified. LDAP clients can request modifications to make changes to data. These requests specify the distinguished name (DN) of the entry and a lsit of modifications. There are four modifications types: 1. add, 2. delete, 3. replace, 4. increment. Add can add a new attribute or add a new value to am existing attribute. Delete will delete values or whole attribute. Replace is much the same, but an alter sets of values within attributes. Increment can increase or decrease an integer value (like times loginAttempts) by a set amount. An important aspect of all modify requests is that the inforamtion they contain for modification must match the established schema on the LDAP server, as they will be rejected if they do not match. Once the server recieves the request and analyzes it for matching, it sets about changing the entry. 
 
 #### Use:
@@ -143,11 +141,8 @@ A disgruntled former employee, with exceptional hacking and network knowledge, w
 
 ![MDFY_Full_Diagram](https://github.com/bartelsjoshuac/SAPG/main/images/MDFY_Full_Diagram.svg)
 
-employee may or may not be able to request things baove his level of access, he still has his access
-upload fake data to mess up server somehow
-change thing shtye shouldnt be able to change
 #### Assessment:
-As is the case with nearly all interactions with LDAP servers, clients who wish to issue requests to the server have to be authenticated to some degree and their permissions must be checked, via ACLs, to ensure the client has the authority to issue certain requests and act upon and request certain data. 
+As is the case with nearly all interactions with LDAP servers, clients who wish to issue requests to the server have to be authenticated to some degree and their permissions must be checked, via ACLs, to ensure the client has the authority to issue certain requests and act upon and request certain data. In this example, the disgruntled former employee tries to make unauthorized changes to data on the LDAP server. Since he still has access to the server and is able to communicate with it, he attempts to increment important server attributes that only the server itself should be able to change. He is stopped by ACL checking by the server and good defualt server configurations, which do not allow users to change server attributes, so he is unable to make those modifications. To make changes to data entries, the correct schema must be followed, or the request will be discarded. The attacker does not know the schema, and tries to determine it by sniffing the network for legitimate users making changes. However, due to data encryption, he is unable to do so. Failing this, he decides to simply issue change request, but as they do not follow the correct schema, they are discarded. The attacker could issue requests to change data with an attribute specified, but the values left empty, which by default would make the entire attribute and its fields empty. But with correct server configuration, no data attributes can be reset. Thus, the attacker is stopped.
 
 ---
 ### Use Case 5: A building supervisor wants to search for the email address of all employees on 2nd floor in the Omaha HQ to notify them of a power outage. (SRCH)
