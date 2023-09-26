@@ -265,11 +265,31 @@ Importance of implementing security controls to protect sensitive data and preve
 
 ## Part 2
 
+## Part 2 
 The [Security section](https://www.openldap.org/doc/admin26/security.html) of the [OpenLDAP Documentation](https://www.openldap.org/doc/admin26/) is rather brief.  It focuses on Network Security which can be summed up as TLS.  By default passwords in LDAP are stored in clear text to comply with [RFC4519](https://www.rfc-editor.org/rfc/rfc4519.txt) which is not desirable.  While several encryption methods are mentioned, it is suggested to use SSHA, or the salted version of the SHA scheme.
 
-#### [Access Controls](https://www.openldap.org/doc/admin26/access-control.html) lists are the primary security feature of OpenLDAP, or any LDAP.  These control who can do what.  Read, Write, Delete, etc.
+#### [Access Controls](https://www.openldap.org/doc/admin26/access-control.html) lists are the primary security feature of OpenLDAP, or any LDAP.  These control who can do what.  Read, Write, Delete, etc. 
 
-#### [Access Logging](https://www.openldap.org/doc/admin26/overlays.html#Access%20Logging) and [Audit](https://www.openldap.org/doc/admin26/overlays.html#Audit%20Logging) are two additional security features of LDAP that must be configured.
+#### [Access Logging](https://www.openldap.org/doc/admin26/overlays.html#Access%20Logging) and [Audit](https://www.openldap.org/doc/admin26/overlays.html#Audit%20Logging) are two additional security features of LDAP that must be configured. 
+
+#### [General Security Features](https://openldap.org/doc/admin24/security.html) All of OpenLDAP's security features can be found at the link above. Described in this documentation are: 
+Netwrok Security Features: 
+1. Selective listening for IPs and ports
+2. Built in IP firewall
+3. TCP wrappers - Provide a rule-basedaccess control system
+Data Integrity and Confidentiality Features:
+1. "Simple" method - Offers various authentication methods that are fairly standard
+2. SASL method - SASL offeres authentication and can integrate with other applications and software that use SASL, it gives OpenLDAP more flexibility
+Password Storage:
+1. Salted SHA
+2. CRYPT hashing
+3. MD5
+4. SMD5
+5. Normal SHA
+6. SASL Password schemes
+Pass-Through Authentication: Allows OpenLDAP to delgate authentication to other applications and software, like Kerberos
+#### Installation: 
+A detailed guide to installation can be found here: [LDAP Installation and Configuration](https://ubuntu.com/server/docs/service-ldap)
 
 <!--- Adam Stemmler --->
 ## Reflection on Assignment
