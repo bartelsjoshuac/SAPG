@@ -277,9 +277,11 @@ Netwrok Security Features:
 1. Selective listening for IPs and ports
 2. Built in IP firewall
 3. TCP wrappers - Provide a rule-basedaccess control system
+
 Data Integrity and Confidentiality Features:
 1. "Simple" method - Offers various authentication methods that are fairly standard
 2. SASL method - SASL offeres authentication and can integrate with other applications and software that use SASL, it gives OpenLDAP more flexibility
+
 Password Storage:
 1. Salted SHA
 2. CRYPT hashing
@@ -287,7 +289,9 @@ Password Storage:
 4. SMD5
 5. Normal SHA
 6. SASL Password schemes
+
 Pass-Through Authentication: Allows OpenLDAP to delgate authentication to other applications and software, like Kerberos
+
 #### Installation: 
 A detailed guide to installation can be found here: [LDAP Installation and Configuration](https://ubuntu.com/server/docs/service-ldap)
 
