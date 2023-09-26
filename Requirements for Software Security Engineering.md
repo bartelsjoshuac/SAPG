@@ -237,6 +237,16 @@ Misuse Case 2: A supervisor generates a report of all employees who have accesse
 
 Misuse Case 3: A disgruntled employee generates a report of all employees who have accessed the sensitive information last couple of months even though they are not authorized to do so then leaks this information to the media.
 
+<!--- Remedy--->
+#### Misuse Remedy:
+Importance of implementing security controls to protect sensitive data and prevention of unauthorized access  is highlighted in these misuse cases. Some security remedies are listed below which can mitigate these risks:
+
+* Access control list (ACL) for restricting access to sensitive data
+* Frequent auditing and logging to track all access to sensitive data
+* Intrusion detection systems (IDS) to detect unauthorized access to sensitive data
+* Encrypting data to protect sensitive data.
+
+
 <!--- End --->
 
 ## Part 2
