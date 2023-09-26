@@ -239,12 +239,23 @@ Misuse Case 3: A disgruntled employee generates a report of all employees who ha
 
 <!--- Remedy--->
 #### Misuse Remedy:
-Importance of implementing security controls to protect sensitive data and prevention of unauthorized access  is highlighted in these misuse cases. Some security remedies are listed below which can mitigate these risks:
+Importance of implementing security controls to protect sensitive data and prevention of unauthorized access  is highlighted in these misuse cases. Apart from education emplyess about the risks of cyber attacks some security remedies are listed below which can mitigate these risks:
 
-* Access control list (ACL) for restricting access to sensitive data
-* Frequent auditing and logging to track all access to sensitive data
-* Intrusion detection systems (IDS) to detect unauthorized access to sensitive data
-* Encrypting data to protect sensitive data.
+* Misuse Case 1:
+
+  - Implement Multi-factor authentication (MFA)
+  - Monitor the system for suspicious activity such as unusual access patterns or failed login attempts
+  - Educate employees about the importances of protecting passwords and risks of phishing attacks
+
+* Misuse Case 2:
+
+  - Implement role-based access control (BRAC)
+  - Audit and log all access to sensitive data. So even supervisors will require authorization to access sensitive data
+* Misuse Case 3:
+
+  - Implement data encryption for the protection of sensitive data
+  - Audit and log all access to sensitive data. Therefore disgruntled employees cannot go undetected if they access any sensitive data.
+
 
 
 <!--- End --->
