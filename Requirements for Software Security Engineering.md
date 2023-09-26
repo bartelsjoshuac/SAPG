@@ -214,7 +214,7 @@ The IDM suite is bound to the LDAP server as an administrative user and wishes t
 
 #### UseMisuse:
 
-![Use-Misuse-Case 6 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case%201%20-Bind.drawio.svg)
+![Use-Misuse-Case 6 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/Use-Misuse%20Case%206%20-EXT.drawio.svg)
 
 The extended operation has full reign over the LDAP server and can issue poor crafted queries which return inaccurate results, leading to unauthorized modifications
 
