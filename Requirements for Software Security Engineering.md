@@ -251,7 +251,7 @@ Importance of implementing security controls to protect sensitive data and preve
 
 * Misuse Case 2:
 
-  - Implement role-based access control (BRAC)
+  - Implement role-based access control (RBAC)
   - Audit and log all access to sensitive data. So even supervisors will require authorization to access sensitive data
 * Misuse Case 3:
 
