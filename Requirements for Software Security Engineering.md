@@ -230,6 +230,12 @@ The analysis search must be redirected by referral to a read only copy.
 
 <!--- Monirul --->
 ### Use Case 7: A security Analyst wants to generate a report containing a list of employees who have accessed sensitive date in last couple of months (SRCH).
+<!--- Misuse cases--->
+Misuse Case 1: A malicious actor gains access to the system and prepares a report of all the employees who have accessed the sensitive information in the past couple of months. Now he is targeting these employees with phishing attacks.
+
+Misuse Case 2: A supervisor generates a report of all employees who have accessed sensitive information in last couple of months. Then he tracks down who misuse their privilege to access information that is beyond their access limit and track their activity.
+
+Misuse Case 3: A disgruntled employee generates a report of all employees who have accessed the sensitive information last couple of months even though they are not authorized to do so then leaks this information to the media.
 
 <!--- End --->
 
