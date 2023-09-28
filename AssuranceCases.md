@@ -15,32 +15,6 @@ The BIND operation identifies the actor to the server.  LDAP will typically allo
 
 #### Use:
 
-![Use-Case-1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use%20Case%201%20-%20Bind.drawio.svg)
-
-The actor wishes to identify themselves to the server and will do so by providing a valid Distinguished Name (DN) and simple password to establish their identity to the LDAP server and perform a BIND.  The LDAP server will then wait for additional operations which will be explored in later uses cases that build on this.
-
-#### UseMisuse:
-
-![Use-Misuse-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case%201%20-Bind.drawio.svg)
-
-The bad actor could sniff the password on the wire on the known port (389).  
-
-Once authenticated, with anonymous access they could also read another user's password attribute.    
-
-Given that weak passwords are in use, a brute force or password spraying attack could discover a password.  
-
-#### Misuse Remedy:
-
-OpenLDAP supports SSL/TLS based on the OpenSSL package that is installed on the host machine.  A strong TLS encryption method should be selected to deter sniffing passwords during BIND requests.    
-
-OpenLDAP can store passwords in clear-txt, encrypted strings, or hashes.  It is suggested that DIGEST-MD5 is used, however SHA, CRYPT, MD5, SMD5, and SASL are offered.  A strong encryption algorithm should be chosen.  Pass-thru authentication is also an option so that passwords are not stored in LDAP at all, this is how a MFA solution would be implemented for the later attack vector (brute force or password spraying).    
-
-OpenLDAP has a [dynamically loaded password policy available.]( https://tobru.ch/openldap-password-policy-overlay/).  A password policy enforcing a minimum length, character set, and complexity should be configured to limit successful brute force or password spraying attacks.  Note that this module also includes the login attempts and lockout.  
-
-The documentation on the configuration of any of these options is not very comprehensive, nor is it part of the setup script which may cause administrators to overlook them, possibly assuming they are implemented by default as they would be in commercial implementations.  
-
-![Misuse-Remedy-Case 1 - Bind](https://github.com/bartelsjoshuac/SAPG/blob/main/images/Use-Misuse%20Case-Final1%20-Bind.drawio.svg)
-
 <!--- End --->
 ---
 
