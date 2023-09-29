@@ -21,9 +21,9 @@
 
 C1: LDAP will perform the authentication request.
 
-IR1: This is not handled by LDAP and indeterminate.
+ IR1: This is not handled by LDAP and indeterminate.
 
-UC1: This case is not handled by LDAP.
+  UC1: This case is not handled by LDAP.
 
 R1: Assuming pass thru authentication is not enabled.
 
