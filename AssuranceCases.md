@@ -23,6 +23,6 @@ The BIND operation identifies the actor to the server.  LDAP will typically allo
 
 ## Part 2
 
-Assess the alignment of the evidence you identified in your diagrams with that available (or can be made available) from the OSS project. Highlight the gaps.
-Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task. 
-Include a reflection on your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward? 
+* Assess the alignment of the evidence you identified in your diagrams with that available (or can be made available) from the OSS project. Highlight the gaps.
+( Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task. 
+* Include a reflection on your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward? 
