@@ -18,7 +18,8 @@
 ![Assurance Case 1](https://github.com/bartelsjoshuac/SAPG/blob/main/images/BIND%20Assurance%20Case.svg)
 
 * C1: LDAP will perform the authentication request
- ** IR1: This is not handled by LDAP and indeterminate
+ 
+ * IR1: This is not handled by LDAP and indeterminate
 
 
 -------------------
