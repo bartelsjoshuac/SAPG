@@ -17,15 +17,13 @@
 
 ![Assurance Case 1](https://github.com/bartelsjoshuac/SAPG/blob/main/images/BIND%20Assurance%20Case.svg)
 
-* C1: LDAP will perform the authentication request
- 
- * IR1: This is not handled by LDAP and indeterminate
-
-
--------------------
-
-UC1: This case is not handled by LDAP  
-R1: Assuming pass thru authentication is not enabled
+C1: LDAP will perform the authentication request
+  
+  IR1: This is not handled by LDAP and indeterminate
+  
+  UC1: This case is not handled by LDAP  
+  
+     R1: Assuming pass thru authentication is not enabled
 
  SC2: And the user has a password
 
