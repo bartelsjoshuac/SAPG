@@ -47,10 +47,9 @@ UC2: Default to Read only or deny
 
 SC4: Indeterminate handling as the client should not do this but can on E3 if desired (sceptical) 
 
-#### Use:
+---
 
 <!--- End- Josh Bartels --->
----
 
 ## Part 2
 <!---Expecations of Assignment for reference --->
