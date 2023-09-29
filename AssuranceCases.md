@@ -59,3 +59,6 @@ SC4: Indeterminate handling as the client should not do this but can on E3 if de
 * Include a reflection on your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward? 
 
 <!--- End - Expecations, this can be removed later --->
+
+It is critical to handle the BIND or authentication process properly as this identifies the end user and begins the authorization process (applie ACLs).  Pass thru authentication is a loop hole that removes trust and the associated evidence from the use case and while it may establish identity, the method in which it was completed is indeterminate.  In the case of a authentication failure, the user may step back to an anonympus BIND, and and authentication failure followed by a anonympus BIND from the same client must be treated as suspcious.  This requires looping back in the use case which is not possible in LDAP, hence leaving it incomplete as this would normally be the responsibility of a SIEM solution.  Although some LDAP varieties handle this, OpenLDAP does not.  All other cases are handled and evidence is logged appropriately for audit purposes.
+
