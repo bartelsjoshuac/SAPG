@@ -30,6 +30,7 @@ SC2: And the user has a password
   R2: Unless the user is disabled and.
   
    E2: Log failure and reason code
+ 
   R33: Password was not valie
   
   IR2: Anonymous authentication is allowed
