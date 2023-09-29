@@ -1,7 +1,7 @@
 # Assurance Case for Software Security Engineering
 
 ## Part 1
-*Using your findings from the requirements assignment, develop five to six (depending on the number of team members) top-level claims. The number of top-level claims can be adjusted to the number of students in your team. List these claims in your report.
+* Using your findings from the requirements assignment, develop five to six (depending on the number of team members) top-level claims. The number of top-level claims can be adjusted to the number of students in your team. List these claims in your report.
 
   * Top-level claims pertain to high-risk critical security properties  
   * Having the claims focus on unique entities and related security properties will allow you to have broad coverage of the assurance needs from your OSS project. 
