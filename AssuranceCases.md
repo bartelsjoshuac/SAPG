@@ -1,4 +1,4 @@
-# Assurance Case for Software Security Engineering
+# Assurance Cases for Software Security Engineering
 <!---Expecations of Assignment for reference --->
 ## Part 1
 * Using your findings from the requirements assignment, develop five to six (depending on the number of team members) top-level claims. The number of top-level claims can be adjusted to the number of students in your team. List these claims in your report.
