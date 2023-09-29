@@ -29,6 +29,8 @@ IR1: Pass thru authentication is a bit of a wildcard, and if enabled circumvents
 
 UC1: The process is further undercut as it will return a response which LDAP must assume to be true, but further examination is needed
 
+SC1: Indterminate
+
 R1: Assume ass thru authentication is not enabled.
 
 SC2: Assume the user has a password.
@@ -37,7 +39,7 @@ E1: Authentication and log success.
 
 R2: Unless the user is disabled
 
-SC#: The user can not log in
+SC3: The user can not log in
 
 E2: Log the failure and end
 
