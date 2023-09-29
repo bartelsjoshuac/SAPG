@@ -19,34 +19,33 @@
 
 ![Assurance Case 1](https://github.com/bartelsjoshuac/SAPG/blob/main/images/BIND%20Assurance%20Case.svg)
 
-C1: LDAP will perform the authentication request.
+C1: LDAP will perform the authentication request properly and handle all scenarios possible.
 
- IR1: This is not handled by LDAP and indeterminate.
+IR1: Pass thru authentication is a bit of a wildcard, and if enabled circumvents/interferes the anticpated process.
 
-  UC1: This case is not handled by LDAP.
+UC1: The process is further undercut as it will return a response which LDAP must assume to be true, but further examination is needed
 
-R1: Assuming pass thru authentication is not enabled.
+R1: Assume ass thru authentication is not enabled.
 
-SC2: And the user has a password.
+SC2: Assume the user has a password.
 
 E1: Authentication and log success.
 
-R2: Unless the user is disabled and.
+R2: Unless the user is disabled
 
-E2: Log failure and reason code.
+SC#: The user can not log in
 
-R33: Password was not valid.
+E2: Log the failure and end
 
-IR2: Anonymous authentication is allowed.
+R3: Password was not valid.
 
-UC2: Default to Read only or Deny.
+E3: Log the failure and retry
 
-SC4: This is indeterminate.
+IR2: Anonympous Authentication occured
 
-R3: Or the user has the wrong password.
+UC2: Default to Read only or deny
 
-E3: Log fail and repeat.
-
+SC4: Indeterminate handling as the client should not do this but can on E3 if desired (sceptical) 
 
 #### Use:
 
