@@ -21,7 +21,7 @@
  * IR1: This is not handled by LDAP and indeterminate
 
 
-
+-------------------
 
 UC1: This case is not handled by LDAP  
 R1: Assuming pass thru authentication is not enabled
