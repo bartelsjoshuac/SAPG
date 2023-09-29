@@ -11,7 +11,11 @@
   * You may use this sample diagram Download sample diagram (open in http://app.diagrams.netLinks to an external site.) to get quick access to all the shapes needed for an assurance case
   * Use proper notations and ensure proper wording of assurance case elements. Avoid typos and grammatical errors as they can be distracting to stakeholders reading the assurance case for making trust decisions. 
   * Assurance cases should have reasonable depth and breadth to convince a technical expert. It is expected that the argument is coherent and convincing. 
+
+---
+
 <!--- End - Expecations, this can be removed later --->
+
 
 
 <!--- Josh Bartels --->
@@ -57,6 +61,8 @@ SC4: Indeterminate handling as the client should not do this but can on E3 if de
 * Assess the alignment of the evidence you identified in your diagrams with that available (or can be made available) from the OSS project. Highlight the gaps.
 ( Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task. 
 * Include a reflection on your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward? 
+
+---
 
 <!--- End - Expecations, this can be removed later --->
 
