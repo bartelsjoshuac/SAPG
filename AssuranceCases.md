@@ -55,6 +55,12 @@ SC4: Indeterminate handling as the client should not do this but can on E3 if de
 
 <!--- End- Josh Bartels --->
 
+### Assurance Case 2:
+
+### Assurance Case 3:
+
+### Assurance Case 4: Modify (MDFY)
+
 
 ## Part 2
 <!---Expecations of Assignment for reference --->
