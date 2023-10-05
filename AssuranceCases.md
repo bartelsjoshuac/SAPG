@@ -55,39 +55,42 @@ SC4: Indeterminate handling as the client should not do this but can on E3 if de
 
 <!--- End- Josh Bartels --->
 
-### Assurance Case 2: (ADD)
+### Assurance Case 2: Creating New Claims (ADD)
 
-Assurance Case 2: Creating New Claims (ADD)
-
-Top-Level Claim:
+**Top-Level Claim:**
 "The ADD operation in OpenLDAP, within a banking environment, guarantees the secure and accurate addition of new entries to the directory, upholding the highest standards of data integrity and access control."
-Sub-Claims:
-Attribute Validation and Compliance:
-Sub-Claim 1: "OpenLDAP enforces strict validation of attributes to ensure compliance with banking-specific data schemas and regulatory requirements."
-Inference Rule: If an attribute is not in compliance with the defined schema, the ADD operation will be rejected.
-Context: In a banking environment, adherence to specific data standards and regulatory requirements is critical for compliance and data consistency.
-Evidence: Documentation demonstrating how OpenLDAP enforces attribute validation against banking-specific schemas and regulations.
-Role-Based Access Control (RBAC) Enforcement:
-Sub-Claim 2: "The ADD operation in OpenLDAP applies Role-Based Access Control to restrict entry additions to authorized personnel only."
-Inference Rule: Only users with specific roles and privileges can perform the ADD operation.
-Context: In a banking environment, ensuring that only authorized personnel can add new entries is crucial for data security and regulatory compliance.
-Evidence: Documentation showing the implementation of RBAC policies in OpenLDAP.
-Audit Trail and Logging:
 
-Sub-Claim 3: "OpenLDAP maintains a comprehensive audit trail and logging mechanism for all ADD operations, providing a transparent record of changes for accountability and regulatory compliance."
-Inference Rule: All ADD operations are logged, including the identity of the requester, the timestamp, and the details of the operation.
-Context: In a banking environment, having a detailed audit trail is essential for compliance with regulatory requirements and for tracking any suspicious or unauthorized activities.
-Evidence: Documentation demonstrating the audit trail capabilities of OpenLDAP.
-Data Encryption and Confidentiality:
-Sub-Claim 4: "OpenLDAP ensures that all data related to the ADD operation is encrypted both in transit and at rest, safeguarding sensitive information from unauthorized access or interception."
-Inference Rule: Data transmitted during the ADD operation is encrypted using secure protocols (e.g., SSL/TLS).
-Context: In a banking environment, protecting sensitive information is paramount to prevent data breaches and maintain customer trust.
-Evidence: Documentation highlighting OpenLDAP's encryption mechanisms for data in transit and at rest.
-Transaction Integrity and Atomicity:
-Sub-Claim 5: "OpenLDAP guarantees the atomicity of the ADD operation, ensuring that either the entire addition is completed successfully or no changes are made to the directory, preventing partial or inconsistent updates."
-Inference Rule: If any part of the ADD operation fails, the entire operation is rolled back.
-Context: In a banking environment, ensuring transactional integrity is critical to prevent data inconsistencies and maintain the accuracy of customer information.
-Evidence: Documentation or references demonstrating the transactional integrity mechanisms in OpenLDAP.
+**Sub-Claims:**
+
+**Sub-Claim 1:** Attribute Validation and Compliance. 
+"OpenLDAP enforces strict validation of attributes to ensure compliance with banking-specific data schemas and regulatory requirements."
+**Inference Rule:** If an attribute is not in compliance with the defined schema, the ADD operation will be rejected.
+**Context:** In a banking environment, adherence to specific data standards and regulatory requirements is critical for compliance and data consistency.
+**Evidence:** Documentation demonstrating how OpenLDAP enforces attribute validation against banking-specific schemas and regulations.
+
+**Sub-Claim 2:** Role-Based Access Control (RBAC) Enforcement:
+"The ADD operation in OpenLDAP applies Role-Based Access Control to restrict entry additions to authorized personnel only."
+**Inference Rule:** Only users with specific roles and privileges can perform the ADD operation.
+**Context:** In a banking environment, ensuring that only authorized personnel can add new entries is crucial for data security and regulatory compliance.
+**Evidence:** Documentation showing the implementation of RBAC policies in OpenLDAP.
+
+**Sub-Claim 3:** Audit Trail and Logging:
+"OpenLDAP maintains a comprehensive audit trail and logging mechanism for all ADD operations, providing a transparent record of changes for accountability and regulatory compliance."
+**Inference Rule:** All ADD operations are logged, including the identity of the requester, the timestamp, and the details of the operation.
+**Context:** In a banking environment, having a detailed audit trail is essential for compliance with regulatory requirements and for tracking any suspicious or unauthorized activities.
+**Evidence:** Documentation demonstrating the audit trail capabilities of OpenLDAP.
+
+**Sub-Claim 4:** Data Encryption and Confidentiality:
+"OpenLDAP ensures that all data related to the ADD operation is encrypted both in transit and at rest, safeguarding sensitive information from unauthorized access or interception."
+**Inference Rule:** Data transmitted during the ADD operation is encrypted using secure protocols (e.g., SSL/TLS).
+**Context:** In a banking environment, protecting sensitive information is paramount to prevent data breaches and maintain customer trust.
+**Evidence:** Documentation highlighting OpenLDAP's encryption mechanisms for data in transit and at rest.
+
+**Sub-Claim 5:** Transaction Integrity and Atomicity:
+"OpenLDAP guarantees the atomicity of the ADD operation, ensuring that either the entire addition is completed successfully or no changes are made to the directory, preventing partial or inconsistent updates."
+**Inference Rule:** If any part of the ADD operation fails, the entire operation is rolled back.
+**Context:** In a banking environment, ensuring transactional integrity is critical to prevent data inconsistencies and maintain the accuracy of customer information.
+**Evidence:** Documentation or references demonstrating the transactional integrity mechanisms in OpenLDAP.
 
 ![image](https://github.com/bartelsjoshuac/SAPG/assets/104176036/5ad19444-2a1d-4bbe-90b9-443a34fce4ac)
 
