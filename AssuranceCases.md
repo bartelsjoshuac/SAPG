@@ -113,9 +113,14 @@ SC4: Indeterminate handling as the client should not do this but can on E3 if de
 <!--- Start - Samuel Schneider --->
 ![Assurance Case 2](https://github.com/bartelsjoshuac/SAPG/blob/main/images/DEL%20assurance%20case.drawio.svg)
 <!--- End - Samuel Schneider --->
+
+<!--- Start - Adam Stemmler--->
 ### Assurance Case 4: Modify (MDFY)
+**Top-Level Claim:**
+OpenLDAP can securely modify data and attributes without worry of misuse or data corruption.
 
 
+<!--- End - Adam Stemmler--->
 ## Part 2
 <!---Expecations of Assignment for reference --->
 
