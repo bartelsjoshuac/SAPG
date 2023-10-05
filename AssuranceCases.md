@@ -109,8 +109,6 @@ SC4: Indeterminate handling as the client should not do this but can on E3 if de
 
 <!--- End- Eliya Ablet --->
 
-![image](https://github.com/bartelsjoshuac/SAPG/assets/104176036/5ad19444-2a1d-4bbe-90b9-443a34fce4ac)
-
 ### Assurance Case 3: Delete (DEL)
 <!--- Start - Samuel Schneider --->
 ![Assurance Case 2](https://github.com/bartelsjoshuac/SAPG/blob/main/images/DEL%20assurance%20case.drawio.svg)
