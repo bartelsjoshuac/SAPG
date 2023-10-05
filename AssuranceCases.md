@@ -107,6 +107,8 @@ SC4: Indeterminate handling as the client should not do this but can on E3 if de
 
 **Evidence:** Documentation or references demonstrating the transactional integrity mechanisms in OpenLDAP.
 
+<!--- End- Eliya Ablet --->
+
 ![image](https://github.com/bartelsjoshuac/SAPG/assets/104176036/5ad19444-2a1d-4bbe-90b9-443a34fce4ac)
 
 ### Assurance Case 3: Delete (DEL)
