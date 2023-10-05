@@ -57,7 +57,9 @@ SC4: Indeterminate handling as the client should not do this but can on E3 if de
 
 ### Assurance Case 2:
 
-### Assurance Case 3:
+### Assurance Case 3: Delete (DEL)
+<!--- Start - Samuel Schneider --->
+![Assurance Case 2](https://github.com/bartelsjoshuac/SAPG/blob/main/images/DEL%20assurance%20case.drawio.svg)
 
 ### Assurance Case 4: Modify (MDFY)
 
