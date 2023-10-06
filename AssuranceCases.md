@@ -34,6 +34,9 @@ Password polices were not enabled and a weak password was used.
 **Undercut 1L**
 This is still allowed.
 
+**Inference Rule 1:**
+Strong password policies are not enabled
+
 **Inference Rule 2:**
 Pass thru authentication delegated the authentication to some other system and we don’t know if we can trust it
 
