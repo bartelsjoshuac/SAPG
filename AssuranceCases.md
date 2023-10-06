@@ -32,29 +32,28 @@ The user authenticates via a simple password.
 Password polices were not enabled and a weak password was used.
 
 **Undercut L**
-This is still allowed.
+This is still allowed and we at least know the actors IP address
 
-**Inference Rule 1:**
-Strong password policies are not enabled
+**Evidence 2:**
+Audit log with IP
 
 **Inference Rule 2:**
 Pass thru authentication delegated the authentication to some other system and we don’t know if we can trust it
 
+**Evidence 3:**
+Audit log with system event log
+
 **Sub-Claim 3:** Certificate
 The user authenticates via x.509 certificate.-
-
-**Rebuttal 1:**
-The user performed an anonymous BIND which is a special feature of LDAP where we can not differentiate user (this may be disabled)
 
 **Evidence 1:**
 Audit log
 
-**Evidence 2:**
-Audit log with system log
+**Rebuttal 1:**
+The user performed an anonymous BIND which is a special feature of LDAP where we can not differentiate user (this may be disabled)
 
-**Evidence 3:**
-Audit log with Event log
- 
+**Evidence 2:**
+Audit log with IP
 
 ---
 
