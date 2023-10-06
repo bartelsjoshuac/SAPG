@@ -17,6 +17,9 @@
 <!--- End - Expecations, this can be removed later --->
 
 <!--- Josh Bartels --->
+
+![Assurance Case 1](https://github.com/bartelsjoshuac/SAPG/blob/main/images/BIND%20Assurance%20Case.svg)
+
 ### Assurance Case 1: Authenticate and Authorization (BIND)
 
 **Top-Level Claim:**
