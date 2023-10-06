@@ -31,7 +31,7 @@ The user authenticates via a simple password.
 **Inference Rule 1:**
 Password polices were not enabled and a weak password was used.
 
-**Undercut 1L**
+**Undercut L**
 This is still allowed.
 
 **Inference Rule 1:**
