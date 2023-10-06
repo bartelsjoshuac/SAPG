@@ -66,7 +66,7 @@ Audit log with IP
 
 **Sub-Claims:**
 
-**Sub-Claim 1:** Attribute Validation and Compliance. 
+**Sub-Claim 2:** Attribute Validation and Compliance. 
 "OpenLDAP enforces strict validation of attributes to ensure compliance with banking-specific data schemas and regulatory requirements."
 
 **Inference Rule:** If an attribute is not in compliance with the defined schema, the ADD operation will be rejected.
@@ -75,7 +75,7 @@ Audit log with IP
 
 **Evidence:** Documentation demonstrating how OpenLDAP enforces attribute validation against banking-specific schemas and regulations.
 
-**Sub-Claim 2:** Role-Based Access Control (RBAC) Enforcement:
+**Sub-Claim 3:** Role-Based Access Control (RBAC) Enforcement:
 "The ADD operation in OpenLDAP applies Role-Based Access Control to restrict entry additions to authorized personnel only."
 
 **Inference Rule:** Only users with specific roles and privileges can perform the ADD operation.
@@ -83,15 +83,6 @@ Audit log with IP
 **Context:** In a banking environment, ensuring that only authorized personnel can add new entries is crucial for data security and regulatory compliance.
 
 **Evidence:** Documentation showing the implementation of RBAC policies in OpenLDAP.
-
-**Sub-Claim 3:** Audit Trail and Logging:
-"OpenLDAP maintains a comprehensive audit trail and logging mechanism for all ADD operations, providing a transparent record of changes for accountability and regulatory compliance."
-
-**Inference Rule:** All ADD operations are logged, including the identity of the requester, the timestamp, and the details of the operation.
-
-**Context:** In a banking environment, having a detailed audit trail is essential for compliance with regulatory requirements and for tracking any suspicious or unauthorized activities.
-
-**Evidence:** Documentation demonstrating the audit trail capabilities of OpenLDAP.
 
 **Sub-Claim 4:** Data Encryption and Confidentiality:
 "OpenLDAP ensures that all data related to the ADD operation is encrypted both in transit and at rest, safeguarding sensitive information from unauthorized access or interception."
