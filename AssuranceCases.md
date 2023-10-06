@@ -19,37 +19,36 @@
 <!--- Josh Bartels --->
 ### Assurance Case 1: Authenticate and Authorization (BIND)
 
-![Assurance Case 1](https://github.com/bartelsjoshuac/SAPG/blob/main/images/BIND%20Assurance%20Case.svg)
+**Top-Level Claim:**
+LDAP minimized unauthorized access by authenticating the user
 
-C1: LDAP will perform the authentication request properly and handle all scenarios possible.
+**Sub-Claim 2:** Password 
+The user authenticates via a simple password.
 
-IR1: Pass thru authentication is a bit of a wildcard, and if enabled circumvents/interferes the anticpated process.
+**Inference Rule 1:**
+Password polices were not enabled and a weak password was used.
 
-UC1: The process is further undercut as it will return a response which LDAP must assume to be true, but further examination is needed
+**Undercut 1L**
+This is still allowed.
 
-SC1: Indterminate
+**Inference Rule 2:**
+Pass thru authentication delegated the authentication to some other system and we don’t know if we can trust it
 
-R1: Assume ass thru authentication is not enabled.
+**Sub-Claim 3:** Certificate
+The user authenticates via x.509 certificate.-
 
-SC2: Assume the user has a password.
+**Rebuttal 1:**
+The user performed an anonymous BIND which is a special feature of LDAP where we can not differentiate user (this may be disabled)
 
-E1: Authentication and log success.
+**Evidence 1:**
+Audit log
 
-R2: Unless the user is disabled
+**Evidence 2:**
+Audit log with system log
 
-SC3: The user can not log in
-
-E2: Log the failure and end
-
-R3: Password was not valid.
-
-E3: Log the failure and retry
-
-IR2: Anonymous Authentication occurred
-
-UC2: Default to Read only or deny
-
-SC4: Indeterminate handling as the client should not do this but can on E3 if desired (skeptical) 
+**Evidence 3:**
+Audit log with Event log
+ 
 
 ---
 
