@@ -116,6 +116,15 @@ OpenLDAP can securely modify data and attributes without worry of misuse or data
 
 
 <!--- End - Adam Stemmler--->
+
+<!--- Start - Md Monirul Islam--->
+### Assurance Case 5: Search (SRCH)
+**Top-Level Claim:**
+OpenLDAP securely enables the security analysts to generate a report containing all the employees who have accessed the sensitive data in the last couple of months.
+
+
+
+<!--- End - Md Monirul Islam--->
 ## Part 2
 <!---Expecations of Assignment for reference --->
 
