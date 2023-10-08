@@ -142,7 +142,7 @@ OpenLDAP securely enables to generate a report containing all the employees who 
 **Evidence 4.1**: OpenLDAP’s logs are stored in a secure location with restricted access. \  
 **Evidence 4.2**: Checksums or other integrity-check mechanisms are in place to verify the integrity of the logs.
 
-
+![Assurance Case 5](https://github.com/bartelsjoshuac/SAPG/blob/main/images/SRCH_accurance_case.svg)
 
 <!--- End - Md Monirul Islam--->
 
