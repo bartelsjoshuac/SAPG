@@ -29,7 +29,7 @@ LDAP minimized unauthorized access by authenticating the user
 The user authenticates via a simple password.
 
 **Inference Rule 1:**
-Password polices were not enabled and a weak password was used.
+Unless Password polices were not enabled and a weak password was used.
 
 **Undercut L**
 This is still allowed and we at least know the actors IP address
