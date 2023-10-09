@@ -159,49 +159,53 @@ OpenLDAP securely enables to generate a report containing all the employees who 
 
 A building supervisor wants to search for the email address of all employees on 2nd floor in the Omaha HQ to notify them of a power outage.
 
-**Top-Level Claim:**
-OpenLDAP can be effectively utilized by the building supervisor to search for the email addresses of all employees on the 2nd floor in the Omaha HQ for power outage notifications.
+**Top-Level Claim C1:**
+OpenLDAP can be utilized by the building supervisor to search for the email addresses of all employees on a specific floor in the Omaha HQ for power outage notifications.
 
-**Sub-claim 1:**
+**Rebuttal RB1:**
+OpenLDAP contains email addresses which are not uptodate. 
+
+**Sub-claim C2:**
 OpenLDAP contains a comprehensive and up-to-date directory of employee information, including email addresses.
 
-**Inference Rule 1:**
-The effectiveness of using OpenLDAP for this use case relies on documented evidence that confirms the presence of a comprehensive and regularly updated employee directory within the OpenLDAP system.
+**Context CT1:**
+OpenLDAP serves as the central repository for employee information, including email addresses. This information is kept up-to-date through regular synchronization processes, ensuring its accuracy and relevance for use in critical notifications.
 
-**Evidence 1.1:**
+**Evidence E1:**
 Organization's IT policy or documentation specifying OpenLDAP as the authoritative source for employee information.
 
-**Evidence 1.2:**
-Records of regular synchronization processes that update employee information in OpenLDAP.
+**Rebuttal RB2:**
+Email search is not effective and can send send emails to employees which are on different floor. 
 
-
-**Sub-claim 2:**
+**Sub-claim C3:**
 OpenLDAP provides robust search functionality, including the ability to filter employees by floor and location.
 
-**Inference Rule 2:**
-The ability to search for employees on the 2nd floor in the Omaha HQ is confirmed through documented evidence showing that OpenLDAP has been configured to support advanced search queries, including filtering by attributes such as "floor" and "location."
-
-**Evidence 2.1:**
+**Evidence E2:**
 Configuration documentation or system specifications that detail the search capabilities of OpenLDAP, including filtering by attributes.
 
-**Evidence 2.2:**
-Training materials or documentation provided to the building supervisor on using OpenLDAP's search functionality.
+**Rebuttal RB3:**
+Unless Supervisors don't know how to use filtering capability 
 
+**Sub-claim C4:**
+Supervisors are well trainined to use the LDAP's email filtering capabilities
 
-**Sub-claim 3:**
+**Evidence E3:**
+Training materials or documentation provided to the building supervisors on using OpenLDAP's search functionality.
+
+**Rebuttal RB4:**
+SRCH functionality is not secure and anyone from the employees can access this list.
+
+**Sub-claim C5:**
 Access controls and security measures are in place to ensure that only authorized personnel, like the building supervisor, can access the email addresses retrieved from OpenLDAP.
 
-**Inference Rule 3:**
-Secure access to email addresses obtained from OpenLDAP is confirmed through documentation that outlines the access controls and security measures implemented within the system.
-
-**Evidence 3.1:**
+**Evidence E4:**
 Access control policies or documentation specifying who has access to employee email addresses and the permissions associated with it.
 
-**Evidence 3.2:**
-Documentation or records of security measures in place, such as authentication methods and encryption protocols.
-
-**Evidence 3.3:**
+**Evidence E5:**
 Evidence of security audits or assessments that confirm compliance with security policies.
+
+![Assurance Case 6](https://github.com/bartelsjoshuac/SAPG/blob/main/images/SRCH.svg)
+
 
 <!--- End - Md Monirul Islam--->
 ## Part 2
