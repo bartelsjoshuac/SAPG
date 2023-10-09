@@ -197,7 +197,7 @@ OpenLDAP securely enables to generation of a report containing all the employees
 <!-- **Inference Rule 3**: If the logs are processed with well-defined and validated queries then the report generated is accurate and lists all access instances to sensitive data.\ -->
 **Evidence E3.1**:  Scripts or tools that query OpenLDAP’s log for the required information use appropriate filters and the results are validated as accurate.
 
-**Rebuttal R4**: Unless there's a robust log integrity checking system, an insider with the right permissions might tamper with logs undetected.
+**Rebuttal R4**: Unless there's a robust log integrity checking system, an insider with the right permissions might tamper with logs undetected.\
 **Sub-claim C4**:  Adequate security mechanisms are in place to prevent tampering with logs.
 <!-- **Inference Rule 4**: If OpenLDAP logs are securely stored, access to them is restricted, and the integrity of the log is regularly verified, then security mechanisms are in place to ensure that logs are not tampered with. \ -->
 **Evidence E4.1**: OpenLDAP’s logs are stored in a secure location with restricted access. \  
