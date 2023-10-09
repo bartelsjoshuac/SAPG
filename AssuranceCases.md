@@ -22,6 +22,7 @@
 
 ### Assurance Case 1: Authenticate and Authorization (BIND)
 ![Assurance Case 1](https://github.com/bartelsjoshuac/SAPG/blob/main/images/BIND%20Assurance%20Case.svg)
+
 **Top-Level Claim:**
 LDAP minimized unauthorized access by authenticating the user
 
