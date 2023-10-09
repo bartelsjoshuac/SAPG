@@ -112,20 +112,25 @@ Audit log with IP
 <!--- Start - Adam Stemmler--->
 ### Assurance Case 4: Modify (MDFY)
 ![Assurance Case 4](https://github.com/bartelsjoshuac/SAPG/blob/main/images/MDFY_Assurance_Case.drawio.svg)
+
 **Top-Level Claim:**
 OpenLDAP ensures the security of OpenLDAP server data. 
-
+---------------
 **Rebutal R1:**
 Unless there is an unauthorized modification of server data.
+
 **Sub-Claim C2:**
 Server enforces authentication with credentials.
+
 **Rebuttal R4:**
 Unless a user binds anonymously, thus skirting the need for authentication.
+
 **Sub-Claim C5:**
 Server enforces access control list checking, preventing anonymous users from modifying data.
+
 **Evidence E1:**
 OpenLDAP servers have a wide variety of quality authetication methods available for their use.
-
+---------------
 **Rebuttal R2:**
 Unless OpenLDAP server data can be read by anyone, thus degrading its confidentiality.
 **Sub-Claim C3:**
