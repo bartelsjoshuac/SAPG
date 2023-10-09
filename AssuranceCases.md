@@ -112,7 +112,15 @@ Audit log with IP
 <!--- Start - Adam Stemmler--->
 ### Assurance Case 4: Modify (MDFY)
 **Top-Level Claim:**
-OpenLDAP can securely modify data and attributes without worry of misuse or data corruption.
+OpenLDAP ensures the security of OpenLDAP server data. 
+
+**Rebutal R1:**
+Unless there is an unauthorized modification of server data.
+
+**Rebuttal R2:**
+Unless the server data is corrupted.
+
+can securely modify data and attributes without worry of misuse or data corruption.
 
 
 <!--- End - Adam Stemmler--->
