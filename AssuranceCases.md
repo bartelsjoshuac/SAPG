@@ -143,11 +143,11 @@ The presence of Roll Back Access Control allows for administrators to undo damag
 ### Assurance Case 4: Modify (MDFY)
 ![Assurance Case 4](https://github.com/bartelsjoshuac/SAPG/blob/main/images/MDFY_Assurance_Case.drawio.svg)
 
-**Top-Level Claim:**
+*Top-Level Claim:*
 OpenLDAP ensures the security of OpenLDAP server data. 
 
 **Rebutal R1:**
-Unless there is an unauthorized modification of server data.
+Unless there is an unauthorized modification of server data from an unathorized or unauthenticated user.
 
 **Sub-Claim C2:**
 Server enforces authentication with credentials.
