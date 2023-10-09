@@ -146,7 +146,53 @@ OpenLDAP securely enables to generate a report containing all the employees who 
 
 <!--- End - Md Monirul Islam--->
 
+### Assurance Case 6: Filtered Employees email search (SRCH)
 
+A building supervisor wants to search for the email address of all employees on 2nd floor in the Omaha HQ to notify them of a power outage.
+
+**Top-Level Claim:**
+OpenLDAP can be effectively utilized by the building supervisor to search for the email addresses of all employees on the 2nd floor in the Omaha HQ for power outage notifications.
+
+**Sub-claim 1:**
+OpenLDAP contains a comprehensive and up-to-date directory of employee information, including email addresses.
+
+**Inference Rule 1:**
+The effectiveness of using OpenLDAP for this use case relies on documented evidence that confirms the presence of a comprehensive and regularly updated employee directory within the OpenLDAP system.
+
+**Evidence 1.1:**
+Organization's IT policy or documentation specifying OpenLDAP as the authoritative source for employee information.
+
+**Evidence 1.2:**
+Records of regular synchronization processes that update employee information in OpenLDAP.
+
+
+**Sub-claim 2:**
+OpenLDAP provides robust search functionality, including the ability to filter employees by floor and location.
+
+**Inference Rule 2:**
+The ability to search for employees on the 2nd floor in the Omaha HQ is confirmed through documented evidence showing that OpenLDAP has been configured to support advanced search queries, including filtering by attributes such as "floor" and "location."
+
+**Evidence 2.1:**
+Configuration documentation or system specifications that detail the search capabilities of OpenLDAP, including filtering by attributes.
+
+**Evidence 2.2:**
+Training materials or documentation provided to the building supervisor on using OpenLDAP's search functionality.
+
+
+**Sub-claim 3:**
+Access controls and security measures are in place to ensure that only authorized personnel, like the building supervisor, can access the email addresses retrieved from OpenLDAP.
+
+**Inference Rule 3:**
+Secure access to email addresses obtained from OpenLDAP is confirmed through documentation that outlines the access controls and security measures implemented within the system.
+
+**Evidence 3.1:**
+Access control policies or documentation specifying who has access to employee email addresses and the permissions associated with it.
+
+**Evidence 3.2:**
+Documentation or records of security measures in place, such as authentication methods and encryption protocols.
+
+**Evidence 3.3:**
+Evidence of security audits or assessments that confirm compliance with security policies.
 
 <!--- End - Md Monirul Islam--->
 ## Part 2
