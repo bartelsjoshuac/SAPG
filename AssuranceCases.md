@@ -115,7 +115,7 @@ Audit log with IP
 
 **Top-Level Claim:**
 OpenLDAP ensures the security of OpenLDAP server data. 
----------------
+
 **Rebutal R1:**
 Unless there is an unauthorized modification of server data.
 
@@ -130,7 +130,7 @@ Server enforces access control list checking, preventing anonymous users from mo
 
 **Evidence E1:**
 OpenLDAP servers have a wide variety of quality authetication methods available for their use.
----------------
+
 **Rebuttal R2:**
 Unless OpenLDAP server data can be read by anyone, thus degrading its confidentiality.
 **Sub-Claim C3:**
