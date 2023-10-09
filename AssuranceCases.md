@@ -107,6 +107,35 @@ Audit log with IP
 ### Assurance Case 3: Delete (DEL)
 <!--- Start - Samuel Schneider --->
 ![Assurance Case 2](https://github.com/bartelsjoshuac/SAPG/blob/main/images/DEL%20assurance%20case.drawio.svg)
+
+
+**Top-Level Claim:**
+LDAP prevents unauthorized DELs through various secuirty mechanisms. Adequate security measures prevent unauthenticated, unauthorized, or by other means malicious actors from performing uncalled for DEL operations in the LDAP server. This applies at both the user and branch levels.
+
+**Sub-Claim 2:** Authenticaton 
+User authentication is required before any operations may be performed in the LDAP server. This prevents non-users from performing operations of any kind on the LDAP server.
+
+**Evidence 1:**
+Identifying information such as distinguished name and password required from all users before they may be permitted to perform any operation. This serves to identify users by linking the distinguished name with the associated password.
+
+**Sub-Claim 3:** Permissions 
+Permission restructions prevent unauthorized users from performing unauthorized operations. By limiting the availability of this powerful functionality to only authorized users, the opportunity for malivious actors to perform unauthorized DELs decreases significantly. Furthermore, this allows for easier tracking of which user performed unauthorized DELs.
+
+**Evidence 2:**
+Implementing a user hierarchy allows priviledges to be allocated based on the class that the user in question belongs to. This allows for convenient gruoping of permisssion groups based on tiers of users.
+
+**Rebuttal 1:**
+Credential theft may be prevented by additional and more modern security features and mechanisms. Fortunately, LDAP servers allow for additional security measures to be implemented on top of already present features. The more security features that an organization adds on, the less prone they are to being the victim of a successful attack.
+
+**Evidence 3:**
+Examples of these security expansions include two factor authentication. The addition of this feature requires that all prospective users authenticate their login requests with a secondary device, typically a call phone. If a malicious actor is attempting to impersonate a legitimate actor, he will be foiled by this security feature since the legitimate actor will be able to deny the request remotely.
+
+**Rebuttal 2:**
+Damage caused by an attack involving stolen credential may be undone if the changes that each user makes are tracked. Tracking changes that each user makes allows administrators to diagnose which user is responsible for unrequested changes to the state of the LDAP server. This is useful in two ways. Not only does this allow administrators to disable hacked accounts, but it allows for action roll backs to be performed to restore the LDAP server to its correct state.
+
+**Evidence 4:**
+The presence of Roll Back Access Controll allows for administrators to undo damage caused by a malicious actor using a hacked account. This allows for restoration of deleted or manipulated data and records so that the damage may be entirely undone.
+
 <!--- End - Samuel Schneider --->
 
 <!--- Start - Adam Stemmler--->
