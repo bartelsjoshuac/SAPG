@@ -188,17 +188,17 @@ OpenLDAP securely enables to generation of a report containing all the employees
 **Evidence 1.1**: When logging functionality of OpenLDAP is enabled it can track and log all access made to directory information.
 
 **Rebuttal 2**: Unless access controls are updated regularly, they might become outdated, leading to inappropriate permissions.\
-**Sub-claim 2**: Access controls are configured properly to ensure only authorized personnel can access sensitive data.
+**Sub-claim 2.1**: Access controls are configured properly to ensure only authorized personnel can access sensitive data.
 <!-- **Inference Rule 2**: If access control policies are well-defined in OpenLDAP configuration and ensure fine-grained control, the access controls are configured properly in OpenLDAP to ensure only authorized personnel can access sensitive data.\ -->
 **Evidence 2.1**: Access control policies are well defined in OpenLDAP’s configuration to ensure fine-grained control over who can access which data.
 
 **Rebuttal 3**: Unless there is capacity for handling large volumes of logs, generating reports might result in missed entries or delays.\
-**Sub-claim 3**: The report generated from the log audit is accurate and encompasses all access instances to the sensitive data. 
+**Sub-claim 3.1**: The report generated from the log audit is accurate and encompasses all access instances to the sensitive data. 
 <!-- **Inference Rule 3**: If the logs are processed with well-defined and validated queries then the report generated is accurate and lists all access instances to sensitive data.\ -->
 **Evidence 3.1**:  Scripts or tools that query OpenLDAP’s log for the required information use appropriate filters and the results are validated as accurate.
 
 **Rebuttal 4**: Unless there's a robust log integrity checking system, an insider with the right permissions might tamper with logs undetected.
-**Sub-claim 4**:  Adequate security mechanisms are in place to prevent tampering with logs.
+**Sub-claim 4.1**:  Adequate security mechanisms are in place to prevent tampering with logs.
 <!-- **Inference Rule 4**: If OpenLDAP logs are securely stored, access to them is restricted, and the integrity of the log is regularly verified, then security mechanisms are in place to ensure that logs are not tampered with. \ -->
 **Evidence 4.1**: OpenLDAP’s logs are stored in a secure location with restricted access. \  
 **Evidence 4.2**: Checksums or other integrity-check mechanisms are in place to verify the integrity of the logs.
