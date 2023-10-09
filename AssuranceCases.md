@@ -152,19 +152,18 @@ Server enforces schema checking for modification requests.
 OpenLDAP securely enables to generate a report containing all the employees who have accessed the sensitive data in the last couple of months.
 
 **Sub-claim 1**: OpenLDAP provides robust logging capabilities that record all access made to sensitive data. \
-**Rebuttal 1.1**: Unless the logging service is constantly checked, it might crash or malfunction, leading to periods with no logs.\
 **Inference Rule 1**: If OpenLDAP’s logging audit functionality can reliably record of all access made to sensitive data then OpenLDAP provides robust logging capabilities of all access made to sensitive data. \
 **Evidence 1.1**: When logging functionality of OpenLDAP is enabled it can track and log all access made to directory information.
 
 
 **Sub-claim 2**: Access controls are configured properly to ensure only authorized personnel can access sensitive data.\
 **Rebuttal 2.1**: Unless access controls are updated regularly, they might become outdated, leading to inappropriate permissions.\
-**Inference Rule 2**: If access control policies are well-defined in OpenLDAP configuration and ensure fine-grained control, the access controls are configured properly in OpenLDAP to ensure only authorized personnel can access on sensitive data.\
+**Inference Rule 2**: If access control policies are well-defined in OpenLDAP configuration and ensure fine-grained control, the access controls are configured properly in OpenLDAP to ensure only authorized personnel can access sensitive data.\
 **Evidence 2.1**: Access control policies are well defined in OpenLDAP’s configuration to ensure fine-grained control over who can access which data.
 
 
 **Sub-claim 3**: The report generated from the log audit is accurate and encompasses all access instances to the sensitive data. \
-**Rebuttal 3.1**: Unless there is capacity for handling large volumes of logs, generating reports might result in missed entries or delays.\
+**Rebuttal 3**: Unless there is capacity for handling large volumes of logs, generating reports might result in missed entries or delays.\
 **Inference Rule 3**: If the logs are processed with well-defined and validated queries then the report generated is accurate and lists all access instances to sensitive data.\
 **Evidence 3.1**:  Scripts or tools that query OpenLDAP’s log for the required information use appropriate filters and the results are validated as accurate.
 
