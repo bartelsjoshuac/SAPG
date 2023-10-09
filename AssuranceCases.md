@@ -122,6 +122,7 @@ Unless the server data is corrupted.
 
 can securely modify data and attributes without worry of misuse or data corruption.
 
+![Assurance Case 4](https://github.com/bartelsjoshuac/SAPG/blob/main/images/MDFY_Assurance_Case.drawio.svg)
 
 <!--- End - Adam Stemmler--->
 
