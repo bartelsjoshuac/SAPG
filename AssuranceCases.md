@@ -208,6 +208,8 @@ OpenLDAP securely enables to generate a report containing all the employees who 
 
 A building supervisor wants to search for the email address of all employees on 2nd floor in the Omaha HQ to notify them of a power outage.
 
+![Assurance Case 6](https://github.com/bartelsjoshuac/SAPG/blob/main/images/SRCH.svg)
+
 **Top-Level Claim C1:**
 OpenLDAP can be utilized by the building supervisor to search for the email addresses of all employees on a specific floor in the Omaha HQ for power outage notifications.
 
@@ -252,8 +254,6 @@ Access control policies or documentation specifying who has access to employee e
 
 **Evidence E5:**
 Evidence of security audits or assessments that confirm compliance with security policies.
-
-![Assurance Case 6](https://github.com/bartelsjoshuac/SAPG/blob/main/images/SRCH.svg)
 
 
 <!--- End - Md Monirul Islam--->
