@@ -157,35 +157,68 @@ The presence of Roll Back Access Control allows for administrators to undo damag
 ### Assurance Case 4: Modify (MDFY)
 ![Assurance Case 4](https://github.com/bartelsjoshuac/SAPG/blob/main/images/MDFY_Assurance_Case.drawio.svg)
 
-*Top-Level Claim:*
+**Top-Level Claim:**
 OpenLDAP ensures the security of OpenLDAP server data. 
+
+**Context CT1:**
+It is crucial for OpenLDAP servers to maintain the confidentiality, integrity, and availability of data, both in transit and at rest, by employing all its suite of tools and proper server settings configurations.
 
 **Rebutal R1:**
 Unless there is an unauthorized modification of server data from an unathorized or unauthenticated user.
 
 **Sub-Claim C2:**
-Server enforces authentication with credentials.
+Server enforces authentication with credentials, thus both authenticating and authorizing the user based on that user's identity.
+
+**Context CT2**
+Depending on configuration, servers can require quite sophisticated passwords, as well as multi factor authentication. OpenLDAP is capable of employing all the latest authentication and authorization standards.
 
 **Rebuttal R4:**
 Unless a user binds anonymously, thus skirting the need for authentication.
 
 **Sub-Claim C5:**
-Server enforces access control list checking, preventing anonymous users from modifying data.
+Server enforces access control list checking, preventing anonymous users from modifying data. ACLs also ensure legitimate users can only modify data they have a need to modify.
 
 **Evidence E1:**
-OpenLDAP servers have a wide variety of quality authetication methods available for their use.
+OpenLDAP servers have a wide variety of quality authetication methods available for their use, and this server employs new, secure authentication techniques.
 
 **Rebuttal R2:**
 Unless OpenLDAP server data can be read by anyone, thus degrading its confidentiality.
+
 **Sub-Claim C3:**
 OpenLDAP servers can opt to hash its data, thus protecting it from being viewed by those who do not have the need to know.
 
+**Rebuttal R5:**
+Unless the network used for communications between the client and LDAP server are being sniffed and monitored.
 
-**Sub-Claim C3:**
-Server enforces schema checking for modification requests.
+**Sub-Claim C6:**
+Server encrypts data in transit from the client to the LDAP server.
 
+**Evidence E2:**
+This server is configured to hash stored data.
+
+**Evidence E3:**
+This server is configured for encrypted communications with client.
 
 **Rebuttal R3:**
+Unless data is corrupted, thus degrading its integrity and availability.
+
+**Sub-Claim C4:**
+OpenLDAP servers can enforce schema checking; this server is configured thusly.
+
+**Context CT3:**
+Data and attributes must follow a structure set by the server (the schema); if it does not it would break the server and its data. Data is arranged in attributes, which have data points. These data points can change based on the schema and modification have to fit that schema. If the server is not configured properly, it would break the data. But OpenLDAP has a defualt schema and its configuration settings for the schema can be easily changed.
+
+**Rebuttal R6:**
+Unless user can change server attributes. Servers have server attributes, like loginAttempts, that help it keep track of data that it needs to function and employ other features. Normal users should not be able to change these lest it create chaos.
+
+**Sub-Claim C7:**
+This server is configured so server attributes cannot be changed by users. It is also configured so that the schema is properly enforced and bad modification requests are thrown away.
+
+**Evidence E4:**
+Server configuration settings. The server configuration settings for the server in question are the evidence for two of the final sub-claims.
+
+**Evidence E5:**
+The OpenLDAP documentation details all the OpenLDAP features and how to implement them. It is evidence for all three final sub-claims.
 
 <!--- End - Adam Stemmler--->
 
