@@ -111,17 +111,29 @@ Identifying information such as distinguished name and password required from al
 **Sub-Claim 3:** Permissions 
 Permission restrictions prevent unauthorized users from performing unauthorized operations. By limiting the availability of this powerful functionality to only authorized users, the opportunity for malicious actors to perform unauthorized DELs decreases significantly. Furthermore, this allows for easier tracking of which user performed unauthorized DELs.
 
-**Evidence 2:**
-Implementing a user hierarchy allows privileges to be allocated based on the class that the user in question belongs to. This allows for convenient grouping of permission groups based on tiers of users.
-
 **Rebuttal 1:**
+Enabling permission restrictions based on user level may induce a false sense of security in the organization. While this is a prudent step, it does not alleviate the concern that permissions given to a trusted user may be abused.
+
+**Sub-Claim 4:**
+This concern may be alleviated by granting permissions on a least-privilege bases. This is where users are given the minimal permissions required to perform their work tasks. By only providing essential functionality and permissions to users, there is far less chance that a user intentionally or unintentionally misuses the permission.
+
+**Evidence 2:**
+Least-privilege permission allocation is a tried-and-true method for reducing permission abuse. It is a low-tech solution that may be implemented with no change to the IT infrastructure of the existing ecosystem. For these reasons, it is worth implementing into the security structure of the LDAP server.
+
+**Rebuttal 2:**
 Credential theft may be prevented by additional and more modern security features and mechanisms. Fortunately, LDAP servers allow for additional security measures to be implemented on top of already present features. The more security features that an organization adds on, the less prone they are to being the victim of a successful attack.
+
+**Sub-Claim 5:**
+Additional authentication features may be implemented into LDAP at the users' discretion. This allows users to increase the levels of security required in their LDAP server depending on factors such as vulnerability and required uptime.
 
 **Evidence 3:**
 Examples of these security expansions include two factor authentication. The addition of this feature requires that all prospective users authenticate their login requests with a secondary device, typically a call phone. If a malicious actor is attempting to impersonate a legitimate actor, he will be foiled by this security feature since the legitimate actor will be able to deny the request remotely.
 
-**Rebuttal 2:**
+**Rebuttal 3:**
 Damage caused by an attack involving stolen credential may be undone if the changes that each user makes are tracked. Tracking changes that each user makes allows administrators to diagnose which user is responsible for unrequested changes to the state of the LDAP server. This is useful in two ways. Not only does this allow administrators to disable hacked accounts, but it allows for action roll backs to be performed to restore the LDAP server to its correct state.
+
+**Sub-Claim 6:**
+If DELs from an unauthorized user are detected, the state of the LDAP server may be rolled back to an earlier state. This will undo the changes made by the malicious actor and allow the organization to revert to prior data states in the event of an attack.
 
 **Evidence 4:**
 The presence of Roll Back Access Control allows for administrators to undo damage caused by a malicious actor using a hacked account. This allows for restoration of deleted or manipulated data and records so that the damage may be entirely undone.
