@@ -130,6 +130,7 @@ The presence of Roll Back Access Control allows for administrators to undo damag
 
 <!--- Start - Adam Stemmler--->
 ### Assurance Case 4: Modify (MDFY)
+
 ![Assurance Case 4](https://github.com/bartelsjoshuac/SAPG/blob/main/images/MDFY_Assurance_Case.drawio.svg)
 
 **Top-Level Claim:**
