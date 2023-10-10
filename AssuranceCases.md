@@ -278,7 +278,24 @@ Evidence of security audits or assessments that confirm compliance with security
 <!---Expecations of Assignment for reference --->
 
 * Assess the alignment of the evidence you identified in your diagrams with that available (or can be made available) from the OSS project. Highlight the gaps.
-( Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task. 
+( Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task.
+
+While working on this OSS project we realized a few limitations of LDAP that may not meet all the requirements:
+1.	Lack of Full Transaction Support:
+LDAP lacks full support for transactions. While certain operations within LDAP can be grouped together in a single transaction-like operation, it doesn't provide the same level of transactional integrity as some other database systems.
+
+2.	Limited Complex Query Capabilities:
+LDAP is optimized for quick retrieval of information based on known attributes.  However, it may not be as suitable for complex querying operations that involve multiple conditions or advanced search capabilities.
+
+3.	Complex Access Control Lists (ACLs):
+Defining and managing complex access control lists in LDAP can be intricate, particularly for large directory services with many users and groups. This complexity can sometimes lead to misconfigurations or unintended security gaps.
+
+4.	Lack of Native Data Validation:
+LDAP does not have built-in mechanisms for enforcing data validation rules at the protocol level. It relies on schema definitions, which may not cover all possible validation requirements.
+
+These limitations don't diminish the value and importance of LDAP, but they highlight areas where careful planning, configuration, and supplementary technologies may be necessary to address specific requirements. Organizations should consider these aspects when implementing LDAP in their environments.
+
+
 * Include a reflection on your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward? 
 
 ---
