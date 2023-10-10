@@ -279,6 +279,6 @@ NOTE that every action in LDAP has a response as LDAP is a RFC defined protocol.
 
 It is critical to handle the BIND or authentication process properly as this identifies the end user and begins the authorization process (apply ACLs).  Pass thru authentication is a loop hole that removes trust and the associated evidence from the use case and while it may establish identity, the method in which it was completed is indeterminate.  In the case of a authentication failure, the user may step back to an anonymous BIND, and authentication failure followed by a anonymous BIND from the same client must be treated as suspicious.  This requires looping back in the use case which is not possible in LDAP, hence leaving it incomplete as this would normally be the responsibility of a SIEM solution.  Although some LDAP varieties handle this, OpenLDAP does not.  All other cases are handled and evidence is logged appropriately for audit purposes.
 
-
+While the report generation employs OpenLDAP's logging capabilities, evidence regarding the search capabilities of the SRCH function is unclear. It is important to ascertain if SRCH can efficiently and securely retrieve logs for queries and whether its outputs align with the report generation mechanism. This gap needs further attention 
 
 
