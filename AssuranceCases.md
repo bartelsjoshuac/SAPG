@@ -152,35 +152,26 @@ Server enforces access control list checking, preventing anonymous users from mo
 OpenLDAP servers have a wide variety of quality authetication methods available for their use, and this server employs new, secure authentication techniques. 
 
 **Rebuttal R2:**
-Unless OpenLDAP server data can be read by anyone, thus degrading its confidentiality.
-
+Unless OpenLDAP server data can be read by anyone, thus degrading its confidentiality. \
 **Sub-Claim C3:**
-OpenLDAP servers can opt to hash its data, thus protecting it from being viewed by those who do not have the need to know.
-
+OpenLDAP servers can opt to hash its data, thus protecting it from being viewed by those who do not have the need to know. \
 **Rebuttal R5:**
-Unless the network used for communications between the client and LDAP server are being sniffed and monitored.
-
+Unless the network used for communications between the client and LDAP server are being sniffed and monitored. \
 **Sub-Claim C6:**
-Server encrypts data in transit from the client to the LDAP server.
-
+Server encrypts data in transit from the client to the LDAP server. \
 **Evidence E2:**
-This server is configured to hash stored data.
-
+This server is configured to hash stored data. \
 **Evidence E3:**
 This server is configured for encrypted communications with client.
 
 **Rebuttal R3:**
-Unless data is corrupted, thus degrading its integrity and availability.
-
+Unless data is corrupted, thus degrading its integrity and availability. \
 **Sub-Claim C4:**
-OpenLDAP servers can enforce schema checking; this server is configured thusly.
-
+OpenLDAP servers can enforce schema checking; this server is configured thusly. \
 **Context CT3:**
-Data and attributes must follow a structure set by the server (the schema); if it does not it would break the server and its data. Data is arranged in attributes, which have data points. These data points can change based on the schema and modification have to fit that schema. If the server is not configured properly, it would break the data. But OpenLDAP has a defualt schema and its configuration settings for the schema can be easily changed.
-
+Data and attributes must follow a structure set by the server (the schema); if it does not it would break the server and its data. Data is arranged in attributes, which have data points. These data points can change based on the schema and modification have to fit that schema. If the server is not configured properly, it would break the data. But OpenLDAP has a defualt schema and its configuration settings for the schema can be easily changed. \
 **Rebuttal R6:**
-Unless user can change server attributes. Servers have server attributes, like loginAttempts, that help it keep track of data that it needs to function and employ other features. Normal users should not be able to change these lest it create chaos.
-
+Unless user can change server attributes. Servers have server attributes, like loginAttempts, that help it keep track of data that it needs to function and employ other features. Normal users should not be able to change these lest it create chaos.\
 **Sub-Claim C7:**
 This server is configured so server attributes cannot be changed by users. It is also configured so that the schema is properly enforced and bad modification requests are thrown away.
 
