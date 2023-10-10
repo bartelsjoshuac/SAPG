@@ -1,25 +1,7 @@
 # Assurance Cases for Software Security Engineering
-<!---Expecations of Assignment for reference --->
 ## Part 1
-* Using your findings from the requirements assignment, develop five to six (depending on the number of team members) top-level claims. The number of top-level claims can be adjusted to the number of students in your team. List these claims in your report.
-
-  * Top-level claims pertain to high-risk critical security properties  
-  * Having the claims focus on unique entities and related security properties will allow you to have broad coverage of the assurance needs from your OSS project. 
-
-* Prepare an argument for each top-level claim that would convince stakeholders in your assumed/hypothetical operational environment. Use this as a planning exercise to figure out what sort of assurances would be necessary. They don't have to match what is currently available in the open-source software project. Document the argument and the needed evidence using an assurance case for each top-level claim. 
-
-  * You may use this sample diagram Download sample diagram (open in http://app.diagrams.netLinks to an external site.) to get quick access to all the shapes needed for an assurance case
-  * Use proper notations and ensure proper wording of assurance case elements. Avoid typos and grammatical errors as they can be distracting to stakeholders reading the assurance case for making trust decisions. 
-  * Assurance cases should have reasonable depth and breadth to convince a technical expert. It is expected that the argument is coherent and convincing. 
-
----
-
-<!--- End - Expecations, this can be removed later --->
 
 <!--- Josh Bartels --->
-
-
-
 ### Assurance Case 1: Authenticate and Authorization (BIND)
 
 ![Assurance Case 1](https://github.com/bartelsjoshuac/SAPG/blob/main/images/BIND%20Assurance%20Case.svg)
@@ -58,9 +40,9 @@ The user performed an anonymous BIND which is a special feature of LDAP where we
 Audit log with IP
 
 ---
-
 <!--- End- Josh Bartels --->
 
+<!--- Start- Eliya Ablet --->
 ### Assurance Case 2: Creating New Claims (ADD)
 
 ![Assurance Case 2](https://github.com/bartelsjoshuac/SAPG/blob/main/images/ADD.svg)
@@ -110,15 +92,8 @@ Audit log with IP
 **Context:** In a banking environment, ensuring transactional integrity is critical to prevent data inconsistencies and maintain the accuracy of customer information.
 
 **Evidence:** Documentation or references demonstrating the transactional integrity mechanisms in OpenLDAP.
-
-
-
-
-
-
-
-
 <!--- End- Eliya Ablet --->
+
 
 ### Assurance Case 3: Delete (DEL)
 <!--- Start - Samuel Schneider --->
@@ -150,8 +125,8 @@ Damage caused by an attack involving stolen credential may be undone if the chan
 
 **Evidence 4:**
 The presence of Roll Back Access Control allows for administrators to undo damage caused by a malicious actor using a hacked account. This allows for restoration of deleted or manipulated data and records so that the damage may be entirely undone.
-
 <!--- End - Samuel Schneider --->
+
 
 <!--- Start - Adam Stemmler--->
 ### Assurance Case 4: Modify (MDFY)
@@ -219,8 +194,8 @@ Server configuration settings. The server configuration settings for the server 
 
 **Evidence E5:**
 The OpenLDAP documentation details all the OpenLDAP features and how to implement them. It is evidence for all three final sub-claims.
-
 <!--- End - Adam Stemmler--->
+
 
 <!--- Start - Md Monirul Islam--->
 ### Assurance Case 5: Search (SRCH)
@@ -250,10 +225,7 @@ OpenLDAP securely enables to generation of a report containing all the employees
 **Evidence E4.1**: OpenLDAP’s logs are stored in a secure location with restricted access. \  
 **Evidence E4.2**: Checksums or other integrity-check mechanisms are in place to verify the integrity of the logs.
 
-
-
-<!--- End - Md Monirul Islam--->
-
+<!--- Start - Awais--->
 ### Assurance Case 6: Filtered Employees email search (SRCH)
 
 A building supervisor wants to search for the email address of all employees on 2nd floor in the Omaha HQ to notify them of a power outage.
@@ -304,43 +276,34 @@ Access control policies or documentation specifying who has access to employee e
 
 **Evidence E5:**
 Evidence of security audits or assessments that confirm compliance with security policies.
+<!--- End - Awais--->
 
-
-<!--- End - Md Monirul Islam--->
 ## Part 2
-<!---Expecations of Assignment for reference --->
 
-* Assess the alignment of the evidence you identified in your diagrams with that available (or can be made available) from the OSS project. Highlight the gaps.
-( Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task.
-
-While working on this OSS project we realized a few limitations of LDAP that may not meet all the requirements:
-1.	Lack of Full Transaction Support:
-LDAP lacks full support for transactions. While certain operations within LDAP can be grouped together in a single transaction-like operation, it doesn't provide the same level of transactional integrity as some other database systems.
-
-2.	Limited Complex Query Capabilities:
-LDAP is optimized for quick retrieval of information based on known attributes.  However, it may not be as suitable for complex querying operations that involve multiple conditions or advanced search capabilities.
-
-3.	Complex Access Control Lists (ACLs):
-Defining and managing complex access control lists in LDAP can be intricate, particularly for large directory services with many users and groups. This complexity can sometimes lead to misconfigurations or unintended security gaps.
-
-4.	Lack of Native Data Validation:
-LDAP does not have built-in mechanisms for enforcing data validation rules at the protocol level. It relies on schema definitions, which may not cover all possible validation requirements.
-
-These limitations don't diminish the value and importance of LDAP, but they highlight areas where careful planning, configuration, and supplementary technologies may be necessary to address specific requirements. Organizations should consider these aspects when implementing LDAP in their environments.
-
-
-* Include a reflection on your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward? 
-
----
-
-<!--- End - Expecations, this can be removed later --->
-
-
-NOTE that every action in LDAP has a response as LDAP is a RFC defined protocol.  OpenLDAP is a directory server implantation which speaks the LDAP protocol.  Therefore, a BIND REQUEST with have a BIND RESPONSE for example.  These must be correlated in the audit log using the messageID.  Open source tools like logstash/Kabana.  OpenLDAP uses CEF logging and provides no assistance in corelating a request with the response (outcome).
-
+## Shortcomings of OpenLDAP
+NOTE that every action in LDAP has a response as LDAP is a RFC defined protocol.  OpenLDAP is a directory server implmentation which speaks the LDAP protocol.  Therefore, a BIND REQUEST will have a BIND RESPONSE for example.  These must be correlated in the audit log using the messageID using open source tools like logstash/Kabana which are not built in to OpenLDAP.  OpenLDAP uses CEF logging and provides no assistance in corelating a request with the response (outcome).
 
 It is critical to handle the BIND or authentication process properly as this identifies the end user and begins the authorization process (apply ACLs).  Pass thru authentication is a loop hole that removes trust and the associated evidence from the use case and while it may establish identity, the method in which it was completed is indeterminate.  In the case of a authentication failure, the user may step back to an anonymous BIND, and authentication failure followed by a anonymous BIND from the same client must be treated as suspicious.  This requires looping back in the use case which is not possible in LDAP, hence leaving it incomplete as this would normally be the responsibility of a SIEM solution.  Although some LDAP varieties handle this, OpenLDAP does not.  All other cases are handled and evidence is logged appropriately for audit purposes.
 
-While the report generation employs OpenLDAP's logging capabilities, evidence regarding the search capabilities of the SRCH function is unclear. It is important to ascertain if SRCH can efficiently and securely retrieve logs for queries and whether its outputs align with the report generation mechanism. This gap needs further attention 
+While the SRCH report generation employs OpenLDAP's logging capabilities, evidence regarding the search capabilities of the SRCH function is unclear. It is important to ascertain if SRCH can efficiently and securely retrieve logs for queries and whether its outputs align with the report generation mechanism. This gap needs further attention.
 
+While working on this OSS project we realized a few limitations of LDAP that may not meet all the requirements:
+Lack of Full Transaction Support:
+LDAP lacks full support for transactions. While certain operations within LDAP can be grouped together in a single transaction-like operation, it doesn't provide the same level of transactional integrity as some other database systems.
 
+Limited Complex Query Capabilities:
+LDAP is optimized for quick retrieval of information based on known attributes.  However, it may not be as suitable for complex querying operations that involve multiple conditions or advanced search capabilities.
+
+Complex Access Control Lists (ACLs):
+Defining and managing complex access control lists in LDAP can be intricate, particularly for large directory services with many users and groups. This complexity can sometimes lead to misconfigurations or unintended security gaps.
+
+Lack of Native Data Validation:
+LDAP does not have built-in mechanisms for enforcing data validation rules at the protocol level. It relies on schema definitions, which may not cover all possible validation requirements.
+
+OpenLDAP does have a number of modern security features builtin. However, there are many others, like rate limiting, that it does not support natively. However, by its nature, OpenLDAP can integrate other third-party software to use features like rate lmiting with great ease; these are issues we took into consideration when building our assurance cases.
+
+## Link to project board: https://github.com/users/bartelsjoshuac/projects/2/views/1
+This has tasks for each use case and the other parts of the assignment as well, with team members assigned.
+
+## Reflection on work:
+This week we improved our communication, being able to get everyone in one palce at the same time for a meeting more often than previously. However, more improvement is needed for our communication. We were all able to meet on Monday to go over everything and review each other's work, offering suggestions and rethinking our own choices based on the dialogue, which was a good change from previous weeks where Mondays were often a mad dash to finish certain work, although we will continue to improve Monday meetings as well as adherence to our internal time lines and due dates apart from the official due date for the assignment. The meeting last week with the professor did help and gave us some much needed feedback which helped guide our decisions when creating our assurance cases. Although, there is room for improvement in our adherence to the instructor feedback and class materials when creating our project contributions, which can and will be improved through increased communication and dialogue in our meetings.
