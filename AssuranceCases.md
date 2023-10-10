@@ -134,28 +134,22 @@ The presence of Roll Back Access Control allows for administrators to undo damag
 ![Assurance Case 4](https://github.com/bartelsjoshuac/SAPG/blob/main/images/MDFY_Assurance_Case.drawio.svg)
 
 **Top-Level Claim:**
-OpenLDAP ensures the security of OpenLDAP server data. 
-
+OpenLDAP ensures the security of OpenLDAP server data. \
 **Context CT1:**
 It is crucial for OpenLDAP servers to maintain the confidentiality, integrity, and availability of data, both in transit and at rest, by employing all its suite of tools and proper server settings configurations.
 
 **Rebutal R1:**
-Unless there is an unauthorized modification of server data from an unathorized or unauthenticated user.
-
+Unless there is an unauthorized modification of server data from an unathorized or unauthenticated user. \
 **Sub-Claim C2:**
-Server enforces authentication with credentials, thus both authenticating and authorizing the user based on that user's identity.
-
+Server enforces authentication with credentials, thus both authenticating and authorizing the user based on that user's identity. \
 **Context CT2**
-Depending on configuration, servers can require quite sophisticated passwords, as well as multi factor authentication. OpenLDAP is capable of employing all the latest authentication and authorization standards.
-
+Depending on configuration, servers can require quite sophisticated passwords, as well as multi factor authentication. OpenLDAP is capable of employing all the latest authentication and authorization standards. \
 **Rebuttal R4:**
-Unless a user binds anonymously, thus skirting the need for authentication.
-
+Unless a user binds anonymously, thus skirting the need for authentication. \
 **Sub-Claim C5:**
-Server enforces access control list checking, preventing anonymous users from modifying data. ACLs also ensure legitimate users can only modify data they have a need to modify.
-
+Server enforces access control list checking, preventing anonymous users from modifying data. ACLs also ensure legitimate users can only modify data they have a need to modify. \
 **Evidence E1:**
-OpenLDAP servers have a wide variety of quality authetication methods available for their use, and this server employs new, secure authentication techniques.
+OpenLDAP servers have a wide variety of quality authetication methods available for their use, and this server employs new, secure authentication techniques. 
 
 **Rebuttal R2:**
 Unless OpenLDAP server data can be read by anyone, thus degrading its confidentiality.
