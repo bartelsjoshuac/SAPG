@@ -63,7 +63,7 @@ Audit log with IP
 
 ### Assurance Case 2: Creating New Claims (ADD)
 
-![Assurance Case 2](https://app.diagrams.net/#Hbartelsjoshuac%2FSAPG%2Fmain%2Fimages%2FADD.svg)
+![Assurance Case 2](https://github.com/bartelsjoshuac/SAPG/blob/main/images/ADD.svg)
 
 **Top-Level Claim:**
 "The ADD operation in OpenLDAP, within a banking environment, guarantees the secure and accurate addition of new entries to the directory, upholding the highest standards of data integrity and access control."
