@@ -3,10 +3,13 @@
 
 <!--- Josh Bartels --->
 ### Threats
-DFD 1
+
+## DFD 1
+
+![Bind Threat](https://github.com/bartelsjoshuac/SAPG/blob/main/images/BINDThreat.jpg)
 
 ### Mitigation
 
-### Report HTML Link
+[Bind Threat TFT Resport](https://github.com/bartelsjoshuac/SAPG/blob/main/BINDThreatReport.htm)
 
 ## Part 2: Observations
