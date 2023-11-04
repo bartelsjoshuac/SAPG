@@ -10,6 +10,6 @@
 
 ### Mitigation
 
-[Bind Threat TFT Resport](https://github.com/bartelsjoshuac/SAPG/blob/main/BINDThreatReport.htm)
+[Bind Threat TFT Resport](https://htmlpreview.github.io/?https://github.com/bartelsjoshuac/SAPG/blob/main/BINDThreatReport.htm)
 
 ## Part 2: Observations
