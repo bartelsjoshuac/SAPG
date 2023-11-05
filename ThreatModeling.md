@@ -15,7 +15,7 @@ Document mitigation strategies for the relevant threats
 
 Pay special attention to elements that interact across threat boundaries
 
-[Bind Threat TFT Report](https://htmlpreview.github.io/?https://github.com/bartelsjoshuac/SAPG/blob/main/BINDThreatReport.htm)
+[Bind Threat TFT Report](https://htmlpreview.github.io/?https://github.com/bartelsjoshuac/SAPG/blob/main/HTML_Files/BINDThreatReport.htm)
 
 ## Part 2: Observations
 Using findings from the DFD-based threat analysis from part 1 of this assignment, review your OSS project for design-related issues. Summarize your observations, in particular, highlight the gaps.
