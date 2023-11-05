@@ -8,13 +8,6 @@
 
 ![Bind Threat](https://github.com/bartelsjoshuac/SAPG/blob/main/images/BINDThreat.jpg)
 
-### Mitigation
-Examine each automatically identified threat
-
-Document mitigation strategies for the relevant threats
-
-Pay special attention to elements that interact across threat boundaries
-
 [Bind Threat TFT Report](https://htmlpreview.github.io/?https://github.com/bartelsjoshuac/SAPG/blob/main/HTML_Files/BINDThreatReport.htm)
 
 ## Part 2: Observations
