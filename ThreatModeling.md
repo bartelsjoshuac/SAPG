@@ -13,7 +13,7 @@
 
 [Bind Threat TFT Report](https://htmlpreview.github.io/?https://github.com/bartelsjoshuac/SAPG/blob/main/HTML_Files/BINDThreatReport.htm)
 
-![Del Threat](https://github.com/bartelsjoshuac/SAPG/blob/main/images/LdapDelDfd.jpg)
+![Del Threat](https://github.com/bartelsjoshuac/SAPG/blob/main/images/LdapDelDfd.PNG)
 
 ## Part 2: Observations
 
