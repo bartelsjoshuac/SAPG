@@ -22,7 +22,7 @@ Our threat examination and mitigation documentation are included below in the HT
 
 ![MDFY/SRCH](https://github.com/bartelsjoshuac/SAPG/blob/main/images/LdapDelDfd.PNG)
 
-[Bind Threat TMT Report](https://htmlpreview.github.io/?https://github.com/bartelsjoshuac/SAPG/blob/main/HTML_Files/SRCH_MDFY_Threat_Report.htm)
+[Modify/Search TMT Report](https://htmlpreview.github.io/?https://github.com/bartelsjoshuac/SAPG/blob/main/HTML_Files/SRCH_MDFY_Threat_Report.htm)
 
 
 
