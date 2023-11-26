@@ -85,6 +85,9 @@ The analysis also revealed a substantial count of bugs across the project's dire
 - `servers`: 556 bugs, 3 vulnerabilities
 - `tests`: 25 bugs
 
+Complete breakdown of the report is seen in the following image:
+
+![Full Code scan report using SonarCloud](images/mmi_overall_stat.jpg)
 
 # Part 2: Key Findings and Contributions
 
