@@ -16,6 +16,8 @@ The github code review categorizes vulnerabilities by easily researchable string
 
 *Document findings from a manual code review of critical security functions identified in misuse cases, assurance cases, and threat models.*
 
+![GitHub Code Scanning REsults](https://github.com/bartelsjoshuac/SAPG/blob/main/images/ghcodescan.jpg)
+
 Looking at the uncontrolled format string found in ldapsearch.c  This is actually the ldapsearch command line utility that is include with OpenLDAP.  This may be used be an admin, with root privledges to SSH to the server only, and is not commonly used, except for tests.
   ```
   } else
