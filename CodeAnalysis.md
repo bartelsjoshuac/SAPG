@@ -64,6 +64,28 @@ A 64 bit unsigned int has a max value of 18,446,744,073,709,551,615.  I suppose 
 
 >>>>> Monirul insert link and description here of Sonarcloud findings
 
+Utilizing [SonarCloud](https://sonarcloud.io/), we've conducted an analysis of the openLDAP project to assess the quality of its code. The insights obtained from SonarCloud have been pivotal in identifying critical areas of concern. There were 4 vulnerabilities were reported by SonarCloud.
+
+![Code scan report using SonarCloud](images/mmi_git_scan_report.png)
+
+Following table illustrates vulnerabilities and corresponding CWE ID. In our findings, a critical vulnerability was pinpointed in the usage of "memset" for deleting sensitive data, a practice susceptible to compiler optimization that could lead to security flaws, as per CWE-14. Additionally, three high-severity vulnerabilities related to TOCTOU race conditions (CWE-367) were discovered, suggesting potential security risks during file access operations.
+
+| Serial   | Alert    | Severity    | CWE |
+|:------------|:----------|:------------:|:-----------:|
+|1| "memset" should not be used to delete sensitive data | Critical |[CWE-14: Compiler Removal of Code to Clear Buffers](https://cwe.mitre.org/data/definitions/14)|
+|2|Accessing files should not introduce TOCTOU vulnerabilities | High |[CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition](https://cwe.mitre.org/data/definitions/367)|
+|3| Accessing files should not introduce TOCTOU vulnerabilities | High |[CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition](https://cwe.mitre.org/data/definitions/367)|
+|4| Accessing files should not introduce TOCTOU vulnerabilities | High |[CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition](https://cwe.mitre.org/data/definitions/367)|
+
+
+The analysis also revealed a substantial count of bugs across the project's directories:
+- `clients/tools`: 7 bugs
+- `contrib`: 83 bugs
+- `libraries`: 406 bugs, 1 vulnerability
+- `servers`: 556 bugs, 3 vulnerabilities
+- `tests`: 25 bugs
+
+
 # Part 2: Key Findings and Contributions
 
 *Provide a summary of findings from manual and/or automated scanning. This summary should include mappings to CWEs to describe significant findings and perceive risk in your hypothetical operational environment.*
