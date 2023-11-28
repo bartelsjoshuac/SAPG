@@ -8,15 +8,15 @@ Document your code review strategy along with responses to the following questio
 
 *What challenges did you expect before starting the code review?*  
 
-No members of the team and fluent in straightr C programming, although most are familair with C.
+No members of the team and fluent in straight C programming, although most are familair with C.  However the tools do not require in depth familiaty with the landuage as they find common flaws in common syntax.
 
 *How did your code review strategy attempt to address the anticipated challenges?*
 
 The github code review categorizes vulnerabilities by easily researchable strings
 
-*Document findings from a manual code review of critical security functions identified in misuse cases, assurance cases, and threat models.*
-
 ***
+
+*Document findings from a manual code review of critical security functions identified in misuse cases, assurance cases, and threat models.*
 
 ![GitHub Code Scanning REsults](https://github.com/bartelsjoshuac/SAPG/blob/main/images/ghcodescan.jpg)
 
@@ -61,10 +61,9 @@ Multiplication result may overflow 'unsigned int' before it is converted to 'siz
 
 A 64 bit unsigned int has a max value of 18,446,744,073,709,551,615.  I suppose a checked could be included to insure that it does not exceed that value however the number is so large the author likely assumeed it be to impossible.  Since there are 9 locations where this same type of operation is done and not checked, I assume skipping this was intentional.
 
+***
 
 *Document findings from automated code scanning (if available). Include links to tool outputs.*
-
-***
 
 Utilizing [SonarCloud](https://sonarcloud.io/), we've conducted an analysis of the openLDAP project to assess the quality of its code. The insights obtained from SonarCloud have been pivotal in identifying critical areas of concern. There were 4 vulnerabilities were reported by SonarCloud.
 
