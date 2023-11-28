@@ -16,6 +16,8 @@ The github code review categorizes vulnerabilities by easily researchable string
 
 *Document findings from a manual code review of critical security functions identified in misuse cases, assurance cases, and threat models.*
 
+***
+
 ![GitHub Code Scanning REsults](https://github.com/bartelsjoshuac/SAPG/blob/main/images/ghcodescan.jpg)
 
 Looking at the uncontrolled format string found in ldapsearch.c  This is actually the ldapsearch command line utility that is include with OpenLDAP.  This may be used be an admin, with root privledges to SSH to the server only, and is not commonly used, except for tests.
@@ -62,7 +64,7 @@ A 64 bit unsigned int has a max value of 18,446,744,073,709,551,615.  I suppose 
 
 *Document findings from automated code scanning (if available). Include links to tool outputs.*
 
->>>>> Monirul insert link and description here of Sonarcloud findings
+***
 
 Utilizing [SonarCloud](https://sonarcloud.io/), we've conducted an analysis of the openLDAP project to assess the quality of its code. The insights obtained from SonarCloud have been pivotal in identifying critical areas of concern. There were 4 vulnerabilities were reported by SonarCloud.
 
