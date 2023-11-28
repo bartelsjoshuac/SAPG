@@ -65,7 +65,7 @@ A 64 bit unsigned int has a max value of 18,446,744,073,709,551,615.  I suppose 
 
 *Document findings from automated code scanning (if available). Include links to tool outputs.*
 
-Utilizing [SonarCloud](https://sonarcloud.io/), we've conducted an analysis of the openLDAP project to assess the quality of its code. The insights obtained from SonarCloud have been pivotal in identifying critical areas of concern. There were 4 vulnerabilities were reported by SonarCloud.
+Utilizing [SonarCloud](https://sonarcloud.io/), we've conducted an analysis of the openLDAP project to assess the quality of its code. The insights obtained from SonarCloud have been pivotal in identifying critical areas of concern. There were 4 vulnerabilities reported by SonarCloud.
 
 ![Code scan report using SonarCloud](images/mmi_git_scan_report.png)
 
