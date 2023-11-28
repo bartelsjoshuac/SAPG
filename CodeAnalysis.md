@@ -94,6 +94,8 @@ Complete breakdown of the report is seen in the following image:
 
 *Provide a summary of findings from manual and/or automated scanning. This summary should include mappings to CWEs to describe significant findings and perceive risk in your hypothetical operational environment.*
 
+We can see significant difference in what GitHub's codeQL found and SonarCloud, in fact none of the same vulnerabilities are flagged.
+
 *Describe your planned or ongoing contributions to the upstream open-source project (I.documentation, design changes, code changes, communications, etc.). Your response can be based on any of the prior assignments in the class.*
 
 *Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task.* 
@@ -103,8 +105,6 @@ Complete breakdown of the report is seen in the following image:
 [Github Code Scanning](https://github.com/bartelsjoshuac/openldap/security/code-scanning)
 
 [Project Board](https://github.com/users/bartelsjoshuac/projects/2/views/1)
-
-
 
 
 *Include a reflection of your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward?*
