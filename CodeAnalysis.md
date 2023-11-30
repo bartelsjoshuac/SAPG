@@ -65,7 +65,8 @@ A 64 bit unsigned int has a max value of 18,446,744,073,709,551,615.  I suppose 
 
 *Document findings from automated code scanning (if available). Include links to tool outputs.*
 
-Utilizing [SonarCloud](https://sonarcloud.io/), we've conducted an analysis of the openLDAP project to assess the quality of its code. The insights obtained from SonarCloud have been pivotal in identifying critical areas of concern. There were 4 vulnerabilities reported by SonarCloud.
+Utilizing [SonarCloud](https://sonarcloud.io/), we've conducted an analysis of the openLDAP project to assess the quality of its code. The insights obtained from SonarCloud have been pivotal in identifying critical areas of concern. There were 4 vulnerabilities reported by SonarCloud. 
+SonarCloud scan result: [link](https://sonarcloud.io/summary/overall?id=hi-mmi_openldap_mmi)
 
 ![Code scan report using SonarCloud](images/mmi_git_scan_report.png)
 
@@ -90,6 +91,16 @@ Complete breakdown of the report is seen in the following image:
 
 ![Full Code scan report using SonarCloud](images/mmi_overall_stat.jpg)
 
+
+The Common Weakness Enumeration (CWE) provides a categorized listing of software weaknesses and technical vulnerabilities. By correlating these with the MITRE ATT&CK framework, which outlines the tactics and techniques used by adversaries, we can better anticipate potential threats. Furthermore, aligning these insights with the MITRE D3FEND framework allows us to establish proactive defenses. Below is a table that illustrates the relationship between common vulnerabilities, the corresponding one potential attack technique, and the countermeasures recommended by MITRE D3FEND.
+
+
+| **CWE** | **MITRE ATT&CK Framework Technique** | **D3FEND Inferred Relationships** |
+|---------|--------------------------------------|--------------------------------|
+| CWE-14: Compiler Removal of Code to Clear Buffers | [T1055: Process Injection](https://attack.mitre.org/techniques/T1055/) - Exploits lingering sensitive data in memory due to incomplete buffer clearing, allowing the injection of malicious code into processes. | [File and Directory Permissions Modification - T1222](https://d3fend.mitre.org/offensive-technique/attack/T1055/) |
+| CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition | [T1222: File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/) - Leverages TOCTOU race conditions to alter file or directory permissions, potentially leading to unauthorized access or privilege escalation. | [Process Injection - T1055](https://d3fend.mitre.org/offensive-technique/attack/T1222/) |
+
+The table above serves as a strategic guide to understanding the nexus between vulnerabilities, attack methodologies, and defensive tactics. It emphasizes how crucial it is to stay ahead of potential threats by not only being aware of how systems can be compromised but also by implementing the appropriate countermeasures. 
 # Part 2: Key Findings and Contributions
 
 *Provide a summary of findings from manual and/or automated scanning. This summary should include mappings to CWEs to describe significant findings and perceive risk in your hypothetical operational environment.*
