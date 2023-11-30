@@ -102,7 +102,7 @@ We can see significant difference in what GitHub's codeQL found and SonarCloud, 
 
 [Our GitHub OpenLDAP Fork](https://github.com/bartelsjoshuac/openldap)
 
-[Github Code Scanning](https://github.com/bartelsjoshuac/openldap/security/code-scanning)
+[Github Code Scan](https://github.com/bartelsjoshuac/openldap/security/code-scanning) (requires project permissions)
 
 [SonarCloud Scan](https://sonarcloud.io/summary/overall?id=hi-mmi_openldap_mmi)
 
