@@ -120,6 +120,8 @@ We can see significant difference in what GitHub's codeQL found and SonarCloud, 
 
 [Project Board](https://github.com/users/bartelsjoshuac/projects/2/views/1)
 
+[OpenLDAP CVE List](https://www.cvedetails.com/vulnerability-list/vendor_id-439/Openldap.html)
+
 
 *Include a reflection of your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward?*
 
