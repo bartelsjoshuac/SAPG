@@ -133,5 +133,5 @@ We can see significant difference in what GitHub's codeQL found and SonarCloud, 
 
 *Include a reflection of your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward?*
 
-Unforuntelty contributions from two team members were absent from the submission of the Assurance cases assignment, did not attend team meetings, nor meetings with the professor and thus far have not contributed to this assignment so this again reflects the contributions of just 4 team members.
+This assignment, like the Assurance Cases, reflects the work of just 4 of the 6 team members and two team members have elected to not contribute communicate or attend required meetings due to unknown circumstances.
 
