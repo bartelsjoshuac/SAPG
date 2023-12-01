@@ -133,5 +133,5 @@ We can see significant difference in what GitHub's codeQL found and SonarCloud, 
 
 *Include a reflection of your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward?*
 
-This assignment, like the Assurance Cases, reflects the work of just 4 of the 6 team members and two team members have elected to not contribute communicate or attend required meetings due to unknown circumstances.
+This assignment, like the Assurance Cases, reflects the work of just some of the team members as some team members have elected to not contribute, communicate or attend required meetings due to unknown circumstances.
 
