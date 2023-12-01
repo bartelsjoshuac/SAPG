@@ -133,3 +133,5 @@ We can see significant difference in what GitHub's codeQL found and SonarCloud, 
 
 *Include a reflection of your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward?*
 
+Two team members were notably absent from the previous assignment 
+
