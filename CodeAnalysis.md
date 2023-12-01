@@ -22,7 +22,15 @@ The github code review categorizes vulnerabilities by easily researchable string
 
 ![GitHub Code Scanning REsults](https://github.com/bartelsjoshuac/SAPG/blob/main/images/ghcodescan.jpg)
 
-Looking at the uncontrolled format string found in ldapsearch.c  This is actually the ldapsearch command line utility that is include with OpenLDAP.  This may be used be an admin, with root privledges to SSH to the server only, and is not commonly used, except for tests.
+| Serial   | Alert    | Severity    | CWE |
+|:------------|:----------|:------------:|:-----------:|
+|1| Uncontrolled format string | Critical | [CWE-134: Use of Externally-Controlled Format String ](https://cwe.mitre.org/data/definitions/134.html) |
+|2| Multiplication result converted to larger type | High | (CWE-190: Integer Overflow or Wraparound)[https://cwe.mitre.org/data/definitions/190.html]
+|3| Multiplication result converted to larger type | High | (CWE-192: Integer Coercion Error)[https://cwe.mitre.org/data/definitions/192.html]
+|4| Multiplication result converted to larger type | High | (CWE-197: Numeric Truncation Error)[https://cwe.mitre.org/data/definitions/197.html]
+|5| Multiplication result converted to larger type | High |  (CWE-681: Incorrect Conversion between Numeric Types) [https://cwe.mitre.org/data/definitions/681.html]
+
+Looking at the uncontrolled format string found in ldapsearch.c (CWE-134)  This is actually the ldapsearch command line utility that is include with OpenLDAP.  This may be used be an admin, with root privledges to SSH to the server only, and is not commonly used, except for tests.
   ```
   } else
     {
@@ -40,15 +48,13 @@ CodeQL
   if ( rc1 != 0 ) {
 ```
 
-
-
 One of the arguments to the ldapsearch command is a search filter.  Here is a valid filter that  (&(uid=josh*)(objectClass=interOrgPerson)(!(l=Omaha))).  This would give us all uid objects of the objectClass inetOrgPerson where the userstart starts with josh and the city is NOT Omaha.  If the search filter were formatted incorrectly, the ldapsearch utility would print this to the screen and the !l would be interpreted by the shell.  If that letter l was a number, the shell could execute that command from the history of the user executing the ldapsearch.  
 
 One option would be to escape the output however since the desire in this use case is to inform the user that they entered an invalid search filter, padding it with escape chars might confuse them further.
 
-The 9 common vulnerabilities of the type "Multiplication result converted to larger type". In most cases a multiplication of two values is occuring before prior to a type conversation to a larger type
+The 9 common vulnerabilities of the type "Multiplication result converted to larger type". In most cases a multiplication of two values is occuring before prior to a type conversation to a larger type.  THis encompass 4 CWE's (190, 192, 197, and 681)
 
-Multiplication result may overflow 'unsigned int' before it is converted to 'size_t'.
+Multiplication result may overflow 'unsigned int' before it is converted to 'size_t'. (NOTE: These were all later update by GitHub  later updated to read "Multiplication result converted to larger type")
 
 ```
   return rc;
