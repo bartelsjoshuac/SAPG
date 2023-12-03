@@ -22,11 +22,15 @@ We ran the code through the GitHub code scanning which found [14 vulnerabilities
 We then selected SonarCloud as another automated code scanning tool to validate the findings of our first pass.
 We wanted to use another automated scanning tool to validate our findings from GitHub CodeQL Workflow. To achieve this, we utilized SonarCloud. SonarCloud is a commercial tool with a powerful set of language-specific analyzers that use thousands of rules to track down hard-to-find issues. As proud supporters of the open source community, SonarCloud allows free usage if this tool for open source projects. This tool yielded vulnerability findings as our initial tool, thus verifying our initial results.
 
-Document your code review strategy along with responses to the following questions:
+**What challenges did you expect before starting the code review?**
 
-*What challenges did you expect before starting the code review?*
+No members of the team are fluent in vanilla C programming, although most intermediately familiar with C from university courses. Fortunately, automated tools do not require in depth familiaty with the landuage as they find common flaws in common syntax.
 
-No members of the team and fluent in straight C programming, although most are  familiar with C.  However the tools do not require in depth familiaty with the landuage as they find common flaws in common syntax.
+First, we did not anticipate finding the number of repeated errors that we did in such a mature product. This implies that there may be a pervasive architectural fault or a false-positive in the automated code review tool.
+
+Second, we were unsure how much our inherant subjectivity would impact our collective understanding of the codebase. Code reviews can be subjective, with different reviewers having varying opinions on what constitutes “good code”. With this in mind, we must consider that subjectivity can lead to disagreements and inconsistencies in code review standards.
+
+Finally, we were unsure how the sturcture of an open-source codebase would impact the code quality. Open-source projects have a tendancy to vary greatly in their code qualities. We anticipated that this may lead to significant inconsistency in portions of the code due to the unstructured nature of open-source projects.
 
 *How did your code review strategy attempt to address the anticipated challenges?*
 
