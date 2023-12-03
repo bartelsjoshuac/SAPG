@@ -1,12 +1,13 @@
 # Part 1: Code Review
 
-**Initial Scope and Strategy**
-
+**Initial Scope and Strategy**:
 To begin, we examined known CWEs for both OpenLDAP itself and C code in general. When analyzing known OpenLDAP CWEs, we used the site "OpenCVE.io."
 This site listed known CVEs for OpenLDAP with their corresponding CWEs. We also decided to analyze the entirety of OpenLDAP to best encompass
 every potential security issue/CWE that OpenLDAP may have.
 
-**CWE Checklist**
+***
+
+**CWE Checklist**:
 
 | Serial   | CWE |  Type | Name |
 |:------------|:---------- | :----------| :---------- |
@@ -21,14 +22,18 @@ every potential security issue/CWE that OpenLDAP may have.
 |9| CWE-789 | Varient | Memory Allocation with Excessive Size Value |
 
 
-**Code Review Tool Selection**
+***
+
+**Code Review Tool Selection**:
 
 We ran the code through the GitHub code scanning which found [14 vulnerabilities](https://github.com/bartelsjoshuac/openldap/security/code-scanning), all critical or high. Given the small number the fact that 9 of the 14 fall into the category of "Multiplication result converted to larger type".  This really just gives us 5 to look at, albeit 9 of them are in different places to examine they are all in the same mdb.c library file, which is the SleepyCat (Berkley DB back end).
 
 We then selected SonarCloud as another automated code scanning tool to validate the findings of our first pass.
 We wanted to use another automated scanning tool to validate our findings from GitHub CodeQL Workflow. To achieve this, we utilized SonarCloud. SonarCloud is a commercial tool with a powerful set of language-specific analyzers that use thousands of rules to track down hard-to-find issues. As proud supporters of the open source community, SonarCloud allows free usage if this tool for open source projects. This tool yielded vulnerability findings as our initial tool, thus verifying our initial results.
 
-**What challenges did you expect before starting the code review?**
+***
+
+**What challenges did you expect before starting the code review?**:
 
 No members of the team are fluent in vanilla C programming, although most intermediately familiar with C from university courses. Fortunately, automated tools do not require in depth familiaty with the landuage as they find common flaws in common syntax.
 
@@ -38,7 +43,9 @@ Second, we were unsure how much our inherant subjectivity would impact our colle
 
 Finally, we were unsure how the sturcture of an open-source codebase would impact the code quality. Open-source projects have a tendancy to vary greatly in their code qualities. We anticipated that this may lead to significant inconsistency in portions of the code due to the unstructured nature of open-source projects.
 
-**How did your code review strategy attempt to address the anticipated challenges?**
+***
+
+**How did your code review strategy attempt to address the anticipated challenges?**:
 
 After consulting with the output of our automated code review tools, we can now address the challenges posed in the prior section.
 
