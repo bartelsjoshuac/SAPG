@@ -1,11 +1,17 @@
 # Part 1: Code Review
 
-*CWE Checklist*
-1. test
-2. test
-3. test
-4. test
-5. test
+**CWE Checklist**
+| Serial   | CWE |  Type | Name |
+|:------------|:---------- | :----------| :---------- |
+|1| CWE-121 | Varient | Stack-based Buffer Overflow |
+|2| CWE-122 | Varient | Heap-based Buffer Overflow |
+|3| CWE-124 | Base | Buffer Underwrite ('Buffer Underflow') |
+|4| CWE-134 | Base | Use of Externally-Controlled Format String |
+|5| CWE-192 | Varient | Integer Coercion Error |
+|6| CWE-197 | Base | Numeric Truncation Error |
+|7| CWE-364 | Base | Signal Handler Race Condition |
+|8| CWE-704 | Class | Incorrect Type Conversion or Cast |
+|9| CWE-789 | Varient | Memory Allocation with Excessive Size Value |
 
 We ran the code through the GitHub code scanning which found [14 vulnerabilities](https://github.com/bartelsjoshuac/openldap/security/code-scanning), all Critical or High.  Given the small number the fact that 9 of the 14 fall into the category of "Multiplication result converted to larger type".  This really just gives us 5 to look at, albeit 9 of them are in different places to examine they are all in the same mdb.c library file, which is the SleepyCat (Berkley DB back end)
 
@@ -13,7 +19,7 @@ We then selected Sonarcloud as another automated code scanning tool
 
 Document your code review strategy along with responses to the following questions:
 
-*What challenges did you expect before starting the code review?*  
+*What challenges did you expect before starting the code review?*
 
 No members of the team and fluent in straight C programming, although most are familair with C.  However the tools do not require in depth familiaty with the landuage as they find common flaws in common syntax.
 
@@ -43,17 +49,17 @@ Looking at the uncontrolled format string found in ldapsearch.c (CWE-134)  This 
   }
   rc1 = dosearch( ld, base, scope, filtpattern, line,
  ```
- 
+
 The value of this argument may come from  and is being used as a formatting argument to dosearch(filtpatt), which calls snprintf(__fmt).
 The value of this argument may come from  and is being used as a formatting argument to dosearch(filtpatt), which calls snprintf(__fmt), which calls __builtin___snprintf_chk((unnamed parameter 4)).
-CodeQL 
+CodeQL
 ```
     attrs, attrsonly, NULL, NULL, NULL, sizelimit );
 
   if ( rc1 != 0 ) {
 ```
 
-One of the arguments to the ldapsearch command is a search filter.  Here is a valid filter that  (&(uid=josh*)(objectClass=interOrgPerson)(!(l=Omaha))).  This would give us all uid objects of the objectClass inetOrgPerson where the userstart starts with josh and the city is NOT Omaha.  If the search filter were formatted incorrectly, the ldapsearch utility would print this to the screen and the !l would be interpreted by the shell.  If that letter l was a number, the shell could execute that command from the history of the user executing the ldapsearch.  
+One of the arguments to the ldapsearch command is a search filter.  Here is a valid filter that  (&(uid=josh*)(objectClass=interOrgPerson)(!(l=Omaha))).  This would give us all uid objects of the objectClass inetOrgPerson where the userstart starts with josh and the city is NOT Omaha.  If the search filter were formatted incorrectly, the ldapsearch utility would print this to the screen and the !l would be interpreted by the shell.  If that letter l was a number, the shell could execute that command from the history of the user executing the ldapsearch.
 
 One option would be to escape the output however since the desire in this use case is to inform the user that they entered an invalid search filter, padding it with escape chars might confuse them further.
 
@@ -78,7 +84,7 @@ A 64 bit unsigned int has a max value of 18,446,744,073,709,551,615.  I suppose 
 
 *Document findings from automated code scanning (if available). Include links to tool outputs.*
 
-Utilizing [SonarCloud](https://sonarcloud.io/), we've conducted an analysis of the openLDAP project to assess the quality of its code. The insights obtained from SonarCloud have been pivotal in identifying critical areas of concern. There were 4 vulnerabilities reported by SonarCloud. 
+Utilizing [SonarCloud](https://sonarcloud.io/), we've conducted an analysis of the openLDAP project to assess the quality of its code. The insights obtained from SonarCloud have been pivotal in identifying critical areas of concern. There were 4 vulnerabilities reported by SonarCloud.
 
 SonarCloud scan result: [link](https://sonarcloud.io/summary/overall?id=hi-mmi_openldap_mmi)
 
@@ -114,7 +120,7 @@ The Common Weakness Enumeration (CWE) provides a categorized listing of software
 | CWE-14: Compiler Removal of Code to Clear Buffers | [T1055: Process Injection](https://attack.mitre.org/techniques/T1055/) - Exploits lingering sensitive data in memory due to incomplete buffer clearing, allowing the injection of malicious code into processes. | [File and Directory Permissions Modification - T1222](https://d3fend.mitre.org/offensive-technique/attack/T1055/) |
 | CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition | [T1222: File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/) - Leverages TOCTOU race conditions to alter file or directory permissions, potentially leading to unauthorized access or privilege escalation. | [Process Injection - T1055](https://d3fend.mitre.org/offensive-technique/attack/T1222/) |
 
-The table above serves as a strategic guide to understanding the nexus between vulnerabilities, attack methodologies, and defensive tactics. It emphasizes how crucial it is to stay ahead of potential threats by not only being aware of how systems can be compromised but also by implementing the appropriate countermeasures. 
+The table above serves as a strategic guide to understanding the nexus between vulnerabilities, attack methodologies, and defensive tactics. It emphasizes how crucial it is to stay ahead of potential threats by not only being aware of how systems can be compromised but also by implementing the appropriate countermeasures.
 # Part 2: Key Findings and Contributions
 
 *Provide a summary of findings from manual and/or automated scanning. This summary should include mappings to CWEs to describe significant findings and perceive risk in your hypothetical operational environment.*
@@ -123,7 +129,7 @@ We can see significant difference in what GitHub's codeQL found and SonarCloud, 
 
 *Describe your planned or ongoing contributions to the upstream open-source project (I.documentation, design changes, code changes, communications, etc.). Your response can be based on any of the prior assignments in the class.*
 
-*Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task.* 
+*Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task.*
 
 [Our GitHub OpenLDAP Fork](https://github.com/bartelsjoshuac/openldap)
 
@@ -139,4 +145,3 @@ We can see significant difference in what GitHub's codeQL found and SonarCloud, 
 *Include a reflection of your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward?*
 
 This assignment, like the Assurance Cases, reflects the work of just some of the team members as some team members have elected to not contribute, communicate or attend required meetings due to unknown circumstances.
-
