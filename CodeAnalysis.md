@@ -58,7 +58,8 @@ Finally, the inherent objectivity of the automated testing tools that we employe
 ***
 
 **Findings from Manual Code Review**
-Speaking at a high level, our aggregate code review led to the conclusion that openLDAP is a solid codebase that largely follows secure and tested design principles. Unfortunately, our limited collective knowledge of C limits our ability to discern high-quality C from low-quality C. 
+
+Speaking at a high level, our aggregate code review led to the conclusion that openLDAP is a solid codebase that largely follows secure and tested design principles. Unfortunately, our limited collective knowledge of C limits our ability to discern high-quality C from low-quality C.
 
 ***
 
