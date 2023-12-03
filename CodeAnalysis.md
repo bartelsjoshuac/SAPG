@@ -13,6 +13,7 @@
 |8| CWE-704 | Class | Incorrect Type Conversion or Cast |
 |9| CWE-789 | Varient | Memory Allocation with Excessive Size Value |
 
+**Code Review Tool Selection**
 We ran the code through the GitHub code scanning which found [14 vulnerabilities](https://github.com/bartelsjoshuac/openldap/security/code-scanning), all Critical or High.  Given the small number the fact that 9 of the 14 fall into the category of "Multiplication result converted to larger type".  This really just gives us 5 to look at, albeit 9 of them are in different places to examine they are all in the same mdb.c library file, which is the SleepyCat (Berkley DB back end)
 
 We then selected Sonarcloud as another automated code scanning tool
@@ -21,7 +22,7 @@ Document your code review strategy along with responses to the following questio
 
 *What challenges did you expect before starting the code review?*
 
-No members of the team and fluent in straight C programming, although most are familair with C.  However the tools do not require in depth familiaty with the landuage as they find common flaws in common syntax.
+No members of the team and fluent in straight C programming, although most are  familiar with C.  However the tools do not require in depth familiaty with the landuage as they find common flaws in common syntax.
 
 *How did your code review strategy attempt to address the anticipated challenges?*
 
