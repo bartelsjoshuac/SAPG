@@ -1,5 +1,11 @@
 # Part 1: Code Review
 
+**Initial Scope and Strategy**
+
+To begin, we examined known CWEs for both OpenLDAP itself and C code in general. When analyzing known OpenLDAP CWEs, we used the site "OpenCVE.io."
+This site listed known CVEs for OpenLDAP with their corresponding CWEs. We also decided to analyze the entirety of OpenLDAP to best encompass
+every potential security issue/CWE that OpenLDAP may have.
+
 **CWE Checklist**
 
 | Serial   | CWE |  Type | Name |
