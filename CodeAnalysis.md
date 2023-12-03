@@ -57,7 +57,12 @@ Finally, the inherent objectivity of the automated testing tools that we employe
 
 ***
 
-*Document findings from a manual code review of critical security functions identified in misuse cases, assurance cases, and threat models.*
+**Findings from Manual Code Review**
+
+
+***
+
+**Findings from Automated Code Review**
 
 ![GitHub Code Scanning REsults](https://github.com/bartelsjoshuac/SAPG/blob/main/images/ghcodescan.jpg)
 
