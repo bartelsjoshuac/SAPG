@@ -26,15 +26,21 @@ We wanted to use another automated scanning tool to validate our findings from G
 
 No members of the team are fluent in vanilla C programming, although most intermediately familiar with C from university courses. Fortunately, automated tools do not require in depth familiaty with the landuage as they find common flaws in common syntax.
 
-First, we did not anticipate finding the number of repeated errors that we did in such a mature product. This implies that there may be a pervasive architectural fault or a false-positive in the automated code review tool.
+First, we were unsure how pervasive any errors would be. It seems to reason that some errors would exist in only a small number of use cases, however it is also likely that some errors would be much more deeply integrated within the project.
 
 Second, we were unsure how much our inherant subjectivity would impact our collective understanding of the codebase. Code reviews can be subjective, with different reviewers having varying opinions on what constitutes “good code”. With this in mind, we must consider that subjectivity can lead to disagreements and inconsistencies in code review standards.
 
 Finally, we were unsure how the sturcture of an open-source codebase would impact the code quality. Open-source projects have a tendancy to vary greatly in their code qualities. We anticipated that this may lead to significant inconsistency in portions of the code due to the unstructured nature of open-source projects.
 
-*How did your code review strategy attempt to address the anticipated challenges?*
+**How did your code review strategy attempt to address the anticipated challenges?**
 
-The github code review categorizes vulnerabilities by easily researchable strings
+After consulting with the output of our automated code review tools, we can now address the challenges posed in the prior section.
+
+First, did not anticipate finding the number of repeated errors that we did in such a mature product. This implies that there may be a pervasive architectural fault or a false-positive in the automated code review tool.
+
+Second, the presence of multiple automated testing tools serving as a moderator allowed us to quickly put asside personal subjectivity that we brought to the code reviews. It is natural to have a unique propensity towards detecting some types of errors over others, however being able to reference the outputs of our automated testing tools allowed us to objectively assess this analysis.
+
+Finally, the inherent objectivity of the automated testing tools that we employed aleviated our concerns about inconcsistencies in code style or quality from the various project contributers by removing the human element of understanding from the task of code review. Since these tools are concerned with the objective metrics that govern proper syntax and code structure, they are not plagued with the human limitations of a desire for consistency among contributions. This is to say that they are not as bothered by changing code smells as human reviewers may be. The result of this is that our final assessment is far more objective since we may consult the outputs of these tools
 
 ***
 
