@@ -171,6 +171,7 @@ We can see significant difference in what GitHub's codeQL found and SonarCloud, 
 ***
 
 **Ongoing Contributions**
+
 OpenLDAP has been around for 25 years, and serves as the basis for numerous commercial LDAP implementations. It is a very mature project and is widely used. Due to its maturity, it has already been subjected to thorough security analysis. Based on our findings, we do not believe that there are any significant contributions that we can make to this project. This belief is further reinforced by the fact that our C capabilities are a major limiting factor.
 
 ***
