@@ -1,13 +1,13 @@
 # Part 1: Code Review
 
-**Initial Scope and Strategy**:
+**Initial Scope and Strategy:**
 To begin, we examined known CWEs for both OpenLDAP itself and C code in general. When analyzing known OpenLDAP CWEs, we used the site "OpenCVE.io."
 This site listed known CVEs for OpenLDAP with their corresponding CWEs. We also decided to analyze the entirety of OpenLDAP to best encompass
 every potential security issue/CWE that OpenLDAP may have.
 
 ***
 
-**CWE Checklist**:
+**CWE Checklist:**
 
 | Serial   | CWE |  Type | Name |
 |:------------|:---------- | :----------| :---------- |
@@ -24,7 +24,7 @@ every potential security issue/CWE that OpenLDAP may have.
 
 ***
 
-**Code Review Tool Selection**:
+**Code Review Tool Selection:**
 
 We ran the code through the GitHub code scanning which found [14 vulnerabilities](https://github.com/bartelsjoshuac/openldap/security/code-scanning), all critical or high. Given the small number the fact that 9 of the 14 fall into the category of "Multiplication result converted to larger type".  This just gives us 5 to look at, albeit 9 of them are in different places to examine they are all in the same mdb.c library file, which is the SleepyCat (Berkley DB back end).
 
@@ -33,7 +33,7 @@ We wanted to use another automated scanning tool to validate our findings from G
 
 ***
 
-**What challenges did you expect before starting the code review?**:
+**What challenges did you expect before starting the code review?:**
 
 No members of the team are fluent in vanilla C programming, although most intermediately familiar with C from university courses. Fortunately, automated tools do not require in depth familiarity with the language as they find common flaws in common syntax.
 
@@ -45,7 +45,7 @@ Finally, we were unsure how the structure of an open-source codebase would impac
 
 ***
 
-**How did your code review strategy attempt to address the anticipated challenges?**:
+**How did your code review strategy attempt to address the anticipated challenges?:**
 
 After consulting with the output of our automated code review tools, we can now address the challenges posed in the prior section.
 
@@ -57,7 +57,7 @@ Finally, the inherent objectivity of the automated testing tools that we employe
 
 ***
 
-**Findings from Manual Code Review**
+**Findings from Manual Code Review:**
 
 Speaking at a high level, our aggregate code review led to the conclusion that openLDAP is a solid codebase that largely follows secure and tested design principles. Unfortunately, our limited collective knowledge of C limits our ability to discern high-quality C from low-quality C.
 
@@ -65,7 +65,7 @@ Our misuse cases, assurance cases, and threat models focused on the primary LDAP
 
 ***
 
-**Findings from Automated Code Scanning - CodeGL**
+**Findings from Automated Code Scanning - CodeGL:**
 
 ![GitHub Code Scanning REsults](https://github.com/bartelsjoshuac/SAPG/blob/main/images/ghcodescan.jpg)
 
@@ -118,7 +118,7 @@ A 64 bit unsigned int has a max value of 18,446,744,073,709,551,615.  I suppose 
 
 ***
 
-**Findings from Automated Code Scanning - SonarCloud**
+**Findings from Automated Code Scanning - SonarCloud:**
 
 Utilizing [SonarCloud](https://sonarcloud.io/), we've conducted an analysis of the openLDAP project to assess the quality of its code. The insights obtained from SonarCloud have been pivotal in identifying critical areas of concern. There were 4 vulnerabilities reported by SonarCloud.
 
@@ -162,7 +162,7 @@ The table above serves as a strategic guide to understanding the nexus between v
 
 # Part 2: Key Findings and Contributions
 
-**Key Findings from Automated Code Scanning**
+**Key Findings from Automated Code Scanning:**
 
 The majority of our findings were not pertinent to the use cases that we analyzed in prior assignments. The findings were mostly related to the use of the C language and manual memory management as opposed to architectural-level design patterns.
 
@@ -170,13 +170,13 @@ We can see significant difference in what GitHub's codeQL found and SonarCloud, 
 
 ***
 
-**Ongoing Contributions**
+**Ongoing Contributions:**
 
-OpenLDAP has been around for over 25 years, derived from a University of Michigan LDAP project and serves as the basis for numerous commercial LDAP implementations. It is a very mature project and is widely used. Due to its maturity, it has already been subjected to thorough security analysis. Based on our findings, we do not believe that there are any significant contributions that we can make to this project. This belief is further reinforced by the fact that our C capabilities are a major limiting factor.
+OpenLDAP has been around for 25 years, and serves as the basis for numerous commercial LDAP implementations. It is a very mature project and is widely used. Due to its maturity, it has already been subjected to thorough security analysis. Based on our findings, we do not believe that there are any significant contributions that we can make to this project. This belief is further reinforced by the fact that our C capabilities are a major limiting factor.
 
 ***
 
-**Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task.**
+**Links:**
 
 [Our GitHub OpenLDAP Fork](https://github.com/bartelsjoshuac/openldap)
 
@@ -189,6 +189,6 @@ OpenLDAP has been around for over 25 years, derived from a University of Michiga
 [OpenLDAP CVE List](https://www.cvedetails.com/vulnerability-list/vendor_id-439/Openldap.html)
 
 
-**Include a reflection of your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward?**
+**Reflection:**
 
 This assignment, like the Assurance Cases, reflects the work of just four of the team members as some team members have elected to not contribute, communicate, or attend required meetings due to unknown circumstances.
