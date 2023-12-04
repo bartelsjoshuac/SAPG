@@ -11,22 +11,22 @@ every potential security issue/CWE that OpenLDAP may have.
 
 | Serial   | CWE |  Type | Name |
 |:------------|:---------- | :----------| :---------- |
-|1| CWE-121 | Varient | Stack-based Buffer Overflow |
-|2| CWE-122 | Varient | Heap-based Buffer Overflow |
+|1| CWE-121 | Variant | Stack-based Buffer Overflow |
+|2| CWE-122 | Variant | Heap-based Buffer Overflow |
 |3| CWE-124 | Base | Buffer Underwrite ('Buffer Underflow') |
 |4| CWE-134 | Base | Use of Externally-Controlled Format String |
-|5| CWE-192 | Varient | Integer Coercion Error |
+|5| CWE-192 | Variant | Integer Coercion Error |
 |6| CWE-197 | Base | Numeric Truncation Error |
 |7| CWE-364 | Base | Signal Handler Race Condition |
 |8| CWE-704 | Class | Incorrect Type Conversion or Cast |
-|9| CWE-789 | Varient | Memory Allocation with Excessive Size Value |
+|9| CWE-789 | Variant | Memory Allocation with Excessive Size Value |
 
 
 ***
 
 **Code Review Tool Selection**:
 
-We ran the code through the GitHub code scanning which found [14 vulnerabilities](https://github.com/bartelsjoshuac/openldap/security/code-scanning), all critical or high. Given the small number the fact that 9 of the 14 fall into the category of "Multiplication result converted to larger type".  This really just gives us 5 to look at, albeit 9 of them are in different places to examine they are all in the same mdb.c library file, which is the SleepyCat (Berkley DB back end).
+We ran the code through the GitHub code scanning which found [14 vulnerabilities](https://github.com/bartelsjoshuac/openldap/security/code-scanning), all critical or high. Given the small number the fact that 9 of the 14 fall into the category of "Multiplication result converted to larger type".  This just gives us 5 to look at, albeit 9 of them are in different places to examine they are all in the same mdb.c library file, which is the SleepyCat (Berkley DB back end).
 
 We then selected SonarCloud as another automated code scanning tool to validate the findings of our first pass.
 We wanted to use another automated scanning tool to validate our findings from GitHub CodeQL Workflow. To achieve this, we utilized SonarCloud. SonarCloud is a commercial tool with a powerful set of language-specific analyzers that use thousands of rules to track down hard-to-find issues. As proud supporters of the open source community, SonarCloud allows free usage if this tool for open source projects. This tool yielded vulnerability findings as our initial tool, thus verifying our initial results.
@@ -35,13 +35,13 @@ We wanted to use another automated scanning tool to validate our findings from G
 
 **What challenges did you expect before starting the code review?**:
 
-No members of the team are fluent in vanilla C programming, although most intermediately familiar with C from university courses. Fortunately, automated tools do not require in depth familiaty with the landuage as they find common flaws in common syntax.
+No members of the team are fluent in vanilla C programming, although most intermediately familiar with C from university courses. Fortunately, automated tools do not require in depth familiarity with the language as they find common flaws in common syntax.
 
 First, we were unsure how pervasive any errors would be. It seems to reason that some errors would exist in only a small number of use cases, however it is also likely that some errors would be much more deeply integrated within the project.
 
-Second, we were unsure how much our inherant subjectivity would impact our collective understanding of the codebase. Code reviews can be subjective, with different reviewers having varying opinions on what constitutes “good code”. With this in mind, we must consider that subjectivity can lead to disagreements and inconsistencies in code review standards.
+Second, we were unsure how much our inherent subjectivity would impact our collective understanding of the codebase. Code reviews can be subjective, with different reviewers having varying opinions on what constitutes “good code”. With this in mind, we must consider that subjectivity can lead to disagreements and inconsistencies in code review standards.
 
-Finally, we were unsure how the sturcture of an open-source codebase would impact the code quality. Open-source projects have a tendancy to vary greatly in their code qualities. We anticipated that this may lead to significant inconsistency in portions of the code due to the unstructured nature of open-source projects.
+Finally, we were unsure how the structure of an open-source codebase would impact the code quality. Open-source projects have a tendency to vary greatly in their code qualities. We anticipated that this may lead to significant inconsistency in portions of the code due to the unstructured nature of open-source projects.
 
 ***
 
@@ -51,9 +51,9 @@ After consulting with the output of our automated code review tools, we can now 
 
 First, did not anticipate finding the number of repeated errors that we did in such a mature product. This implies that there may be a pervasive architectural fault or a false-positive in the automated code review tool.
 
-Second, the presence of multiple automated testing tools serving as a moderator allowed us to quickly put asside personal subjectivity that we brought to the code reviews. It is natural to have a unique propensity towards detecting some types of errors over others, however being able to reference the outputs of our automated testing tools allowed us to objectively assess this analysis.
+Second, the presence of multiple automated testing tools serving as a moderator allowed us to quickly put aside personal subjectivity that we brought to the code reviews. It is natural to have a unique propensity towards detecting some types of errors over others, however being able to reference the outputs of our automated testing tools allowed us to objectively assess this analysis.
 
-Finally, the inherent objectivity of the automated testing tools that we employed aleviated our concerns about inconcsistencies in code style or quality from the various project contributers by removing the human element of understanding from the task of code review. Since these tools are concerned with the objective metrics that govern proper syntax and code structure, they are not plagued with the human limitations of a desire for consistency among contributions. This is to say that they are not as bothered by changing code smells as human reviewers may be. The result of this is that our final assessment is far more objective since we may consult the outputs of these tools
+Finally, the inherent objectivity of the automated testing tools that we employed alleviated our concerns about inconsistencies in code style or quality from the various project contributors by removing the human element of understanding from the task of code review. Since these tools are concerned with the objective metrics that govern proper syntax and code structure, they are not plagued with the human limitations of a desire for consistency among contributions. This is to say that they are not as bothered by changing code smells as human reviewers may be. The result of this is that our final assessment is far more objective since we may consult the outputs of these tools.
 
 ***
 
@@ -61,7 +61,7 @@ Finally, the inherent objectivity of the automated testing tools that we employe
 
 Speaking at a high level, our aggregate code review led to the conclusion that openLDAP is a solid codebase that largely follows secure and tested design principles. Unfortunately, our limited collective knowledge of C limits our ability to discern high-quality C from low-quality C.
 
-Our misuse cases, assurance cases, and threat models focused on the primary LDAP interactions of BIND, ADD, DEL, MDFY, and SEARCH.However the majority of the vulnerabilities identified where found in the back end database operations.
+Our misuse cases, assurance cases, and threat models focused on the primary LDAP interactions of BIND, ADD, DEL, MDFY, and SEARCH. However the majority of the vulnerabilities identified where found in the back-end database operations.
 
 ***
 
@@ -77,7 +77,7 @@ Our misuse cases, assurance cases, and threat models focused on the primary LDAP
 |4| Multiplication result converted to larger type | High | (CWE-197: Numeric Truncation Error)[https://cwe.mitre.org/data/definitions/197.html]
 |5| Multiplication result converted to larger type | High |  (CWE-681: Incorrect Conversion between Numeric Types) [https://cwe.mitre.org/data/definitions/681.html]
 
-Looking at the uncontrolled format string found in ldapsearch.c (CWE-134)  This is actually the ldapsearch command line utility that is include with OpenLDAP.  This may be used be an admin, with root privledges to SSH to the server only, and is not commonly used, except for tests.
+Looking at the uncontrolled format string found in ldapsearch.c (CWE-134)  This is actually the ldapsearch command line utility that is include with OpenLDAP.  This may be used be an admin, with root privileges to SSH to the server only, and is not commonly used, except for tests.
   ```
   } else
     {
@@ -95,11 +95,11 @@ CodeQL
   if ( rc1 != 0 ) {
 ```
 
-One of the arguments to the ldapsearch command is a search filter.  Here is a valid filter that  (&(uid=josh*)(objectClass=interOrgPerson)(!(l=Omaha))).  This would give us all uid objects of the objectClass inetOrgPerson where the userstart starts with josh and the city is NOT Omaha.  If the search filter were formatted incorrectly, the ldapsearch utility would print this to the screen and the !l would be interpreted by the shell.  If that letter l was a number, the shell could execute that command from the history of the user executing the ldapsearch.
+One of the arguments to the ldapsearch command is a search filter.  Here is a valid filter that  (&(uid=josh*)(objectClass=interOrgPerson)(!(l=Omaha))).  This would give us all uid objects of the objectClass inetOrgPerson where the user start starts with josh and the city is NOT Omaha.  If the search filter were formatted incorrectly, the ldapsearch utility would print this to the screen and the !l would be interpreted by the shell.  If that letter l was a number, the shell could execute that command from the history of the user executing the ldapsearch.
 
 One option would be to escape the output however since the desire in this use case is to inform the user that they entered an invalid search filter, padding it with escape chars might confuse them further.
 
-The 9 common vulnerabilities of the type "Multiplication result converted to larger type". In most cases a multiplication of two values is occuring before prior to a type conversation to a larger type.  THis encompass 4 CWE's (190, 192, 197, and 681)
+The 9 common vulnerabilities of the type "Multiplication result converted to larger type". In most cases a multiplication of two values is occurring before prior to a type conversation to a larger type.  This encompass 4 CWE's (190, 192, 197, and 681)
 
 Multiplication result may overflow 'unsigned int' before it is converted to 'size_t'. (NOTE: These were all later update by GitHub  later updated to read "Multiplication result converted to larger type")
 
@@ -114,7 +114,7 @@ Multiplication result may overflow 'unsigned int' before it is converted to 'siz
 	  	return ENOMEM;
 ```
 
-A 64 bit unsigned int has a max value of 18,446,744,073,709,551,615.  I suppose a checked could be included to insure that it does not exceed that value however the number is so large the author likely assumeed it be to impossible.  Since there are 9 locations where this same type of operation is done and not checked, I assume skipping this was intentional.
+A 64 bit unsigned int has a max value of 18,446,744,073,709,551,615.  I suppose a checked could be included to insure that it does not exceed that value however the number is so large the author likely assumed it be to impossible.  Since there are 9 locations where this same type of operation is done and not checked, I assume skipping this was intentional.
 
 ***
 
@@ -164,7 +164,7 @@ The table above serves as a strategic guide to understanding the nexus between v
 
 **Key Findings from Automated Code Scanning**
 
-The majority of our findings were not pertinant to the use cases that we analyzed in prior assignments. The findings were mostly related to the use of the C language and manual memory management as opposed to architural-level design patterns.
+The majority of our findings were not pertinent to the use cases that we analyzed in prior assignments. The findings were mostly related to the use of the C language and manual memory management as opposed to architectural-level design patterns.
 
 We can see significant difference in what GitHub's codeQL found and SonarCloud, in fact none of the same vulnerabilities are flagged. This is likely due to the fact that SonarCloud is a commercial product and GitHub's codeQL is open source.  The codeQL scan found 3 vulnerabilities, 2 of which are critical.  The first is a CWE-120, Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') and the second is a CWE-416, Use After Free.  The third is a CWE-416, Use After Free.  The first two are critical and the third is high.
 
@@ -174,7 +174,7 @@ We can see significant difference in what GitHub's codeQL found and SonarCloud, 
 
 ***
 
-*Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task.*
+**Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task.**
 
 [Our GitHub OpenLDAP Fork](https://github.com/bartelsjoshuac/openldap)
 
@@ -187,6 +187,6 @@ We can see significant difference in what GitHub's codeQL found and SonarCloud, 
 [OpenLDAP CVE List](https://www.cvedetails.com/vulnerability-list/vendor_id-439/Openldap.html)
 
 
-*Include a reflection of your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward?*
+**Include a reflection of your teamwork for this assignment. What issues occurred? How did you resolve them? What did you plan to change moving forward?**
 
-This assignment, like the Assurance Cases, reflects the work of just some of the team members as some team members have elected to not contribute, communicate or attend required meetings due to unknown circumstances.
+This assignment, like the Assurance Cases, reflects the work of just four of the team members as some team members have elected to not contribute, communicate, or attend required meetings due to unknown circumstances.
