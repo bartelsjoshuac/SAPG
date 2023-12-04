@@ -61,6 +61,8 @@ Finally, the inherent objectivity of the automated testing tools that we employe
 
 Speaking at a high level, our aggregate code review led to the conclusion that openLDAP is a solid codebase that largely follows secure and tested design principles. Unfortunately, our limited collective knowledge of C limits our ability to discern high-quality C from low-quality C.
 
+Our misuse cases, assurance cases, and threat models focused on the primary LDAP interactions of BIND, ADD, DEL, MDFY, and SEARCH.However the majority of the vulnerabilities identified where found in the back end database operations.
+
 ***
 
 **Findings from Automated Code Scanning - CodeGL**
@@ -155,13 +157,22 @@ The Common Weakness Enumeration (CWE) provides a categorized listing of software
 | CWE-367: Time-of-check Time-of-use (TOCTOU) Race Condition | [T1222: File and Directory Permissions Modification](https://attack.mitre.org/techniques/T1222/) - Leverages TOCTOU race conditions to alter file or directory permissions, potentially leading to unauthorized access or privilege escalation. | [Process Injection - T1055](https://d3fend.mitre.org/offensive-technique/attack/T1222/) |
 
 The table above serves as a strategic guide to understanding the nexus between vulnerabilities, attack methodologies, and defensive tactics. It emphasizes how crucial it is to stay ahead of potential threats by not only being aware of how systems can be compromised but also by implementing the appropriate countermeasures.
+
+***
+
 # Part 2: Key Findings and Contributions
 
-*Provide a summary of findings from manual and/or automated scanning. This summary should include mappings to CWEs to describe significant findings and perceive risk in your hypothetical operational environment.*
+**Key Findings from Automated Code Scanning**
 
-We can see significant difference in what GitHub's codeQL found and SonarCloud, in fact none of the same vulnerabilities are flagged.
+The majority of our findings were not pertinant to the use cases that we analyzed in prior assignments. The findings were mostly related to the use of the C language and manual memory management as opposed to architural-level design patterns.
 
-*Describe your planned or ongoing contributions to the upstream open-source project (I.documentation, design changes, code changes, communications, etc.). Your response can be based on any of the prior assignments in the class.*
+We can see significant difference in what GitHub's codeQL found and SonarCloud, in fact none of the same vulnerabilities are flagged. This is likely due to the fact that SonarCloud is a commercial product and GitHub's codeQL is open source.  The codeQL scan found 3 vulnerabilities, 2 of which are critical.  The first is a CWE-120, Buffer Copy without Checking Size of Input ('Classic Buffer Overflow') and the second is a CWE-416, Use After Free.  The third is a CWE-416, Use After Free.  The first two are critical and the third is high.
+
+***
+
+**OpenLDAP has been around for 25 years, and serves as the basis for numerous commercial LDAP implementations. It is a very mature project and is widely used. Due to its maturity, it has already been subjected to thorough security analysis. Based on our findings, we do not believe that there are any significant contributions that we can make to this project. This belief is further reinforced by the fact that our C capabilities are a major limiting factor.**
+
+***
 
 *Include a link to your team's GitHub repository that shows your internal project task assignments and collaborations to finish this task.*
 
