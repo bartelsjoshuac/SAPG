@@ -72,10 +72,10 @@ Our misuse cases, assurance cases, and threat models focused on the primary LDAP
 | Serial   | Alert    | Severity    | CWE |
 |:------------|:----------|:------------:|:-----------:|
 |1| Uncontrolled format string | Critical | [CWE-134: Use of Externally-Controlled Format String ](https://cwe.mitre.org/data/definitions/134.html) |
-|2| Multiplication result converted to larger type | High | (CWE-190: Integer Overflow or Wraparound)[https://cwe.mitre.org/data/definitions/190.html]
-|3| Multiplication result converted to larger type | High | (CWE-192: Integer Coercion Error)[https://cwe.mitre.org/data/definitions/192.html]
-|4| Multiplication result converted to larger type | High | (CWE-197: Numeric Truncation Error)[https://cwe.mitre.org/data/definitions/197.html]
-|5| Multiplication result converted to larger type | High |  (CWE-681: Incorrect Conversion between Numeric Types) [https://cwe.mitre.org/data/definitions/681.html]
+|2| Multiplication result converted to larger type | High | [CWE-190: Integer Overflow or Wraparound](https://cwe.mitre.org/data/definitions/190.html)
+|3| Multiplication result converted to larger type | High | [CWE-192: Integer Coercion Error](https://cwe.mitre.org/data/definitions/192.html)
+|4| Multiplication result converted to larger type | High | [CWE-197: Numeric Truncation Error](https://cwe.mitre.org/data/definitions/197.html)
+|5| Multiplication result converted to larger type | High |  [CWE-681: Incorrect Conversion between Numeric Types](https://cwe.mitre.org/data/definitions/681.html)
 
 Looking at the uncontrolled format string found in ldapsearch.c (CWE-134)  This is actually the ldapsearch command line utility that is include with OpenLDAP.  This may be used be an admin, with root privileges to SSH to the server only, and is not commonly used, except for tests.
   ```
